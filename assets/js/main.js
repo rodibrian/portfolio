@@ -9,6 +9,17 @@ document.addEventListener('DOMContentLoaded', function() {
         offset: 100
     });
 
+    // Initialize WOW.js (animations on scroll, not on full page load)
+    if (typeof WOW !== 'undefined') {
+        new WOW({
+            boxClass: 'wow',
+            animateClass: 'animate__animated',
+            offset: 120,
+            mobile: true,
+            live: true
+        }).init();
+    }
+
     // Initialize all components
     initNavigation();
     initTypewriter();
@@ -131,60 +142,85 @@ function initTypewriter() {
 
 // Counter animation
 function initCounters() {
-    const counters = document.querySelectorAll('.counter');
-    const speed = 200;
-
-    const countUp = (counter) => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        const inc = target / speed;
-
-        if (count < target) {
-            counter.innerText = Math.ceil(count + inc);
-            setTimeout(() => countUp(counter), 1);
-        } else {
-            counter.innerText = target;
-        }
-    };
-
-    // Intersection Observer for counters
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counter = entry.target;
-                countUp(counter);
-                counterObserver.unobserve(counter);
-            }
-        });
-    }, { threshold: 0.7 });
-
-    counters.forEach(counter => {
-        counterObserver.observe(counter);
-    });
+    // Kept for backward compatibility; actual triggering is synced with skill bars below.
+    initStatsAndSkillsSync();
 }
 
 // Skill bars animation
 function initSkillBars() {
-    const skillBars = document.querySelectorAll('.progress-bar');
+    // Kept for backward compatibility; actual triggering is synced with counters above.
+    initStatsAndSkillsSync();
+}
 
-    const skillObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const progressBar = entry.target;
-                const width = progressBar.getAttribute('data-width');
-                
-                setTimeout(() => {
-                    progressBar.style.width = width + '%';
-                }, 200);
-                
-                skillObserver.unobserve(progressBar);
+// Sync counters (CountUp.js) + skill bars together
+let __statsSkillsSyncInited = false;
+function initStatsAndSkillsSync() {
+    if (__statsSkillsSyncInited) return;
+    __statsSkillsSyncInited = true;
+
+    const sections = [
+        document.getElementById('about'),
+        document.getElementById('skills')
+    ].filter(Boolean);
+
+    // Ensure progress bars start at 0 so animation is visible
+    document.querySelectorAll('.progress-bar[data-width]').forEach(bar => {
+        if (!bar.style.width) bar.style.width = '0%';
+    });
+
+    const animateCountersIn = (root) => {
+        const counters = root.querySelectorAll('.counter[data-target]');
+        counters.forEach(counter => {
+            const target = Number(counter.getAttribute('data-target') || 0);
+            const duration = 1.8;
+
+            // If CountUp.js is present, use it
+            const CountUpCtor =
+                (typeof window !== 'undefined' && window.CountUp) ||
+                (typeof window !== 'undefined' && window.countUp && window.countUp.CountUp) ||
+                (typeof CountUp !== 'undefined' && CountUp);
+
+            if (CountUpCtor) {
+                const cu = new CountUpCtor(counter, target, {
+                    duration,
+                    startVal: 0,
+                    useEasing: true,
+                    useGrouping: true
+                });
+                cu.start();
+            } else {
+                // Fallback (simple increment)
+                counter.textContent = String(target);
             }
         });
-    }, { threshold: 0.5 });
+    };
 
-    skillBars.forEach(bar => {
-        skillObserver.observe(bar);
-    });
+    const animateBarsIn = (root) => {
+        const bars = root.querySelectorAll('.progress-bar[data-width]');
+        bars.forEach(bar => {
+            const width = bar.getAttribute('data-width');
+            // Match the counter duration for visual sync
+            bar.style.transitionDuration = '1.8s';
+            requestAnimationFrame(() => {
+                bar.style.width = width + '%';
+            });
+        });
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+
+            const section = entry.target;
+            // Trigger both animations at the same time for this section
+            animateCountersIn(section);
+            animateBarsIn(section);
+
+            observer.unobserve(section);
+        });
+    }, { threshold: 0.35 });
+
+    sections.forEach(section => observer.observe(section));
 }
 
 // Project filters

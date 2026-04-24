@@ -23,6 +23,58 @@
     box-sizing: border-box;
 }
 
+/* Section transitions (smooth visual continuity) */
+.section-transition {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-transition::before,
+.section-transition::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 70px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Top fade-in */
+.section-transition::before {
+    top: 0;
+    background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.0));
+    mix-blend-mode: overlay;
+    opacity: 0.55;
+}
+
+/* Bottom fade-out */
+.section-transition::after {
+    bottom: 0;
+    background:
+        linear-gradient(to top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.0));
+    mix-blend-mode: overlay;
+    opacity: 0.55;
+}
+
+.section-transition > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional subtle separator line between sections */
+.section-transition::after {
+    box-shadow: 0 -1px 0 rgba(31, 41, 55, 0.06) inset;
+}
+
+@media (max-width: 768px) {
+    .section-transition::before,
+    .section-transition::after {
+        height: 48px;
+    }
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
