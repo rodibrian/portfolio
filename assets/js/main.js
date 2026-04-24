@@ -20,6 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
 });
 
+// EmailJS configuration (fill these values)
+// Create an EmailJS account, add an Email Service + Email Template, then paste IDs below.
+const EMAILJS_CONFIG = {
+    publicKey: "YX4PR5z1IhqV01ii1",
+    serviceId: "rodibrian_gmailjs",
+    templateId: "template_6vsrdho"
+};
+
 // Navigation functionality
 function initNavigation() {
     const navbar = document.getElementById('mainNav');
@@ -339,6 +347,26 @@ function openProjectModal(index) {
 function initContactForm() {
     const form = document.getElementById('contactForm');
     const successAlert = document.getElementById('contactSuccess');
+    const errorAlert = document.getElementById('contactError');
+
+    if (!form) return;
+
+    const canUseEmailJs =
+        typeof emailjs !== 'undefined' &&
+        EMAILJS_CONFIG.publicKey &&
+        EMAILJS_CONFIG.serviceId &&
+        EMAILJS_CONFIG.templateId &&
+        !String(EMAILJS_CONFIG.publicKey).includes("YOUR_") &&
+        !String(EMAILJS_CONFIG.serviceId).includes("YOUR_") &&
+        !String(EMAILJS_CONFIG.templateId).includes("YOUR_");
+
+    if (typeof emailjs !== 'undefined' && EMAILJS_CONFIG.publicKey && !String(EMAILJS_CONFIG.publicKey).includes("YOUR_")) {
+        try {
+            emailjs.init({ publicKey: EMAILJS_CONFIG.publicKey });
+        } catch (_) {
+            // ignore init failure and handle at submit time
+        }
+    }
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -347,7 +375,6 @@ function initContactForm() {
         const formData = new FormData(form);
         const data = Object.fromEntries(formData);
         
-        // Simulate form submission
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
         
@@ -355,20 +382,50 @@ function initContactForm() {
         submitBtn.innerHTML = '<span class="loading"></span> Envoi en cours...';
         submitBtn.disabled = true;
         
-        setTimeout(() => {
-            // Hide form and show success message
+        successAlert?.classList.add('d-none');
+        errorAlert?.classList.add('d-none');
+
+        const templateParams = {
+            // Template expects these exact keys
+            title: data.subject,
+            name: data.name,
+            email_guest: data.email,
+            message: data.message,
+
+            // Optional extras (safe to ignore in template)
+            to_email: "embony.rodibrian@gmail.com",
+            from_name: data.name,
+            from_email: data.email
+        };
+
+        const onSuccess = () => {
             form.style.display = 'none';
-            successAlert.classList.remove('d-none');
-            
-            // Reset form after delay
+            successAlert?.classList.remove('d-none');
+
             setTimeout(() => {
                 form.reset();
                 form.style.display = 'block';
-                successAlert.classList.add('d-none');
+                successAlert?.classList.add('d-none');
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
             }, 5000);
-        }, 2000);
+        };
+
+        const onError = () => {
+            errorAlert?.classList.remove('d-none');
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        };
+
+        if (!canUseEmailJs) {
+            onError();
+            return;
+        }
+
+        emailjs
+            .send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, templateParams)
+            .then(onSuccess)
+            .catch(onError);
     });
 }
 
