@@ -1,9 +1,26 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-default-lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rodi Brian</title>
+    <title data-i18n="meta.title">Rodi Brian | Full-Stack Developer</title>
+    <meta name="description" content="Portfolio of Rodi Brian — Full-Stack Developer specialized in modern web applications, UI/UX, and scalable solutions." data-i18n="meta.description" data-i18n-attr="content">
+    <meta name="theme-color" content="#2563EB">
+    <link rel="canonical" href="./">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rodi Brian | Full-Stack Developer" data-i18n="meta.ogTitle" data-i18n-attr="content">
+    <meta property="og:description" content="I build modern, scalable and user-friendly web applications. Explore projects, skills and contact." data-i18n="meta.ogDescription" data-i18n-attr="content">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/profil.png">
+    <meta property="og:url" content="./">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rodi Brian | Full-Stack Developer" data-i18n="meta.twitterTitle" data-i18n-attr="content">
+    <meta name="twitter:description" content="Modern web apps, UI/UX, scalable solutions." data-i18n="meta.twitterDescription" data-i18n-attr="content">
+    <meta name="twitter:image" content="assets/img/profil.png">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -30,24 +47,32 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Accueil</a>
+                        <a class="nav-link" href="#home" data-i18n="nav.home">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">À propos</a>
+                        <a class="nav-link" href="#about" data-i18n="nav.value">Proposition</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Compétences</a>
+                        <a class="nav-link" href="#skills" data-i18n="nav.skills">Compétences</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#experience">Expérience</a>
+                        <a class="nav-link" href="#experience" data-i18n="nav.experience">Expérience</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projets</a>
+                        <a class="nav-link" href="#projects" data-i18n="nav.projects">Projets</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
                     </li>
                 </ul>
+                <div class="lang-switch ms-3">
+                    <button type="button" class="lang-btn" data-lang="fr" aria-label="Français">
+                        <span class="lang-flag" aria-hidden="true">🇫🇷</span><span class="lang-code">FR</span>
+                    </button>
+                    <button type="button" class="lang-btn" data-lang="en" aria-label="English">
+                        <span class="lang-flag" aria-hidden="true">🇬🇧</span><span class="lang-code">EN</span>
+                    </button>
+                </div>
                 <div class="social-links ms-3">
                     <a href="https://github.com/rodibrian" target="_blank" class="text-decoration-none">
                         <i class="fab fa-github"></i>
@@ -79,22 +104,28 @@
                     <h1 class="display-3 fw-bold mb-4" data-aos="fade-up">
                         Rodi Brian
                     </h1>
+                    <div class="hero-role mb-2" data-aos="fade-up" data-aos-delay="150">
+                        <span data-i18n="hero.role">Full-Stack Developer | Web • UI/UX • Desktop (Qt)</span>
+                    </div>
                     <h2 class="h3 mb-4 text-primary" data-aos="fade-up" data-aos-delay="200">
                         <span id="typewriter"></span>
                     </h2>
                     <div class="d-flex align-items-center justify-content-center mb-4" data-aos="fade-up" data-aos-delay="400">
                         <i class="fas fa-map-marker-alt me-2"></i>
-                        <span>Freelance à distance</span>
+                        <span data-i18n="hero.location">Freelance à distance</span>
                     </div>
-                    <p class="lead mb-5" data-aos="fade-up" data-aos-delay="600">
-                        J’allie performance technique et créativité pour concevoir des applications modernes et intuitives, offrant des expériences utilisateur de haut niveau.
+                    <p class="lead mb-5 hero-subtitle" data-aos="fade-up" data-aos-delay="600" data-i18n="hero.subtitle">
+                        Je conçois des applications modernes, performantes et faciles à utiliser — avec une attention forte à l’UI/UX, à la maintenabilité et à l’impact business.
                     </p>
                     <div class="hero-buttons" data-aos="fade-up" data-aos-delay="800">
                         <a href="#projects" class="btn btn-primary btn-lg me-3">
-                            <i class="fas fa-eye me-2"></i>Voir mes projets
+                            <i class="fas fa-eye me-2"></i><span data-i18n="hero.ctaProjects">Voir mes projets</span>
                         </a>
-                        <a href="#contact" class="btn btn-outline-light btn-lg">
-                            <i class="fas fa-envelope me-2"></i>Me contacter
+                        <a href="assets/docs/RODI_BRIAN_CV.pdf" class="btn btn-outline-light btn-lg me-3" download data-i18n="hero.cvHref" data-i18n-attr="href">
+                            <i class="fas fa-file-arrow-down me-2"></i><span data-i18n="hero.ctaCv">Télécharger CV</span>
+                        </a>
+                        <a href="#contact" class="btn btn-ghost btn-lg">
+                            <i class="fas fa-envelope me-2"></i><span data-i18n="hero.ctaContact">Me contacter</span>
                         </a>
                     </div>
                 </div>
@@ -107,13 +138,13 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About / Value Section -->
     <section id="about" class="py-5 bg-light about-section section-transition">
         <div class="container">
 
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title wow animate__animated animate__fadeInUp" data-aos="fade-up">À propos de moi</h2>
+                    <h2 class="section-title wow animate__animated animate__fadeInUp" data-aos="fade-up" data-i18n="value.title">Proposition de valeur</h2>
                     <div class="section-divider wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200"></div>
                 </div>
             </div>
@@ -125,8 +156,8 @@
                         <div class="experience-badge">
                             <div class="text-center">
                                 <i class="fas fa-trophy text-warning fa-2x mb-2"></i>
-                                <div class="fw-semibold">Sénior Confirmé</div>
-                                <small class="text-muted">C++/Qt • Frontend • UI/UX</small>
+                                <div class="fw-semibold" data-i18n="value.badgeTitle">Sénior Confirmé</div>
+                                <small class="text-muted" data-i18n="value.badgeSubtitle">C++/Qt • Frontend • UI/UX</small>
                             </div>
 </div>
 
@@ -134,42 +165,42 @@
                 </div>
                 <div class="col-lg-6 wow animate__animated animate__fadeInRight" data-aos="fade-left">
                     <div class="about-content-card">
-                        <h3 class="about-kicker text-primary mb-2">
-                            Développeur C/C++ • Frontend • UI/UX
-                        </h3>
-                        <h4 class="about-headline fw-bold mb-3">
-                            Des interfaces élégantes, un code solide, une expérience fluide.
-                        </h4>
-                        <p class="mb-3">
-                            Développeur passionné et créatif, spécialisé en C++/Qt et en conception d’interfaces modernes.
-                            J’allie expertise technique et sens du design pour créer des applications performantes et intuitives.
+                        <h3 class="about-kicker text-primary mb-2" data-i18n="value.kicker">Full-Stack • C++/Qt • UI/UX</h3>
+                        <h4 class="about-headline fw-bold mb-3" data-i18n="value.headline">Je transforme des besoins métiers en produits clairs, robustes et agréables à utiliser.</h4>
+                        <p class="mb-3" data-i18n="value.p1">
+                            J’aide les équipes et les clients à livrer des applications web et desktop fiables (C++/Qt, Java, Web),
+                            avec une attention forte à l’architecture, la performance et l’expérience utilisateur.
                         </p>
-                        <p class="mb-4">
-                            Mon expérience couvre le développement logiciel en C++/Qt ainsi que le frontend moderne, avec une forte orientation UI/UX.
-                            J’aime transformer des idées complexes en expériences utilisateurs fluides et efficaces.
+                        <p class="mb-4" data-i18n="value.p2">
+                            Mon objectif est simple : un produit qui se comprend vite, qui se maintient facilement, et qui apporte un résultat mesurable
+                            (gain de temps, réduction d’erreurs, meilleure conversion, meilleure ergonomie).
                         </p>
 
                         <div class="about-highlights mb-4">
                             <span class="about-pill">
                                 <i class="fas fa-check-circle me-2"></i>
-                                Apps performantes en C++/Qt
+                                <span data-i18n="value.pill1">Desktop apps (C++/Qt) performantes</span>
                             </span>
                             <span class="about-pill">
                                 <i class="fas fa-check-circle me-2"></i>
-                                UI modernes & design centré utilisateur
+                                <span data-i18n="value.pill2">UI modernes & design centré utilisateur</span>
                             </span>
                             <span class="about-pill">
                                 <i class="fas fa-check-circle me-2"></i>
-                                Frontend moderne (React/Bootstrap)
+                                <span data-i18n="value.pill3">Frontend moderne (Bootstrap / JS)</span>
+                            </span>
+                            <span class="about-pill">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <span data-i18n="value.pill4">Code propre & maintenable</span>
                             </span>
                         </div>
 
                         <div class="d-flex flex-wrap gap-2 align-items-center">
                             <a href="#contact" class="btn btn-primary">
-                                <i class="fas fa-handshake me-2"></i>Travaillons ensemble
+                                <i class="fas fa-handshake me-2"></i><span data-i18n="value.ctaWork">Travaillons ensemble</span>
                             </a>
                             <a href="#projects" class="btn btn-outline-primary">
-                                <i class="fas fa-layer-group me-2"></i>Voir mes projets
+                                <i class="fas fa-layer-group me-2"></i><span data-i18n="value.ctaProjects">Voir mes projets</span>
                             </a>
                         </div>
                     </div>
@@ -183,28 +214,28 @@
         <div class="stat-card">
             <i class="fas fa-code text-primary mb-3"></i>
             <div class="h3 fw-bold counter" data-target="15">0</div>
-            <small class="text-muted">Projets en C++/Qt & Frontend</small>
+            <small class="text-muted" data-i18n="stats.s1">Projets en C++/Qt & Frontend</small>
         </div>
     </div>
     <div class="col-6 col-md-3 text-center mb-4" data-aos="fade-up" data-aos-delay="200">
         <div class="stat-card">
             <i class="fas fa-palette text-primary mb-3"></i>
             <div class="h3 fw-bold counter" data-target="50">0</div>
-            <small class="text-muted">Interfaces UI/UX conçues</small>
+            <small class="text-muted" data-i18n="stats.s2">Interfaces UI/UX conçues</small>
         </div>
     </div>
     <div class="col-6 col-md-3 text-center mb-4" data-aos="fade-up" data-aos-delay="300">
         <div class="stat-card">
             <i class="fas fa-users text-primary mb-3"></i>
             <div class="h3 fw-bold counter" data-target="20">0</div>
-            <small class="text-muted">Clients satisfaits</small>
+            <small class="text-muted" data-i18n="stats.s3">Clients satisfaits</small>
         </div>
     </div>
     <div class="col-6 col-md-3 text-center mb-4" data-aos="fade-up" data-aos-delay="400">
         <div class="stat-card">
             <i class="fas fa-laptop-code text-primary mb-3"></i>
             <div class="h3 fw-bold counter" data-target="5">0</div>
-            <small class="text-muted">Années d’expérience</small>
+            <small class="text-muted" data-i18n="stats.s4">Années d’expérience</small>
         </div>
     </div>
 </div>
@@ -217,18 +248,67 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center mb-5">
-                <h2 class="section-title wow animate__animated animate__fadeInUp" data-aos="fade-up">Mes Compétences</h2>
+                <h2 class="section-title wow animate__animated animate__fadeInUp" data-aos="fade-up" data-i18n="skills.title">Mes Compétences</h2>
                 <div class="section-divider wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200"></div>
-                <p class="lead wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400">
+                <p class="lead wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400" data-i18n="skills.subtitle">
                     Une expertise technique et créative pour concevoir des applications et interfaces modernes et performantes
                 </p>
             </div>
         </div>
+
+        <!-- Modern skill highlights (scan-friendly) -->
+        <div class="row g-4 mb-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="col-lg-3 col-md-6">
+                <div class="skill-highlight">
+                    <div class="skill-highlight-icon bg-primary">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div>
+                        <div class="skill-highlight-title" data-i18n="skills.h1.title">Frontend</div>
+                        <div class="skill-highlight-tags" data-i18n="skills.h1.tags">HTML • CSS • JavaScript • Bootstrap</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="skill-highlight">
+                    <div class="skill-highlight-icon bg-success">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div>
+                        <div class="skill-highlight-title" data-i18n="skills.h2.title">Backend</div>
+                        <div class="skill-highlight-tags" data-i18n="skills.h2.tags">PHP • APIs • Architecture</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="skill-highlight">
+                    <div class="skill-highlight-icon bg-purple">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div>
+                        <div class="skill-highlight-title" data-i18n="skills.h3.title">Desktop</div>
+                        <div class="skill-highlight-tags" data-i18n="skills.h3.tags">C++ • Qt • SQLite</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="skill-highlight">
+                    <div class="skill-highlight-icon bg-warning">
+                        <i class="fas fa-screwdriver-wrench"></i>
+                    </div>
+                    <div>
+                        <div class="skill-highlight-title" data-i18n="skills.h4.title">Outils</div>
+                        <div class="skill-highlight-tags" data-i18n="skills.h4.tags">Git • GitHub • Figma • Office</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <!-- C++/Qt & Backend Skills -->
             <div class="col-lg-3 col-md-6 mb-4 wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="100">
                 <div class="skill-category">
-                    <h4 class="text-success mb-4">C++ / Backend</h4>
+                    <h4 class="text-success mb-4" data-i18n="skills.categories.backend">C++ / Backend</h4>
                     <div class="skill-item mb-3">
                         <div class="d-flex justify-content-between mb-1">
                             <span>C++</span>
@@ -262,7 +342,7 @@
             <!-- Frontend Skills -->
             <div class="col-lg-3 col-md-6 mb-4 wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200">
                 <div class="skill-category">
-                    <h4 class="text-primary mb-4">Frontend</h4>
+                    <h4 class="text-primary mb-4" data-i18n="skills.categories.frontend">Frontend</h4>
                     <div class="skill-item mb-3">
                         <div class="d-flex justify-content-between mb-1">
                             <span>HTML/CSS</span>
@@ -296,7 +376,7 @@
             <!-- UI/UX & Design Skills -->
             <div class="col-lg-3 col-md-6 mb-4 wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="300">
                 <div class="skill-category">
-                    <h4 class="text-purple mb-4">UI/UX & Design</h4>
+                    <h4 class="text-purple mb-4" data-i18n="skills.categories.design">UI/UX & Design</h4>
                     <div class="skill-item mb-3">
                         <div class="d-flex justify-content-between mb-1">
                             <span>UI/UX Design</span>
@@ -330,7 +410,7 @@
             <!-- Tools & Other Skills -->
             <div class="col-lg-3 col-md-6 mb-4 wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400">
                 <div class="skill-category">
-                    <h4 class="text-warning mb-4">Outils</h4>
+                    <h4 class="text-warning mb-4" data-i18n="skills.categories.tools">Outils</h4>
                     <div class="skill-item mb-3">
                         <div class="d-flex justify-content-between mb-1">
                             <span>Git/GitHub</span>
@@ -365,7 +445,7 @@
         <!-- Featured Skills -->
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <h4 class="mb-4" data-aos="fade-up">Technologies principales</h4>
+                <h4 class="mb-4" data-aos="fade-up" data-i18n="skills.featuredTitle">Technologies principales</h4>
                 <div class="featured-skills" data-aos="fade-up" data-aos-delay="200">
                     <span class="badge bg-success me-2 mb-2">C++ 85%</span>
                     <span class="badge bg-success me-2 mb-2">Qt Designer 80%</span>
@@ -386,9 +466,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center mb-5">
-                <h2 class="section-title wow animate__animated animate__fadeInUp" data-aos="fade-up">Mon Parcours</h2>
+                <h2 class="section-title wow animate__animated animate__fadeInUp" data-aos="fade-up" data-i18n="experience.title">Mon Parcours</h2>
                 <div class="section-divider wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200"></div>
-                <p class="lead wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400">
+                <p class="lead wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400" data-i18n="experience.subtitle">
                     Un parcours riche en expériences, apprentissages continus et développement de solutions innovantes
                 </p>
             </div>
@@ -404,11 +484,11 @@
                             <div class="timeline-date">
                                 <i class="fas fa-calendar-alt me-2"></i>2018 - 2023
                             </div>
-                            <h4>Formation Académique</h4>
+                    <h4 data-i18n="experience.t1.title">Formation Académique</h4>
                             <div class="company mb-3">
-                                <i class="fas fa-university me-2"></i>Université de Barikadimy Toamasina
+                        <i class="fas fa-university me-2"></i><span data-i18n="experience.t1.org">Université de Barikadimy Toamasina</span>
                             </div>
-                            <p>
+                    <p data-i18n="experience.t1.text">
                                 Licence en Informatique, suivie de la 2ème année de Master en Génie Informatique. 
                                 Acquisition de solides compétences en développement logiciel, architecture des applications et design d’interface.
                             </p>
@@ -429,11 +509,11 @@
                             <div class="timeline-date">
                                 <i class="fas fa-calendar-alt me-2"></i>2021 - 2023
                             </div>
-                            <h4>Développeur Full-Stack</h4>
+                    <h4 data-i18n="experience.t2.title">Développeur Full-Stack</h4>
                             <div class="company mb-3">
-                                <i class="fas fa-building me-2"></i>DDS (Design and Development Solution)
+                        <i class="fas fa-building me-2"></i><span data-i18n="experience.t2.org">DDS (Design and Development Solution)</span>
                             </div>
-                            <p>
+                    <p data-i18n="experience.t2.text">
                                 Développement d’applications web modernes avec Bootstrap Studio et intégration responsive. 
                                 Conception et maintenance d’applications desktop sous Java et Qt C++. Maîtrise de la Suite Office pour les besoins de reporting et documentation.
                             </p>
@@ -452,15 +532,15 @@
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
                             <div class="timeline-date">
-                                <i class="fas fa-calendar-alt me-2"></i>Depuis 2019
+                                <i class="fas fa-calendar-alt me-2"></i><span data-i18n="experience.since2019">Depuis 2019</span>
                             </div>
-                            <h4>Développement Web et Desktop (Indépendant)</h4>
+                    <h4 data-i18n="experience.t3.title">Développement Web et Desktop (Indépendant)</h4>
                             <div class="company mb-3">
-                                <i class="fas fa-building me-2"></i>Freelance
+                        <i class="fas fa-building me-2"></i><span data-i18n="experience.t3.org">Freelance</span>
                             </div>
-                            <p>
-    Création d’applications desktop et web indépendantes avec Java, C++/Qt et technologies frontend modernes, en mettant l’accent sur l’expérience utilisateur et la performance.
-</p>
+                    <p data-i18n="experience.t3.text">
+                        Création d’applications desktop et web indépendantes avec Java, C++/Qt et technologies frontend modernes, en mettant l’accent sur l’expérience utilisateur et la performance.
+                    </p>
 
                             <div class="technologies">
                                 <span class="badge bg-success me-1 mb-1">Java SE</span>
@@ -480,12 +560,12 @@
         <div class="row mt-5">
             <div class="col-lg-8 mx-auto text-center">
                 <div class="cta-card" data-aos="fade-up">
-                    <h3 class="text-white mb-3">Prêt pour de nouveaux défis</h3>
-                    <p class="text-white-50 mb-4">
+                    <h3 class="text-white mb-3" data-i18n="experience.ctaTitle">Prêt pour de nouveaux défis</h3>
+                    <p class="text-white-50 mb-4" data-i18n="experience.ctaText">
                         Je recherche constamment des opportunités pour grandir et contribuer à des projets innovants.
                     </p>
                     <a href="#contact" class="btn btn-light">
-                        <i class="fas fa-comments me-2"></i>Discutons de votre projet
+                        <i class="fas fa-comments me-2"></i><span data-i18n="experience.ctaBtn">Discutons de votre projet</span>
                     </a>
                 </div>
             </div>
@@ -499,9 +579,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title wow animate__animated animate__fadeInUp" data-aos="fade-up">Mes Projets</h2>
+                    <h2 class="section-title wow animate__animated animate__fadeInUp" data-aos="fade-up" data-i18n="projects.title">Mes Projets</h2>
                     <div class="section-divider wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200"></div>
-                    <p class="lead wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400">
+                    <p class="lead wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400" data-i18n="projects.subtitle">
                         Une sélection de mes réalisations les plus représentatives
                     </p>
                 </div>
@@ -512,10 +592,10 @@
                 <div class="col-12 text-center">
                     <div class="project-filters" data-aos="fade-up" data-aos-delay="200">
                         <button class="btn btn-outline-primary active me-2 mb-2" data-filter="all">
-                            Tous les projets (14)
+                            <span data-i18n="projects.filterAll">Tous les projets</span> (14)
                         </button>
                         <button class="btn btn-outline-primary me-2 mb-2" data-filter="featured">
-                            Projets phares (4)
+                            <span data-i18n="projects.filterFeatured">Projets phares</span> (4)
                         </button>
                     </div>
                 </div>
@@ -542,10 +622,18 @@
             </div>
             <div class="project-content">
                 <h4 class="project-title">Betsimisaraka Tours</h4>
-                <p class="project-description">
+                <p class="project-description" data-i18n="projects.items.0.desc">
                     Site vitrine touristique présentant les services, circuits, tarifs et l’équipe de l’agence. 
                     Inclut un formulaire de contact et une mise en page responsive.
                 </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(0)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/betsimisaraka-tours" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
                 <div class="project-technologies">
                     <span class="badge bg-warning me-1 mb-1">HTML</span>
                     <span class="badge bg-warning me-1 mb-1">CSS</span>
@@ -571,14 +659,22 @@
                         </a>
                     </div>
                 </div>
-                <span class="project-badge">Phare</span>
+                <span class="project-badge" data-i18n="projects.badgeFeatured">Phare</span>
             </div>
             <div class="project-content">
                 <h4 class="project-title">Gestion des Clients</h4>
-                <p class="project-description">
+                <p class="project-description" data-i18n="projects.items.1.desc">
                     Programme en C avec liste chaînée pour gérer les clients d’une banque : ajout, 
                     recherche, transactions et statistiques de comptes.
                 </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(1)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/gestion-clients" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
                 <div class="project-technologies">
                     <span class="badge bg-danger me-1 mb-1">C</span>
                     <span class="badge bg-danger me-1 mb-1">Console</span>
@@ -606,10 +702,18 @@
             </div>
             <div class="project-content">
                 <h4 class="project-title">Gestion de Livres</h4>
-                <p class="project-description">
+                <p class="project-description" data-i18n="projects.items.2.desc">
                     Application de gestion de livres avec Qt et SQLite : ajout, modification, suppression et 
                     affichage des livres enregistrés avec ID automatique.
                 </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(2)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/gestion-livres" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
                 <div class="project-technologies">
                     <span class="badge bg-primary me-1 mb-1">C++</span>
                     <span class="badge bg-primary me-1 mb-1">Qt</span>
@@ -638,10 +742,18 @@
             </div>
             <div class="project-content">
                 <h4 class="project-title">Gestion de Bibliothèque</h4>
-                <p class="project-description">
+                <p class="project-description" data-i18n="projects.items.3.desc">
                     Logiciel Qt/SQLite pour gérer une bibliothèque : enregistrement, mise à jour et suppression 
                     de livres avec affichage structuré.
                 </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(3)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/bibliotheque" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
                 <div class="project-technologies">
                     <span class="badge bg-info me-1 mb-1">C++</span>
                     <span class="badge bg-info me-1 mb-1">Qt</span>
@@ -670,10 +782,18 @@
             </div>
             <div class="project-content">
                 <h4 class="project-title">Gestion Étudiants & Articles</h4>
-                <p class="project-description">
+                <p class="project-description" data-i18n="projects.items.4.desc">
                     Application Qt permettant la gestion des étudiants, matières et articles. 
                     Calcul automatique de moyennes et affichage des notes.
                 </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(4)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/gestion-etudiants" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
                 <div class="project-technologies">
                     <span class="badge bg-success me-1 mb-1">C++</span>
                     <span class="badge bg-success me-1 mb-1">Qt</span>
@@ -702,9 +822,17 @@
             </div>
             <div class="project-content">
                 <h4 class="project-title">Fiche de paie</h4>
-                <p class="project-description">
-                    Une simple application Qt qui permet de génerer un fiche paie à partir des informations du mois.
+                <p class="project-description" data-i18n="projects.items.5.desc">
+                    Une application Qt qui permet de générer une fiche de paie à partir des informations du mois.
                 </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(5)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/fiche-de-paie" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
                 <div class="project-technologies">
                     <span class="badge bg-danger me-1 mb-1">Qt Designer</span>
                     <span class="badge bg-danger me-1 mb-1">C++</span>
@@ -733,10 +861,18 @@
             </div>
             <div class="project-content">
                 <h4 class="project-title">Gestion Contacts et Appels</h4>
-                <p class="project-description">
+                <p class="project-description" data-i18n="projects.items.6.desc">
                     Application Qt pour enregistrer et gérer des contacts, appels et historique. 
                     Recherche et mise à jour rapides des informations.
                 </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(6)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/gestion-contact" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
                 <div class="project-technologies">
                     <span class="badge bg-primary me-1 mb-1">C++</span>
                     <span class="badge bg-primary me-1 mb-1">Qt</span>
@@ -761,14 +897,22 @@
                         </a>
                     </div>
                 </div>
-                <span class="project-badge">Phare</span>
+                <span class="project-badge" data-i18n="projects.badgeFeatured">Phare</span>
             </div>
             <div class="project-content">
                 <h4 class="project-title">Gestion de Logements</h4>
-                <p class="project-description">
+                <p class="project-description" data-i18n="projects.items.7.desc">
                     Logiciel Qt pour gérer les logements étudiants : ajout de chambres, répartition 
                     et suivi des étudiants hébergés.
                 </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(7)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/gestion-logements" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
                 <div class="project-technologies">
                     <span class="badge bg-info me-1 mb-1">C++</span>
                     <span class="badge bg-info me-1 mb-1">Qt</span>
@@ -796,10 +940,18 @@
             </div>
             <div class="project-content">
                 <h4 class="project-title">Tableau de Synthèse Bilan</h4>
-                <p class="project-description">
+                <p class="project-description" data-i18n="projects.items.8.desc">
                     Application Qt générant un tableau de synthèse bilan (actif/passif) avec calculs 
                     et interprétation automatique des résultats.
                 </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(8)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/bilan-fonctionnel" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
                 <div class="project-technologies">
                     <span class="badge bg-success me-1 mb-1">C++</span>
                     <span class="badge bg-success me-1 mb-1">Qt</span>
@@ -824,14 +976,22 @@
                         </a>
                     </div>
                 </div>
-                <span class="project-badge">Phare</span>
+                <span class="project-badge" data-i18n="projects.badgeFeatured">Phare</span>
             </div>
             <div class="project-content">
                 <h4 class="project-title">Outils de Traitement Octave</h4>
-                <p class="project-description">
+                <p class="project-description" data-i18n="projects.items.9.desc">
                     Scripts Octave pour manipuler des matrices, résoudre des équations, 
                     traiter des signaux et effectuer des transformations de Fourier.
                 </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(9)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/outils-traitement" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
                 <div class="project-technologies">
                     <span class="badge bg-secondary me-1 mb-1">Octave</span>
                     <span class="badge bg-secondary me-1 mb-1">Maths</span>
@@ -859,9 +1019,17 @@
         </div>
         <div class="project-content">
             <h4 class="project-title">Voiture Taxi 3D</h4>
-            <p class="project-description">
+            <p class="project-description" data-i18n="projects.items.10.desc">
                 Modélisation 3D d’une voiture taxi avec OpenSCAD. Projet mettant en valeur la conception paramétrique et le rendu.
             </p>
+            <div class="project-ctas">
+                <button class="btn btn-sm btn-primary" onclick="openProjectModal(10)">
+                    <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                </button>
+                <a href="https://github.com/rodibrian/openScad-design" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                    <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                </a>
+            </div>
             <div class="project-technologies">
                 <span class="badge bg-secondary me-1 mb-1">OpenSCAD</span>
                 <span class="badge bg-secondary me-1 mb-1">3D</span>
@@ -889,9 +1057,17 @@
         </div>
         <div class="project-content">
             <h4 class="project-title">Logo / Maquette AEMIA</h4>
-            <p class="project-description">
+            <p class="project-description" data-i18n="projects.items.11.desc">
                 Projet OpenSCAD pour concevoir une maquette 3D et un logo représentant l’association AEMIA.
             </p>
+            <div class="project-ctas">
+                <button class="btn btn-sm btn-primary" onclick="openProjectModal(11)">
+                    <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                </button>
+                <a href="https://github.com/rodibrian/openScad-design" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                    <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                </a>
+            </div>
             <div class="project-technologies">
                 <span class="badge bg-secondary me-1 mb-1">OpenSCAD</span>
                 <span class="badge bg-secondary me-1 mb-1">3D</span>
@@ -917,13 +1093,21 @@
                     </a>
                 </div>
             </div>
-            <span class="project-badge">Phare</span>
+            <span class="project-badge" data-i18n="projects.badgeFeatured">Phare</span>
         </div>
         <div class="project-content">
             <h4 class="project-title">Projecteur Serveur/Client</h4>
-            <p class="project-description">
+            <p class="project-description" data-i18n="projects.items.12.desc">
                Une application qui permet de projeter les informations du serveur vers une vue client,en Java Server.
             </p>
+            <div class="project-ctas">
+                <button class="btn btn-sm btn-primary" onclick="openProjectModal(12)">
+                    <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                </button>
+                <a href="https://github.com/rodibrian/projecteur-serveur_client" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                    <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                </a>
+            </div>
             <div class="project-technologies">
                 <span class="badge bg-secondary me-1 mb-1">Java SE</span>
                 <span class="badge bg-secondary me-1 mb-1">Design</span>
@@ -951,9 +1135,17 @@
         </div>
         <div class="project-content">
             <h4 class="project-title">Dictionnaire Qt</h4>
-            <p class="project-description">
+            <p class="project-description" data-i18n="projects.items.13.desc">
                 Mini-logiciel Qt permettant la gestion d’un dictionnaire : recherche de mots, traduction et consultation.
             </p>
+            <div class="project-ctas">
+                <button class="btn btn-sm btn-primary" onclick="openProjectModal(13)">
+                    <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                </button>
+                <a href="https://github.com/rodibrian/dictionnaire" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                    <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                </a>
+            </div>
             <div class="project-technologies">
                 <span class="badge bg-secondary me-1 mb-1">C++</span>
                 <span class="badge bg-secondary me-1 mb-1">Qt</span>
@@ -976,9 +1168,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title wow animate__animated animate__fadeInUp" data-aos="fade-up">Contactez-moi</h2>
+                    <h2 class="section-title wow animate__animated animate__fadeInUp" data-aos="fade-up" data-i18n="contact.title">Contactez-moi</h2>
                     <div class="section-divider wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200"></div>
-                    <p class="lead wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400">
+                    <p class="lead wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400" data-i18n="contact.subtitle">
                         Prêt à donner vie à votre projet ? Discutons de vos besoins et créons quelque chose d'exceptionnel ensemble
                     </p>
                 </div>
@@ -986,8 +1178,8 @@
             <div class="row">
                 <!-- Contact Info -->
                 <div class="col-lg-6 mb-5 wow animate__animated animate__fadeInLeft" data-aos="fade-right">
-                    <h3 class="mb-4">Parlons de votre projet</h3>
-                    <p class="mb-4">
+                    <h3 class="mb-4" data-i18n="contact.leftTitle">Parlons de votre projet</h3>
+                    <p class="mb-4" data-i18n="contact.leftText">
                         Je suis toujours ouvert aux opportunités de collaboration et aux projets innovants. 
                         N'hésitez pas à me contacter pour discuter de vos idées !
                     </p>
@@ -998,17 +1190,17 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="contact-details">
-                                <h5>Email</h5>
+                                <h5 data-i18n="contact.emailLabel">Email</h5>
                                 <p>embony.rodibrian@gmail.com</p>
                             </div>
                         </a>
                         
-                        <a href="tel:+33612345678" class="contact-item">
+                        <a href="tel:+261342633132" class="contact-item">
                             <div class="contact-icon bg-success">
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="contact-details">
-                                <h5>Téléphone</h5>
+                                <h5 data-i18n="contact.phoneLabel">Téléphone</h5>
                                 <p>+261 34 26 331 32</p>
                             </div>
                         </a>
@@ -1018,18 +1210,18 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="contact-details">
-                                <h5>Localisation</h5>
+                                <h5 data-i18n="contact.locationLabel">Localisation</h5>
                                 <p>Toamasina, Madagascar (Freelance)</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="social-links-contact mt-4">
-                        <h5 class="mb-3">Retrouvez-moi sur</h5>
-                        <a href="https://github.com/votre-username" target="_blank" class="social-link">
+                        <h5 class="mb-3" data-i18n="contact.socialTitle">Retrouvez-moi sur</h5>
+                        <a href="https://github.com/rodibrian" target="_blank" class="social-link" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://linkedin.com/in/votre-profil" target="_blank" class="social-link">
+                        <a href="https://linkedin.com/in/rodibrian-embony" target="_blank" class="social-link" aria-label="LinkedIn">
                             <i class="fab fa-linkedin"></i>
                         </a>
                     </div>
@@ -1038,47 +1230,72 @@
                 <!-- Contact Form -->
                 <div class="col-lg-6 wow animate__animated animate__fadeInRight" data-aos="fade-left">
                     <div class="contact-form-wrapper">
-                        <h3 class="mb-4">Envoyez-moi un message</h3>
+                        <h3 class="mb-4" data-i18n="contact.formTitle">Envoyez-moi un message</h3>
                         
                         <div id="contactSuccess" class="alert alert-success d-none">
                             <div class="text-center">
                                 <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
-                                <h4>Message envoyé !</h4>
-                                <p>Merci pour votre message. Je vous répondrai dans les plus brefs délais.</p>
+                                <h4 data-i18n="contact.successTitle">Message envoyé !</h4>
+                                <p data-i18n="contact.successText">Merci pour votre message. Je vous répondrai dans les plus brefs délais.</p>
                             </div>
                         </div>
 
                         <div id="contactError" class="alert alert-danger d-none">
                             <div class="text-center">
                                 <i class="fas fa-triangle-exclamation fa-3x text-danger mb-3"></i>
-                                <h4>Envoi échoué</h4>
-                                <p class="mb-0">Une erreur est survenue. Réessayez dans quelques instants.</p>
+                                <h4 data-i18n="contact.errorTitle">Envoi échoué</h4>
+                                <p class="mb-0" data-i18n="contact.errorText">Une erreur est survenue. Réessayez dans quelques instants.</p>
                             </div>
                         </div>
                         
                         <form id="contactForm">
                             <div class="row">
                                 <div class="col-md-6 mb-3">
-                                    <label for="name" class="form-label">Nom complet *</label>
+                                    <label for="name" class="form-label" data-i18n="contact.nameLabel">Nom complet *</label>
                                     <input type="text" class="form-control" id="name" name="name" required>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <label for="email" class="form-label">Email *</label>
+                                    <label for="email" class="form-label" data-i18n="contact.email2Label">Email *</label>
                                     <input type="email" class="form-control" id="email" name="email" required>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="subject" class="form-label">Sujet *</label>
+                                <label for="subject" class="form-label" data-i18n="contact.subjectLabel">Sujet *</label>
                                 <input type="text" class="form-control" id="subject" name="subject" required>
                             </div>
                             <div class="mb-3">
-                                <label for="message" class="form-label">Message *</label>
+                                <label for="message" class="form-label" data-i18n="contact.messageLabel">Message *</label>
                                 <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">
-                                <i class="fas fa-paper-plane me-2"></i>Envoyer le message
+                                <i class="fas fa-paper-plane me-2"></i><span data-i18n="contact.submit">Envoyer le message</span>
                             </button>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-5 section-transition">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="final-cta" data-aos="fade-up">
+                        <div class="row align-items-center g-4">
+                            <div class="col-md-8">
+                                <h3 class="text-white fw-bold mb-2" data-i18n="finalCta.title">Vous avez un projet en tête ?</h3>
+                                <p class="text-white-50 mb-0" data-i18n="finalCta.text">
+                                    Construisons quelque chose de propre, rapide et fiable — avec une expérience utilisateur au niveau.
+                                </p>
+                            </div>
+                            <div class="col-md-4 text-md-end">
+                                <a href="#contact" class="btn btn-light btn-lg w-100 d-md-inline-block" style="max-width: 260px;">
+                                    <i class="fas fa-paper-plane me-2"></i><span data-i18n="finalCta.button">Me contacter</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1091,20 +1308,20 @@
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <h5>Rodi Brian</h5>
-                    <p class="text-secondary">Développeur passionné créant des expériences web modernes et performantes.</p>
+                    <p class="text-secondary" data-i18n="footer.tagline">Développeur passionné créant des expériences web modernes et performantes.</p>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <h5>Navigation</h5>
+                    <h5 data-i18n="footer.navigation">Navigation</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#home" class="footer-link">Accueil</a></li>
-                        <li><a href="#about" class="footer-link">À propos</a></li>
-                        <li><a href="#skills" class="footer-link">Compétences</a></li>
-                        <li><a href="#projects" class="footer-link">Projets</a></li>
-                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                        <li><a href="#home" class="footer-link" data-i18n="nav.home">Accueil</a></li>
+                        <li><a href="#about" class="footer-link" data-i18n="nav.value">Proposition</a></li>
+                        <li><a href="#skills" class="footer-link" data-i18n="nav.skills">Compétences</a></li>
+                        <li><a href="#projects" class="footer-link" data-i18n="nav.projects">Projets</a></li>
+                        <li><a href="#contact" class="footer-link" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <h5>Contact</h5>
+                    <h5 data-i18n="footer.contact">Contact</h5>
                     <p class="text-secondary">
                         <i class="fas fa-envelope me-2"></i>embony.rodibrian@gmail.com
                     </p>
@@ -1127,11 +1344,11 @@
             <hr class="my-4">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="text-white mb-0">&copy; 2025 Rodi Brian. Tous droits réservés.</p>
+                    <p class="text-white mb-0" data-i18n="footer.rights">&copy; 2025 Rodi Brian. Tous droits réservés.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <p class="text-white mb-0">
-                        Créé avec <i class="fas fa-heart text-danger"></i> et Bootstrap
+                        <span data-i18n="footer.madeWith">Créé avec</span> <i class="fas fa-heart text-danger"></i> <span data-i18n="footer.andBootstrap">et Bootstrap</span>
                     </p>
                 </div>
             </div>
@@ -1143,21 +1360,23 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitle">Titre du projet</h5>
+                    <h5 class="modal-title" id="modalTitle" data-i18n="modal.titlePlaceholder">Titre du projet</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <img id="modalImage" src="" alt="" class="img-fluid mb-3 rounded">
-                    <p id="modalDescription">Description du projet</p>
+                    <p id="modalDescription" data-i18n="modal.descriptionPlaceholder">Description du projet</p>
                     <div class="mb-3">
-                        <h6>Technologies utilisées</h6>
+                        <h6 data-i18n="modal.techUsed">Technologies utilisées</h6>
                         <div id="modalTechnologies"></div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    
+                    <a id="modalDemo" href="#" target="_blank" rel="noopener" class="btn btn-primary d-none">
+                        <i class="fas fa-arrow-up-right-from-square me-2"></i><span data-i18n="modal.liveDemo">Live Demo</span>
+                    </a>
                     <a id="modalGithub" href="#" target="_blank" class="btn btn-outline-secondary">
-                        <i class="fab fa-github me-2"></i>Code source
+                        <i class="fab fa-github me-2"></i><span data-i18n="modal.sourceCode">Code source</span>
                     </a>
                 </div>
             </div>

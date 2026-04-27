@@ -14,6 +14,10 @@
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 20px;
 }
 
 /* Global Styles */
@@ -191,6 +195,47 @@ html {
     transform: translateY(-2px);
 }
 
+/* Language switch (top-right) */
+.lang-switch {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.lang-btn {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.92);
+    padding: 0.35rem 0.55rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 700;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.10);
+    border-color: rgba(255, 255, 255, 0.26);
+}
+
+.lang-btn.active {
+    background: rgba(59, 130, 246, 0.18);
+    border-color: rgba(59, 130, 246, 0.42);
+}
+
+.lang-flag {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.lang-code {
+    font-size: 0.85rem;
+    letter-spacing: 0.4px;
+}
+
 /* Hero Section */
 .hero-section {
     min-height: 100vh;
@@ -205,6 +250,40 @@ html {
     overflow: hidden;
     background-size: 140% 140%, 140% 140%, 140% 140%, 100% 100%;
     animation: hero-mesh-shift 18s ease-in-out infinite alternate;
+}
+
+.hero-role {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: rgba(255, 255, 255, 0.88);
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.hero-subtitle {
+    max-width: 52rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.btn-ghost {
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+}
+
+.btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.26);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+    color: #fff;
 }
 
 .hero-background {
@@ -443,11 +522,114 @@ html {
         radial-gradient(700px 380px at 90% 30%, rgba(139, 92, 246, 0.14), transparent 60%),
         radial-gradient(700px 380px at 50% 90%, rgba(16, 185, 129, 0.10), transparent 55%);
     pointer-events: none;
+    z-index: 0;
+    will-change: transform;
+    animation: section-mesh-drift 18s ease-in-out infinite alternate;
+}
+
+.about-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to right, rgba(31, 41, 55, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(31, 41, 55, 0.06) 1px, transparent 1px);
+    background-size: 140px 140px;
+    opacity: 0.22;
+    mask-image: radial-gradient(700px 300px at 50% 20%, rgba(0,0,0,0.85), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    will-change: transform;
+    animation: section-grid-drift 26s linear infinite;
 }
 
 .about-section .container {
     position: relative;
     z-index: 1;
+}
+
+/* Skills + Experience animated backgrounds (light, dynamic) */
+#skills,
+#experience {
+    position: relative;
+    overflow: hidden;
+}
+
+#skills::before,
+#experience::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    will-change: transform;
+    animation: section-mesh-drift 22s ease-in-out infinite alternate;
+}
+
+#skills::after,
+#experience::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.22;
+    background:
+        linear-gradient(to right, rgba(31, 41, 55, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(31, 41, 55, 0.06) 1px, transparent 1px);
+    background-size: 160px 160px;
+    mask-image: radial-gradient(720px 320px at 50% 22%, rgba(0,0,0,0.85), transparent 70%);
+    will-change: transform;
+    animation: section-grid-drift 28s linear infinite;
+}
+
+#skills::before {
+    background:
+        radial-gradient(900px 520px at 15% 15%, rgba(59, 130, 246, 0.14), transparent 60%),
+        radial-gradient(760px 480px at 90% 30%, rgba(139, 92, 246, 0.12), transparent 60%),
+        radial-gradient(820px 540px at 50% 92%, rgba(16, 185, 129, 0.10), transparent 55%);
+}
+
+#experience::before {
+    background:
+        radial-gradient(900px 520px at 20% 10%, rgba(245, 158, 11, 0.10), transparent 60%),
+        radial-gradient(760px 480px at 85% 25%, rgba(59, 130, 246, 0.12), transparent 60%),
+        radial-gradient(820px 540px at 45% 95%, rgba(139, 92, 246, 0.10), transparent 55%);
+}
+
+#skills > .container,
+#experience > .container {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes section-mesh-drift {
+    0% { transform: translate3d(0, 0, 0) scale(1); filter: saturate(1) brightness(1); }
+    100% { transform: translate3d(14px, -10px, 0) scale(1.02); filter: saturate(1.06) brightness(1.02); }
+}
+
+@keyframes section-grid-drift {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-28px, 16px, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-section::before,
+    .about-section::after,
+    #skills::before,
+    #skills::after,
+    #experience::before,
+    #experience::after {
+        animation: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section::after,
+    #skills::after,
+    #experience::after {
+        background-size: 120px 120px;
+    }
 }
 
 .about-image {
@@ -574,6 +756,49 @@ html {
     height: 100%;
 }
 
+.skill-highlight {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78));
+    border: 1px solid rgba(31, 41, 55, 0.08);
+    border-radius: 16px;
+    padding: 1.1rem 1.15rem;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    height: 100%;
+}
+
+.skill-highlight:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(59, 130, 246, 0.22);
+}
+
+.skill-highlight-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex: 0 0 auto;
+    box-shadow: 0 14px 24px rgba(0, 0, 0, 0.15);
+}
+
+.skill-highlight-title {
+    font-weight: 700;
+    color: var(--dark-color);
+    line-height: 1.1;
+}
+
+.skill-highlight-tags {
+    color: #6b7280;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
 .skill-category:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
@@ -668,6 +893,38 @@ html {
     text-align: center;
 }
 
+/* Final CTA */
+.final-cta {
+    background:
+        radial-gradient(900px 480px at 20% 10%, rgba(59, 130, 246, 0.26), transparent 60%),
+        radial-gradient(700px 420px at 90% 20%, rgba(139, 92, 246, 0.20), transparent 60%),
+        linear-gradient(135deg, #0b1220 0%, #121a33 35%, #140b2a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 22px;
+    padding: 2.25rem;
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
+    position: relative;
+    overflow: hidden;
+}
+
+.final-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 110px 110px;
+    opacity: 0.22;
+    mask-image: radial-gradient(600px 300px at 40% 20%, rgba(0,0,0,0.9), transparent 70%);
+    pointer-events: none;
+}
+
+.final-cta > * {
+    position: relative;
+    z-index: 1;
+}
+
 /* Projects Section */
 .project-filters .btn {
     border-radius: 25px;
@@ -758,6 +1015,22 @@ html {
 
 .project-content {
     padding: 1.5rem;
+}
+
+.project-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.9rem;
+}
+
+.project-ctas .btn {
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.project-ctas .btn-outline-secondary {
+    border-width: 2px;
 }
 
 .project-title {
@@ -1231,6 +1504,10 @@ html {
         display: block;
         width: 100%;
         margin-bottom: 0.5rem;
+    }
+
+    .project-ctas .btn {
+        width: 100%;
     }
 }
 
