@@ -116,15 +116,39 @@ function initGalleryFilters() {
     button.addEventListener("click", () => {
       const filter = button.dataset.filter || "all";
 
+      // Mettre à jour l'état actif des boutons
       galleryFilterButtons.forEach((btn) => btn.classList.toggle("active", btn === button));
 
-      galleryItems.forEach((item) => {
+      // Animer les items avec des délais échelonnés
+      const itemsToShow = [];
+      const itemsToHide = [];
+
+      galleryItems.forEach((item, index) => {
         const matches = filter === "all" || item.dataset.category === filter;
-        item.classList.toggle("is-hidden", !matches);
+        if (matches) {
+          itemsToShow.push({ item, index });
+        } else {
+          itemsToHide.push({ item, index });
+        }
+      });
+
+      // Masquer les items avec délai
+      itemsToHide.forEach(({ item }) => {
+        item.classList.add("is-hidden");
+        item.classList.remove("is-visible");
+      });
+
+      // Afficher les items avec délai échelonné
+      itemsToShow.forEach(({ item, index }) => {
+        item.classList.remove("is-hidden");
+        setTimeout(() => {
+          item.classList.add("is-visible");
+        }, index * 60);
       });
     });
   });
 }
+
 
 function initSmoothScroll() {
   const easeInOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
@@ -258,5 +282,7 @@ initActiveNav();
 initContactForm();
 initGalleryFilters();
 initSmoothScroll();
+initScrollTopButton();
+initCertificationCarousel();
 initScrollTopButton();
 initCertificationCarousel();
