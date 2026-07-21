@@ -186,6 +186,25 @@ img { max-width: 100%; display: block; }
   gap: 0.8rem;
   margin-bottom: 0.7rem;
 }
+.timeline-title-group {
+  display: flex;
+  align-items: start;
+  gap: 0.8rem;
+}
+.company-mark {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  background: var(--surface-alt);
+}
+.company-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .timeline-date { color: var(--accent); font-weight: 700; margin: 0 0 0.4rem; }
 .timeline-card h3 { margin: 0 0 0.5rem; }
 .timeline-card p { margin: 0; color: var(--muted); }
@@ -257,19 +276,31 @@ img { max-width: 100%; display: block; }
 .experience-panel h3 { margin-top: 0; margin-bottom: 0.55rem; }
 .experience-panel p { color: var(--muted); margin: 0 0 0.9rem; }
 .gallery-grid { display: grid; gap: 0.8rem; }
+.collage-grid {
+  grid-template-columns: 1fr;
+}
 .gallery-card {
   overflow: hidden;
   border-radius: 18px;
   border: 1px solid var(--border);
   background: var(--surface-alt);
 }
-.gallery-card img { width: 100%; height: 140px; object-fit: cover; }
-.gallery-card span {
-  display: block;
-  padding: 0.7rem 0.8rem;
-  font-weight: 700;
-  color: var(--text);
+.gallery-card img { width: 100%; height: 150px; object-fit: cover; }
+.gallery-caption {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.8rem 0.9rem 0.95rem;
 }
+.gallery-caption strong {
+  color: var(--text);
+  font-size: 0.95rem;
+}
+.gallery-caption span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.tall-card img { height: 190px; }
 .panel-links { display: grid; gap: 0.55rem; }
 .panel-links a { justify-content: flex-start; }
 
