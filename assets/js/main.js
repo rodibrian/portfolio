@@ -5,6 +5,8 @@ const body = document.body;
 const revealItems = Array.from(document.querySelectorAll(".reveal"));
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
+const galleryFilterButtons = Array.from(document.querySelectorAll(".filter-btn"));
+const galleryItems = Array.from(document.querySelectorAll(".gallery-item"));
 
 function applyTheme(theme) {
   body.classList.toggle("dark", theme === "dark");
@@ -85,9 +87,27 @@ function initContactForm() {
   });
 }
 
+function initGalleryFilters() {
+  if (!galleryFilterButtons.length || !galleryItems.length) return;
+
+  galleryFilterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter || "all";
+
+      galleryFilterButtons.forEach((btn) => btn.classList.toggle("active", btn === button));
+
+      galleryItems.forEach((item) => {
+        const matches = filter === "all" || item.dataset.category === filter;
+        item.classList.toggle("is-hidden", !matches);
+      });
+    });
+  });
+}
+
 initTheme();
 initMenu();
 initThemeToggle();
 initReveal();
 initActiveNav();
 initContactForm();
+initGalleryFilters();
