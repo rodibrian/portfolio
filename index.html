@@ -90,51 +90,90 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <div class="hero-background">
-            <div class="floating-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-                <div class="shape shape-3"></div>
-                <div class="shape shape-4"></div>
-            </div>
-        </div>
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-lg-8 mx-auto text-center text-white">
-                    <h1 class="display-3 fw-bold mb-4" data-aos="fade-up">
-                        Rodi Brian
-                    </h1>
-                    <div class="hero-role mb-2" data-aos="fade-up" data-aos-delay="150">
-                        <span data-i18n="hero.role">Full-Stack Developer | Web • UI/UX • Desktop (Qt)</span>
-                    </div>
-                    <h2 class="h3 mb-4 text-primary" data-aos="fade-up" data-aos-delay="200">
-                        <span id="typewriter"></span>
-                    </h2>
-                    <div class="d-flex align-items-center justify-content-center mb-4" data-aos="fade-up" data-aos-delay="400">
-                        <i class="fas fa-map-marker-alt me-2"></i>
-                        <span data-i18n="hero.location">Freelance à distance</span>
-                    </div>
-                    <p class="lead mb-5 hero-subtitle" data-aos="fade-up" data-aos-delay="600" data-i18n="hero.subtitle">
-                        Je conçois des applications modernes, performantes et faciles à utiliser — avec une attention forte à l’UI/UX, à la maintenabilité et à l’impact business.
+                    <h1 class="display-3 fw-bold mb-3" data-aos="fade-up" data-i18n="hero.title">Rodi Brian — Développeur Full-Stack</h1>
+                    <p class="lead mb-4 hero-subtitle" data-aos="fade-up" data-aos-delay="150" data-i18n="hero.subtitle">
+                        Développement d'applications web et desktop performantes, UI/UX pensé pour l'utilisateur et code maintenable.
                     </p>
-                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="800">
-                        <a href="#projects" class="btn btn-primary btn-lg me-3">
-                            <i class="fas fa-eye me-2"></i><span data-i18n="hero.ctaProjects">Voir mes projets</span>
+                    <div class="d-flex justify-content-center gap-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <a href="#projects" class="btn btn-primary btn-lg">
+                            <i class="fas fa-briefcase me-2"></i><span data-i18n="hero.ctaProjects">Voir mes projets</span>
                         </a>
-                        <a href="assets/docs/RODI_BRIAN_CV.pdf" class="btn btn-outline-light btn-lg me-3" download data-i18n="hero.cvHref" data-i18n-attr="href">
-                            <i class="fas fa-file-arrow-down me-2"></i><span data-i18n="hero.ctaCv">Télécharger CV</span>
+                        <a href="mailto:embony.rodibrian@gmail.com" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-phone me-2"></i><span data-i18n="hero.ctaCall">Réserver un appel</span>
                         </a>
-                        <a href="#contact" class="btn btn-ghost btn-lg">
-                            <i class="fas fa-envelope me-2"></i><span data-i18n="hero.ctaContact">Me contacter</span>
-                        </a>
+                    </div>
+                    <div class="hero-meta text-white-50" data-aos="fade-up" data-aos-delay="450">
+                        <span class="me-3"><i class="fas fa-map-marker-alt me-1"></i><span data-i18n="hero.location">Freelance — Toamasina, Madagascar</span></span>
+                        <span><i class="fas fa-envelope me-1"></i><a href="mailto:embony.rodibrian@gmail.com" class="text-white-50">embony.rodibrian@gmail.com</a></span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <a href="#about" class="text-white">
-                <i class="fas fa-chevron-down"></i>
-            </a>
+    </section>
+
+    <!-- Services Section (inserted before Skills) -->
+    <section id="services" class="py-5 section-transition">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up" data-i18n="services.title">Services</h2>
+                    <div class="section-divider" data-aos="fade-up" data-aos-delay="150"></div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-i18n="services.s1">
+                    <div class="service-card p-4 h-100">
+                        <div class="service-icon mb-3"><i class="fas fa-code fa-2x text-primary"></i></div>
+                        <h5 data-i18n="services.s1.title">Développement Web</h5>
+                        <p data-i18n="services.s1.desc">Applications web responsives, intégration front-end et APIs robustes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100" data-i18n="services.s2">
+                    <div class="service-card p-4 h-100">
+                        <div class="service-icon mb-3"><i class="fas fa-desktop fa-2x text-purple"></i></div>
+                        <h5 data-i18n="services.s2.title">Applications Desktop</h5>
+                        <p data-i18n="services.s2.desc">Solutions C++ / Qt performantes pour usages métiers critiques.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200" data-i18n="services.s3">
+                    <div class="service-card p-4 h-100">
+                        <div class="service-icon mb-3"><i class="fas fa-paint-brush fa-2x text-warning"></i></div>
+                        <h5 data-i18n="services.s3.title">Design & UI/UX</h5>
+                        <p data-i18n="services.s3.desc">Conception d'interfaces centrées utilisateur, prototypes et maquettes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases / Success Stories Section (inserted before Skills) -->
+    <section id="cases" class="py-5 bg-light section-transition">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up" data-i18n="cases.title">Études de cas</h2>
+                    <div class="section-divider" data-aos="fade-up" data-aos-delay="150"></div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-up" data-i18n="cases.items.0">
+                    <div class="case-card p-4 h-100">
+                        <h5 class="fw-bold" data-i18n="cases.items.0.title">Smart‑Sekoly — Plateforme éducative</h5>
+                        <p data-i18n="cases.items.0.desc">Conception d'une plateforme éducative avec amélioration UX et performance.</p>
+                        <a href="#projects" class="text-primary" data-i18n="cases.items.0.cta">Voir le projet →</a>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-i18n="cases.items.1">
+                    <div class="case-card p-4 h-100">
+                        <h5 class="fw-bold" data-i18n="cases.items.1.title">MadaFlow ERP — Gestion d'entreprise</h5>
+                        <p data-i18n="cases.items.1.desc">ERP métier optimisé pour la gestion des flux et des stocks (placeholder).</p>
+                        <a href="#projects" class="text-primary" data-i18n="cases.items.1.cta">Voir le projet →</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -476,6 +515,30 @@
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <div class="timeline">
+
+                    <!-- New Experience: CEO Baia Creative Solutions -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="50">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">
+                                <i class="fas fa-calendar-alt me-2"></i>Depuis Janvier 2026
+                            </div>
+                            <h4>CEO — Baia Creative Solutions</h4>
+                            <div class="company mb-3">
+                                <i class="fas fa-briefcase me-2"></i><span>Baia Creative Solutions</span>
+                            </div>
+                            <p>
+                                Création et direction d'une startup offrant : <strong>Design graphique & création numérique</strong>,
+                                <strong> Conception & solutions web</strong>, et <strong>Multiservices numériques & bureautiques</strong>.
+                            </p>
+                            <p class="fst-italic">“Créer du design. Simplifier le numérique”</p>
+                            <div class="technologies">
+                                <span class="badge bg-purple me-1 mb-1">Design</span>
+                                <span class="badge bg-primary me-1 mb-1">Web</span>
+                                <span class="badge bg-warning me-1 mb-1">Multiservices</span>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Experience 4 -->
                     <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">

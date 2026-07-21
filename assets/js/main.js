@@ -30,10 +30,33 @@ document.addEventListener('DOMContentLoaded', function() {
     initBackToTop();
     initSmoothScroll();
     initI18n();
+    // Prepare project images for lazy-loading (convert src -> data-src)
+    prepareProjectImagesForLazy();
+    // Activate lazy loading observer
+    initLazyLoading();
 });
 
+// Convert existing project image `src` to `data-src` and replace with tiny placeholder
+function prepareProjectImagesForLazy() {
+    const placeholder = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
+    document.querySelectorAll('img').forEach(img => {
+        try {
+            const src = img.getAttribute('src') || '';
+            if (src.includes('assets/img/projets/')) {
+                // If data-src already set, skip
+                if (!img.hasAttribute('data-src')) {
+                    img.setAttribute('data-src', src);
+                    img.setAttribute('src', placeholder);
+                    img.classList.add('lazy');
+                    img.setAttribute('loading', 'lazy');
+                }
+            }
+        } catch (_) { /* ignore */ }
+    });
+}
+
 // --- i18n (FR default) -------------------------------------------------------
-const I18N = {
+let I18N = {
     fr: {
         meta: {
             title: "Rodi Brian | Full-Stack Developer",
@@ -392,6 +415,41 @@ function initI18n() {
     });
 
     applyI18n(initial);
+}
+
+// Enhanced initI18n: attempt to load external i18n JSON and merge with embedded I18N
+function initI18n() {
+    const defaultLang = document.documentElement.getAttribute('data-default-lang') || 'fr';
+    const saved = localStorage.getItem('lang');
+    const initial = saved || defaultLang;
+
+    // Merge external i18n if present
+    fetch('assets/i18n.json', { cache: 'no-cache' })
+        .then(res => {
+            if (!res.ok) throw new Error('no external i18n');
+            return res.json();
+        })
+        .then(data => {
+            // shallow merge top-level locales
+            Object.keys(data).forEach(locale => {
+                I18N[locale] = Object.assign({}, I18N[locale] || {}, data[locale]);
+            });
+        })
+        .catch(() => {
+            // ignore and continue with embedded I18N
+        })
+        .finally(() => {
+            document.querySelectorAll('.lang-btn[data-lang]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const lang = btn.getAttribute('data-lang');
+                    if (!lang) return;
+                    localStorage.setItem('lang', lang);
+                    applyI18n(lang);
+                });
+            });
+
+            applyI18n(initial);
+        });
 }
 
 // EmailJS configuration (fill these values)

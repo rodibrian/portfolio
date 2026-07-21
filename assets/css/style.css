@@ -799,6 +799,48 @@ html {
     font-size: 0.95rem;
 }
 
+/* New: Services & Cases cards */
+.service-card,
+.case-card {
+    background: white;
+    border-radius: 14px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(31,41,55,0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.service-card:hover,
+.case-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+}
+.service-card .service-icon,
+.case-card .case-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: rgba(59,130,246,0.06);
+}
+.service-card h5,
+.case-card h5 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.service-card p,
+.case-card p {
+    color: #6b7280;
+}
+
+/* Hero meta small line */
+.hero-meta a { color: inherit; text-decoration: underline; }
+
+@media (max-width: 768px) {
+    .hero-section { padding-top: 4rem; padding-bottom: 4rem; }
+    .section-title { font-size: 2rem; }
+}
+
 .skill-category:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl);

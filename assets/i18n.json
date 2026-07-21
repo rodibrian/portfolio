@@ -1,0 +1,46 @@
+{
+  "fr": {
+    "hero": {
+      "title": "Rodi Brian — Développeur Full-Stack",
+      "subtitle": "Développement d'applications web et desktop performantes, UI/UX pensé pour l'utilisateur et code maintenable.",
+      "ctaProjects": "Voir mes projets",
+      "ctaCall": "Réserver un appel",
+      "location": "Freelance — Toamasina, Madagascar"
+    },
+    "services": {
+      "title": "Services",
+      "s1": { "title": "Développement Web", "desc": "Applications web responsives, intégration front-end et APIs robustes." },
+      "s2": { "title": "Applications Desktop", "desc": "Solutions C++ / Qt performantes pour usages métiers critiques." },
+      "s3": { "title": "Design & UI/UX", "desc": "Conception d'interfaces centrées utilisateur, prototypes et maquettes." }
+    },
+    "cases": {
+      "title": "Études de cas",
+      "items": [
+        { "title": "Smart‑Sekoly — Plateforme éducative", "desc": "Conception d'une plateforme éducative avec amélioration UX et performance.", "cta": "Voir le projet →" },
+        { "title": "MadaFlow ERP — Gestion d'entreprise", "desc": "ERP métier optimisé pour la gestion des flux et des stocks (placeholder).", "cta": "Voir le projet →" }
+      ]
+    }
+  },
+  "en": {
+    "hero": {
+      "title": "Rodi Brian — Full-Stack Developer",
+      "subtitle": "Building performant web and desktop apps with user-centered UI/UX and maintainable code.",
+      "ctaProjects": "See projects",
+      "ctaCall": "Book a call",
+      "location": "Freelance — Toamasina, Madagascar"
+    },
+    "services": {
+      "title": "Services",
+      "s1": { "title": "Web Development", "desc": "Responsive web apps, front-end integration and robust APIs." },
+      "s2": { "title": "Desktop Applications", "desc": "High-performance C++ / Qt solutions for critical business use." },
+      "s3": { "title": "Design & UI/UX", "desc": "User-centered interface design, prototypes and mockups." }
+    },
+    "cases": {
+      "title": "Case Studies",
+      "items": [
+        { "title": "Smart‑Sekoly — Education Platform", "desc": "Designed an education platform improving UX and performance.", "cta": "View project →" },
+        { "title": "MadaFlow ERP — Enterprise Management", "desc": "ERP optimized for handling flows and inventory (placeholder).", "cta": "View project →" }
+      ]
+    }
+  }
+}
