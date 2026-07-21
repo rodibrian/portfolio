@@ -26,7 +26,10 @@ body.dark {
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
 body {
   margin: 0;
   font-family: Inter, sans-serif;
@@ -609,6 +612,27 @@ img { max-width: 100%; display: block; }
 .form-status { min-height: 1.2rem; color: var(--accent); font-weight: 600; }
 .site-footer { padding: 1.2rem 0 2rem; }
 .footer-row { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); align-items: center; }
+.scroll-top {
+  position: fixed;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 40;
+}
+.scroll-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
 @media (max-width: 920px) {
   .hero-grid, .about-grid, .contact-grid, .skills-grid, .project-grid, .cards-row, .two-col-list { grid-template-columns: 1fr 1fr; }

@@ -108,6 +108,65 @@ function initGalleryFilters() {
   });
 }
 
+function initSmoothScroll() {
+  const easeInOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+
+  const smoothScrollTo = (targetY, duration = 700) => {
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    const startTime = performance.now();
+
+    const step = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeInOutCubic(progress);
+
+      window.scrollTo(0, startY + distance * eased);
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+
+    window.requestAnimationFrame(step);
+  };
+
+  document.querySelectorAll('a[href^="#"], button[data-scroll-target]').forEach((element) => {
+    element.addEventListener("click", (event) => {
+      const targetId = element.getAttribute("href") || element.getAttribute("data-scroll-target");
+      if (!targetId || targetId === "#") return;
+
+      const target = document.querySelector(targetId);
+      if (!target) return;
+
+      event.preventDefault();
+
+      const topOffset = target.getBoundingClientRect().top + window.scrollY - 92;
+      smoothScrollTo(topOffset, 700);
+
+      window.setTimeout(() => {
+        history.pushState(null, "", targetId);
+      }, 120);
+    });
+  });
+}
+
+function initScrollTopButton() {
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+  if (!scrollTopBtn) return;
+
+  const toggleVisibility = () => {
+    scrollTopBtn.classList.toggle("is-visible", window.scrollY > 500);
+  };
+
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  window.addEventListener("scroll", toggleVisibility, { passive: true });
+  toggleVisibility();
+}
+
 function initCertificationCarousel() {
   if (!certificationTrack || !certificationCards.length) return;
 
@@ -180,4 +239,6 @@ initReveal();
 initActiveNav();
 initContactForm();
 initGalleryFilters();
+initSmoothScroll();
+initScrollTopButton();
 initCertificationCarousel();
