@@ -531,10 +531,27 @@ img { max-width: 100%; display: block; }
 .cert-content p { margin: 0; color: var(--muted); line-height: 1.6; }
 .cards-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
 .two-col-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-.contact-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 1rem; }
-.contact-form { padding: 1.2rem; display: grid; gap: 0.9rem; }
+.contact-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 1rem; align-items: start; }
+.contact-card, .contact-form { padding: 1.25rem; align-self: start; }
+.contact-card { display: grid; gap: 0.9rem; }
+.contact-list { display: grid; gap: 0.6rem; }
+.contact-list li { display: flex; align-items: center; gap: 0.55rem; color: var(--muted); }
+.map-card {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  min-height: 220px;
+}
+.map-card iframe {
+  width: 100%;
+  height: 220px;
+  border: 0;
+}
+.contact-form { display: grid; gap: 0.9rem; height: fit-content; }
+.form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; }
 .contact-form label { display: grid; gap: 0.4rem; font-weight: 600; color: var(--muted); }
 .contact-form input, .contact-form textarea { width: 100%; border: 1px solid var(--border); border-radius: 14px; padding: 0.8rem 0.9rem; font: inherit; background: var(--surface-alt); color: var(--text); }
+.contact-form input:focus, .contact-form textarea:focus { outline: 2px solid rgba(37, 99, 235, 0.2); border-color: var(--accent); }
 .form-status { min-height: 1.2rem; color: var(--accent); font-weight: 600; }
 .site-footer { padding: 1.2rem 0 2rem; }
 .footer-row { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); align-items: center; }
@@ -577,5 +594,6 @@ img { max-width: 100%; display: block; }
   .hero-section { padding-top: 3.5rem; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .about-grid, .contact-grid, .skills-grid, .project-grid, .cards-row, .two-col-list { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
   .footer-row { flex-direction: column; align-items: flex-start; }
 }

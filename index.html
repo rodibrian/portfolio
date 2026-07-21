@@ -694,30 +694,46 @@
         <div class="contact-card reveal">
           <p class="eyebrow">Contact</p>
           <h2>Discutons de votre projet.</h2>
-          <p>Disponible pour des missions freelance, des collaborations à distance et des projets à moyen terme.</p>
+          <p>Disponible pour des missions freelance, des collaborations à distance et des projets à moyen terme. Je travaille aussi à travers Baia Creative Solutions pour accompagner les clients dans leurs besoins numériques.</p>
           <ul class="contact-list">
             <li><i class="fa-solid fa-envelope"></i> embony.rodibrian@gmail.com</li>
             <li><i class="fa-solid fa-phone"></i> +261 34 26 331 32</li>
             <li><i class="fa-solid fa-location-dot"></i> Toamasina, Madagascar</li>
+            <li><i class="fa-solid fa-building"></i> Baia Creative Solutions</li>
           </ul>
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/rodibrian-embony/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://github.com/rodibrian/" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.facebook.com/embony.rodibrian" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/rodibrian-embony/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/rodibrian/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.facebook.com/embony.rodibrian" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://x.com/e_rodibrian" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+          <div class="map-card">
+            <iframe
+              src="https://www.google.com/maps?q=Toamasina%20Madagascar&z=12&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Carte de Toamasina"
+            ></iframe>
           </div>
         </div>
         <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <label>
+              Nom
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+          </div>
           <label>
-            Nom
-            <input type="text" name="name" required />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" required />
+            Objet
+            <input type="text" name="subject" placeholder="Ex. Projet web, application desktop, collaboration" />
           </label>
           <label>
             Message
-            <textarea name="message" rows="5" required></textarea>
+            <textarea name="message" rows="6" required></textarea>
           </label>
           <button class="btn btn-primary" type="submit">Envoyer</button>
           <p class="form-status" id="formStatus" aria-live="polite"></p>
