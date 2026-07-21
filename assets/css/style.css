@@ -431,17 +431,23 @@ img { max-width: 100%; display: block; }
 .education-top {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+.education-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 .education-year {
-  margin: 0 0 0.25rem;
+  margin: 0;
   color: var(--accent);
   font-weight: 700;
+  white-space: nowrap;
 }
 .education-content h3 { margin: 0; }
-.education-top span {
+.education-institution {
   font-size: 0.9rem;
   color: var(--muted);
   font-weight: 600;
@@ -449,6 +455,25 @@ img { max-width: 100%; display: block; }
 .education-content p {
   margin: 0 0 0.55rem;
   color: var(--muted);
+}
+.education-details {
+  margin-top: 0.6rem;
+}
+.education-details summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 700;
+  list-style: none;
+}
+.education-details summary::-webkit-details-marker {
+  display: none;
+}
+.education-details-body {
+  margin-top: 0.55rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: 14px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
 }
 .education-content ul {
   margin: 0;
