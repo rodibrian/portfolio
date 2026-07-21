@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+  <rect width="900" height="900" rx="48" fill="#e8eef8"/>
+  <circle cx="450" cy="340" r="190" fill="#d7e2f2"/>
+  <circle cx="450" cy="340" r="140" fill="#ffffff"/>
+  <path d="M250 780c18-190 155-300 200-300s182 110 200 300" fill="#d7e2f2"/>
+  <rect x="220" y="120" width="460" height="120" rx="24" fill="#2563eb" opacity="0.12"/>
+  <text x="450" y="840" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="42" fill="#102235">Photo de profil</text>
+</svg>

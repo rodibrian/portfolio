@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="fr" data-default-lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta.title">E. Rodi Brian | Full-Stack Developer</title>
+    <meta name="description" content="Portfolio of Rodi Brian — Full-Stack Developer specialized in modern web applications, UI/UX, and scalable solutions." data-i18n="meta.description" data-i18n-attr="content">
+    <meta name="theme-color" content="#2563EB">
+    <link rel="canonical" href="./">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rodi Brian | Full-Stack Developer" data-i18n="meta.ogTitle" data-i18n-attr="content">
+    <meta property="og:description" content="I build modern, scalable and user-friendly web applications. Explore projects, skills and contact." data-i18n="meta.ogDescription" data-i18n-attr="content">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/profil.png">
+    <meta property="og:url" content="./">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rodi Brian | Full-Stack Developer" data-i18n="meta.twitterTitle" data-i18n-attr="content">
+    <meta name="twitter:description" content="Modern web apps, UI/UX, scalable solutions." data-i18n="meta.twitterDescription" data-i18n-attr="content">
+    <meta name="twitter:image" content="assets/img/profil.png">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Animate.css (for WOW.js animations) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">Rodi Brian</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home" data-i18n="nav.home">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-i18n="nav.value">Proposition</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills" data-i18n="nav.skills">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience" data-i18n="nav.experience">Expérience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" data-i18n="nav.projects">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="lang-switch ms-3">
+                    <button type="button" class="lang-btn" data-lang="fr" aria-label="Français">
+                        <span class="lang-flag" aria-hidden="true">🇫🇷</span><span class="lang-code">FR</span>
+                    </button>
+                    <button type="button" class="lang-btn" data-lang="en" aria-label="English">
+                        <span class="lang-flag" aria-hidden="true">🇬🇧</span><span class="lang-code">EN</span>
+                    </button>
+                </div>
+                <div class="social-links ms-3">
+                    <a href="https://github.com/rodibrian" target="_blank" class="text-decoration-none">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/rodibrian-embony" target="_blank" class="text-decoration-none">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://facebook.com/embony.rodibrian" target="_blank" class="text-decoration-none">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-8 mx-auto text-center text-white">
+                    <h1 class="display-3 fw-bold mb-3" data-aos="fade-up" data-i18n="hero.title">Rodi Brian — Développeur Full-Stack</h1>
+                    <p class="lead mb-4 hero-subtitle" data-aos="fade-up" data-aos-delay="150" data-i18n="hero.subtitle">
+                        Développement d'applications web et desktop performantes, UI/UX pensé pour l'utilisateur et code maintenable.
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <a href="#projects" class="btn btn-primary btn-lg">
+                            <i class="fas fa-briefcase me-2"></i><span data-i18n="hero.ctaProjects">Voir mes projets</span>
+                        </a>
+                        <a href="mailto:embony.rodibrian@gmail.com?subject=RDV%2015min" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-phone me-2"></i><span data-i18n="hero.ctaCall">Réserver un appel</span>
+                        </a>
+                    </div>
+                    <div class="hero-meta text-white-50" data-aos="fade-up" data-aos-delay="450">
+                        <span class="me-3"><i class="fas fa-map-marker-alt me-1"></i><span data-i18n="hero.location">Freelance — Toamasina, Madagascar</span></span>
+                        <span><i class="fas fa-envelope me-1"></i><a href="mailto:embony.rodibrian@gmail.com" class="text-white-50">embony.rodibrian@gmail.com</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (inserted before Skills) -->
+    <section id="services" class="py-5 section-transition">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up" data-i18n="services.title">Services</h2>
+                    <div class="section-divider" data-aos="fade-up" data-aos-delay="150"></div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-i18n="services.s1">
+                    <div class="service-card p-4 h-100">
+                        <div class="service-icon mb-3"><i class="fas fa-code fa-2x text-primary"></i></div>
+                        <h5 data-i18n="services.s1.title">Développement Web</h5>
+                        <p data-i18n="services.s1.desc">Applications web responsives, intégration front-end et APIs robustes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100" data-i18n="services.s2">
+                    <div class="service-card p-4 h-100">
+                        <div class="service-icon mb-3"><i class="fas fa-desktop fa-2x text-purple"></i></div>
+                        <h5 data-i18n="services.s2.title">Applications Desktop</h5>
+                        <p data-i18n="services.s2.desc">Solutions C++ / Qt performantes pour usages métiers critiques.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200" data-i18n="services.s3">
+                    <div class="service-card p-4 h-100">
+                        <div class="service-icon mb-3"><i class="fas fa-paint-brush fa-2x text-warning"></i></div>
+                        <h5 data-i18n="services.s3.title">Design & UI/UX</h5>
+                        <p data-i18n="services.s3.desc">Conception d'interfaces centrées utilisateur, prototypes et maquettes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases / Success Stories Section (inserted before Skills) -->
+    <section id="cases" class="py-5 bg-light section-transition">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up" data-i18n="cases.title">Études de cas</h2>
+                    <div class="section-divider" data-aos="fade-up" data-aos-delay="150"></div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-up" data-i18n="cases.items.0">
+                    <div class="case-card p-4 h-100">
+                        <h5 class="fw-bold" data-i18n="cases.items.0.title">Smart‑Sekoly — Plateforme éducative</h5>
+                        <p data-i18n="cases.items.0.desc">Conception d'une plateforme éducative avec amélioration UX et performance.</p>
+                        <a href="#projects" class="text-primary" data-i18n="cases.items.0.cta">Voir le projet →</a>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-i18n="cases.items.1">
+                    <div class="case-card p-4 h-100">
+                        <h5 class="fw-bold" data-i18n="cases.items.1.title">MadaFlow ERP — Gestion d'entreprise</h5>
+                        <p data-i18n="cases.items.1.desc">ERP métier optimisé pour la gestion des flux et des stocks (placeholder).</p>
+                        <a href="#projects" class="text-primary" data-i18n="cases.items.1.cta">Voir le projet →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Value Section -->
+    <section id="about" class="py-5 bg-light about-section section-transition">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title wow animate__animated animate__fadeInUp" data-aos="fade-up" data-i18n="value.title">Proposition de valeur</h2>
+                    <div class="section-divider wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200"></div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 wow animate__animated animate__fadeInLeft" data-aos="fade-right">
+                    <div class="about-image">
+                        <img src="assets/img/profil.png" 
+                             alt="Profile" class="img-fluid rounded-3 shadow-lg">
+                        <div class="experience-badge">
+                            <div class="text-center">
+                                <i class="fas fa-trophy text-warning fa-2x mb-2"></i>
+                                <div class="fw-semibold" data-i18n="value.badgeTitle">Sénior Confirmé</div>
+                                <small class="text-muted" data-i18n="value.badgeSubtitle">C++/Qt • Frontend • UI/UX</small>
+                            </div>
+</div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 wow animate__animated animate__fadeInRight" data-aos="fade-left">
+                    <div class="about-content-card">
+                        <h3 class="about-kicker text-primary mb-2" data-i18n="value.kicker">Full-Stack • C++/Qt • UI/UX</h3>
+                        <h4 class="about-headline fw-bold mb-3" data-i18n="value.headline">Je transforme des besoins métiers en produits clairs, robustes et agréables à utiliser.</h4>
+                        <p class="mb-3" data-i18n="value.p1">
+                            J’aide les équipes et les clients à livrer des applications web et desktop fiables (C++/Qt, Java, Web),
+                            avec une attention forte à l’architecture, la performance et l’expérience utilisateur.
+                        </p>
+                        <p class="mb-4" data-i18n="value.p2">
+                            Mon objectif est simple : un produit qui se comprend vite, qui se maintient facilement, et qui apporte un résultat mesurable
+                            (gain de temps, réduction d’erreurs, meilleure conversion, meilleure ergonomie).
+                        </p>
+
+                        <div class="about-highlights mb-4">
+                            <span class="about-pill">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <span data-i18n="value.pill1">Desktop apps (C++/Qt) performantes</span>
+                            </span>
+                            <span class="about-pill">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <span data-i18n="value.pill2">UI modernes & design centré utilisateur</span>
+                            </span>
+                            <span class="about-pill">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <span data-i18n="value.pill3">Frontend moderne (Bootstrap / JS)</span>
+                            </span>
+                            <span class="about-pill">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <span data-i18n="value.pill4">Code propre & maintenable</span>
+                            </span>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-2 align-items-center">
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="fas fa-handshake me-2"></i><span data-i18n="value.ctaWork">Travaillons ensemble</span>
+                            </a>
+                            <a href="#projects" class="btn btn-outline-primary">
+                                <i class="fas fa-layer-group me-2"></i><span data-i18n="value.ctaProjects">Voir mes projets</span>
+                            </a>
+                        </div>
+                    </div>
+</div>
+
+            </div>
+            
+            <!-- Stats -->
+            <div class="row mt-5">
+    <div class="col-6 col-md-3 text-center mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat-card">
+            <i class="fas fa-code text-primary mb-3"></i>
+            <div class="h3 fw-bold counter" data-target="15">0</div>
+            <small class="text-muted" data-i18n="stats.s1">Projets en C++/Qt & Frontend</small>
+        </div>
+    </div>
+    <div class="col-6 col-md-3 text-center mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-card">
+            <i class="fas fa-palette text-primary mb-3"></i>
+            <div class="h3 fw-bold counter" data-target="50">0</div>
+            <small class="text-muted" data-i18n="stats.s2">Interfaces UI/UX conçues</small>
+        </div>
+    </div>
+    <div class="col-6 col-md-3 text-center mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat-card">
+            <i class="fas fa-users text-primary mb-3"></i>
+            <div class="h3 fw-bold counter" data-target="20">0</div>
+            <small class="text-muted" data-i18n="stats.s3">Clients satisfaits</small>
+        </div>
+    </div>
+    <div class="col-6 col-md-3 text-center mb-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="stat-card">
+            <i class="fas fa-laptop-code text-primary mb-3"></i>
+            <div class="h3 fw-bold counter" data-target="5">0</div>
+            <small class="text-muted" data-i18n="stats.s4">Années d’expérience</small>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </section>
+
+   <!-- Skills Section -->
+<section id="skills" class="py-5 section-transition">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center mb-5">
+                <h2 class="section-title wow animate__animated animate__fadeInUp" data-aos="fade-up" data-i18n="skills.title">Mes Compétences</h2>
+                <div class="section-divider wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200"></div>
+                <p class="lead wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400" data-i18n="skills.subtitle">
+                    Une expertise technique et créative pour concevoir des applications et interfaces modernes et performantes
+                </p>
+            </div>
+        </div>
+
+        <!-- Modern skill highlights (scan-friendly) -->
+        <div class="row g-4 mb-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="col-lg-3 col-md-6">
+                <div class="skill-highlight">
+                    <div class="skill-highlight-icon bg-primary">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div>
+                        <div class="skill-highlight-title" data-i18n="skills.h1.title">Frontend</div>
+                        <div class="skill-highlight-tags" data-i18n="skills.h1.tags">HTML • CSS • JavaScript • Bootstrap</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="skill-highlight">
+                    <div class="skill-highlight-icon bg-success">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div>
+                        <div class="skill-highlight-title" data-i18n="skills.h2.title">Backend</div>
+                        <div class="skill-highlight-tags" data-i18n="skills.h2.tags">PHP • APIs • Architecture</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="skill-highlight">
+                    <div class="skill-highlight-icon bg-purple">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div>
+                        <div class="skill-highlight-title" data-i18n="skills.h3.title">Desktop</div>
+                        <div class="skill-highlight-tags" data-i18n="skills.h3.tags">C++ • Qt • SQLite</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="skill-highlight">
+                    <div class="skill-highlight-icon bg-warning">
+                        <i class="fas fa-screwdriver-wrench"></i>
+                    </div>
+                    <div>
+                        <div class="skill-highlight-title" data-i18n="skills.h4.title">Outils</div>
+                        <div class="skill-highlight-tags" data-i18n="skills.h4.tags">Git • GitHub • Figma • Office</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- C++/Qt & Backend Skills -->
+            <div class="col-lg-3 col-md-6 mb-4 wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-category">
+                    <h4 class="text-success mb-4" data-i18n="skills.categories.backend">C++ / Backend</h4>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>C++</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Qt Designer</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Java</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" data-width="75"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frontend Skills -->
+            <div class="col-lg-3 col-md-6 mb-4 wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-category">
+                    <h4 class="text-primary mb-4" data-i18n="skills.categories.frontend">Frontend</h4>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>HTML/CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Framework JS (JQuery)</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>JavaScript</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" data-width="90"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UI/UX & Design Skills -->
+            <div class="col-lg-3 col-md-6 mb-4 wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-category">
+                    <h4 class="text-purple mb-4" data-i18n="skills.categories.design">UI/UX & Design</h4>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>UI/UX Design</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-purple" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Canva</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-purple" data-width="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Edraw Max</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-purple" data-width="70"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Other Skills -->
+            <div class="col-lg-3 col-md-6 mb-4 wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-category">
+                    <h4 class="text-warning mb-4" data-i18n="skills.categories.tools">Outils</h4>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Git/GitHub</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Office</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" data-width="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>IA</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" data-width="70"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Skills -->
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <h4 class="mb-4" data-aos="fade-up" data-i18n="skills.featuredTitle">Technologies principales</h4>
+                <div class="featured-skills" data-aos="fade-up" data-aos-delay="200">
+                    <span class="badge bg-success me-2 mb-2">C++ 85%</span>
+                    <span class="badge bg-success me-2 mb-2">Qt Designer 80%</span>
+                    <span class="badge bg-primary me-2 mb-2">HTML/CSS 90%</span>
+                    <span class="badge bg-primary me-2 mb-2">Framework JS (JQuery) 60%</span>
+                    <span class="badge bg-purple me-2 mb-2">UI/UX Design 85%</span>
+                    <span class="badge bg-purple me-2 mb-2">Canva 85%</span>
+                    <span class="badge bg-warning me-2 mb-2">Git/GitHub 75%</span>
+                    <span class="badge bg-warning me-2 mb-2">IA 75%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Experience Section -->
+<section id="experience" class="py-5 bg-light section-transition">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center mb-5">
+                <h2 class="section-title wow animate__animated animate__fadeInUp" data-aos="fade-up" data-i18n="experience.title">Mon Parcours</h2>
+                <div class="section-divider wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200"></div>
+                <p class="lead wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400" data-i18n="experience.subtitle">
+                    Un parcours riche en expériences, apprentissages continus et développement de solutions innovantes
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="timeline">
+
+                    <!-- New Experience: CEO Baia Creative Solutions -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="50">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">
+                                <i class="fas fa-calendar-alt me-2"></i>Depuis Janvier 2026
+                            </div>
+                            <h4>CEO — Baia Creative Solutions</h4>
+                            <div class="company mb-3">
+                                <i class="fas fa-briefcase me-2"></i><span>Baia Creative Solutions</span>
+                            </div>
+                            <p>
+                                Création et direction d'une startup offrant : <strong>Design graphique & création numérique</strong>,
+                                <strong> Conception & solutions web</strong>, et <strong>Multiservices numériques & bureautiques</strong>.
+                            </p>
+                            <p class="fst-italic">“Créer du design. Simplifier le numérique”</p>
+                            <div class="technologies">
+                                <span class="badge bg-purple me-1 mb-1">Design</span>
+                                <span class="badge bg-primary me-1 mb-1">Web</span>
+                                <span class="badge bg-warning me-1 mb-1">Multiservices</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 4 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">
+                                <i class="fas fa-calendar-alt me-2"></i>2018 - 2023
+                            </div>
+                    <h4 data-i18n="experience.t1.title">Formation Académique</h4>
+                            <div class="company mb-3">
+                        <i class="fas fa-university me-2"></i><span data-i18n="experience.t1.org">Université de Barikadimy Toamasina</span>
+                            </div>
+                    <p data-i18n="experience.t1.text">
+                                Licence en Informatique, suivie de la 2ème année de Master en Génie Informatique. 
+                                Acquisition de solides compétences en développement logiciel, architecture des applications et design d’interface.
+                            </p>
+                            <div class="technologies">
+                                <span class="badge bg-warning me-1 mb-1">Java</span>
+                                <span class="badge bg-warning me-1 mb-1">C++ / Qt</span>
+                                <span class="badge bg-warning me-1 mb-1">UI/UX</span>
+                                <span class="badge bg-warning me-1 mb-1">Web Frontend</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Experience 1 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">
+                                <i class="fas fa-calendar-alt me-2"></i>2021 - 2023
+                            </div>
+                    <h4 data-i18n="experience.t2.title">Développeur Full-Stack</h4>
+                            <div class="company mb-3">
+                        <i class="fas fa-building me-2"></i><span data-i18n="experience.t2.org">DDS (Design and Development Solution)</span>
+                            </div>
+                    <p data-i18n="experience.t2.text">
+                                Développement d’applications web modernes avec Bootstrap Studio et intégration responsive. 
+                                Conception et maintenance d’applications desktop sous Java et Qt C++. Maîtrise de la Suite Office pour les besoins de reporting et documentation.
+                            </p>
+                            <div class="technologies">
+                                <span class="badge bg-primary me-1 mb-1">C++ / Qt</span>
+                                <span class="badge bg-primary me-1 mb-1">Java</span>
+                                <span class="badge bg-primary me-1 mb-1">Bootstrap</span>
+                                <span class="badge bg-primary me-1 mb-1">HTML/CSS</span>
+                                <span class="badge bg-primary me-1 mb-1">Office Suite</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">
+                                <i class="fas fa-calendar-alt me-2"></i><span data-i18n="experience.since2019">Depuis 2019</span>
+                            </div>
+                    <h4 data-i18n="experience.t3.title">Développement Web et Desktop (Indépendant)</h4>
+                            <div class="company mb-3">
+                        <i class="fas fa-building me-2"></i><span data-i18n="experience.t3.org">Freelance</span>
+                            </div>
+                    <p data-i18n="experience.t3.text">
+                        Création d’applications desktop et web indépendantes avec Java, C++/Qt et technologies frontend modernes, en mettant l’accent sur l’expérience utilisateur et la performance.
+                    </p>
+
+                            <div class="technologies">
+                                <span class="badge bg-success me-1 mb-1">Java SE</span>
+                                <span class="badge bg-success me-1 mb-1">Qt / C++</span>
+                                <span class="badge bg-success me-1 mb-1">Html&CSS</span>
+                                <span class="badge bg-success me-1 mb-1">Canva</span>
+                                <span class="badge bg-success me-1 mb-1">Office suite</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="row mt-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="cta-card" data-aos="fade-up">
+                    <h3 class="text-white mb-3" data-i18n="experience.ctaTitle">Prêt pour de nouveaux défis</h3>
+                    <p class="text-white-50 mb-4" data-i18n="experience.ctaText">
+                        Je recherche constamment des opportunités pour grandir et contribuer à des projets innovants.
+                    </p>
+                    <a href="#contact" class="btn btn-light">
+                        <i class="fas fa-comments me-2"></i><span data-i18n="experience.ctaBtn">Discutons de votre projet</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 section-transition">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title wow animate__animated animate__fadeInUp" data-aos="fade-up" data-i18n="projects.title">Mes Projets</h2>
+                    <div class="section-divider wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200"></div>
+                    <p class="lead wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400" data-i18n="projects.subtitle">
+                        Une sélection de mes réalisations les plus représentatives
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <div class="project-filters" data-aos="fade-up" data-aos-delay="200">
+                        <button class="btn btn-outline-primary active me-2 mb-2" data-filter="all">
+                            <span data-i18n="projects.filterAll">Tous les projets</span> (14)
+                        </button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-filter="featured">
+                            <span data-i18n="projects.filterFeatured">Projets phares</span> (4)
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="row" id="projectsGrid">
+    <!-- Projet 1 : Betsimisaraka Tours -->
+    <div class="col-lg-4 col-md-6 mb-4 project-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/img/projets/betsimisaraka.png" alt="Betsimisaraka Tours" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-actions">
+                        <button class="btn btn-light btn-sm me-2" onclick="openProjectModal(0)">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        
+                        <a href="https://github.com/rodibrian/betsimisaraka-tours" target="_blank" class="btn btn-light btn-sm">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-content">
+                <h4 class="project-title">Betsimisaraka Tours</h4>
+                <p class="project-description" data-i18n="projects.items.0.desc">
+                    Site vitrine touristique présentant les services, circuits, tarifs et l’équipe de l’agence. 
+                    Inclut un formulaire de contact et une mise en page responsive.
+                </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(0)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/betsimisaraka-tours" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
+                <div class="project-technologies">
+                    <span class="badge bg-warning me-1 mb-1">HTML</span>
+                    <span class="badge bg-warning me-1 mb-1">CSS</span>
+                    <span class="badge bg-warning me-1 mb-1">PHP</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projet 2 : Gestion des Clients -->
+    <div class="col-lg-4 col-md-6 mb-4 project-item featured" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/img/projets/gestion-client.png" alt="Gestion des Clients" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-actions">
+                        <button class="btn btn-light btn-sm me-2" onclick="openProjectModal(1)">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        
+                        <a href="https://github.com/rodibrian/gestion-clients" target="_blank" class="btn btn-light btn-sm">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <span class="project-badge" data-i18n="projects.badgeFeatured">Phare</span>
+            </div>
+            <div class="project-content">
+                <h4 class="project-title">Gestion des Clients</h4>
+                <p class="project-description" data-i18n="projects.items.1.desc">
+                    Programme en C avec liste chaînée pour gérer les clients d’une banque : ajout, 
+                    recherche, transactions et statistiques de comptes.
+                </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(1)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/gestion-clients" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
+                <div class="project-technologies">
+                    <span class="badge bg-danger me-1 mb-1">C</span>
+                    <span class="badge bg-danger me-1 mb-1">Console</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projet 3 : Gestion de Livres -->
+    <div class="col-lg-4 col-md-6 mb-4 project-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/img/projets/gestion-livres.png" alt="Gestion de Livres" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-actions">
+                        <button class="btn btn-light btn-sm me-2" onclick="openProjectModal(2)">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        
+                        <a href="https://github.com/rodibrian/gestion-livres" target="_blank" class="btn btn-light btn-sm">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-content">
+                <h4 class="project-title">Gestion de Livres</h4>
+                <p class="project-description" data-i18n="projects.items.2.desc">
+                    Application de gestion de livres avec Qt et SQLite : ajout, modification, suppression et 
+                    affichage des livres enregistrés avec ID automatique.
+                </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(2)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/gestion-livres" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
+                <div class="project-technologies">
+                    <span class="badge bg-primary me-1 mb-1">C++</span>
+                    <span class="badge bg-primary me-1 mb-1">Qt</span>
+                    <span class="badge bg-primary me-1 mb-1">SQLite</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projet 4 : Gestion de Bibliothèque -->
+    <div class="col-lg-4 col-md-6 mb-4 project-item" data-aos="fade-up" data-aos-delay="400">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/img/projets/gestion-bibliotheque.png" alt="Gestion de Bibliothèque" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-actions">
+                        <button class="btn btn-light btn-sm me-2" onclick="openProjectModal(3)">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        
+                        <a href="https://github.com/rodibrian/bibliotheque" target="_blank" class="btn btn-light btn-sm">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-content">
+                <h4 class="project-title">Gestion de Bibliothèque</h4>
+                <p class="project-description" data-i18n="projects.items.3.desc">
+                    Logiciel Qt/SQLite pour gérer une bibliothèque : enregistrement, mise à jour et suppression 
+                    de livres avec affichage structuré.
+                </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(3)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/bibliotheque" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
+                <div class="project-technologies">
+                    <span class="badge bg-info me-1 mb-1">C++</span>
+                    <span class="badge bg-info me-1 mb-1">Qt</span>
+                    <span class="badge bg-info me-1 mb-1">SQLite</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projet 5 : Gestion Étudiants & Articles -->
+    <div class="col-lg-4 col-md-6 mb-4 project-item" data-aos="fade-up" data-aos-delay="500">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/img/projets/gestion-etudiants.png" alt="Gestion Étudiants & Articles" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-actions">
+                        <button class="btn btn-light btn-sm me-2" onclick="openProjectModal(4)">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        
+                        <a href="https://github.com/rodibrian/gestion-etudiants" target="_blank" class="btn btn-light btn-sm">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-content">
+                <h4 class="project-title">Gestion Étudiants & Articles</h4>
+                <p class="project-description" data-i18n="projects.items.4.desc">
+                    Application Qt permettant la gestion des étudiants, matières et articles. 
+                    Calcul automatique de moyennes et affichage des notes.
+                </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(4)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/gestion-etudiants" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
+                <div class="project-technologies">
+                    <span class="badge bg-success me-1 mb-1">C++</span>
+                    <span class="badge bg-success me-1 mb-1">Qt</span>
+                    <span class="badge bg-success me-1 mb-1">SQLite</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projet 6 : Fiche de paie -->
+    <div class="col-lg-4 col-md-6 mb-4 project-item" data-aos="fade-up" data-aos-delay="600">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/img/projets/fiche-de-paie.png" alt="Fiche de paie" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-actions">
+                        <button class="btn btn-light btn-sm me-2" onclick="openProjectModal(5)">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        
+                        <a href="https://github.com/rodibrian/fiche-de-paie" target="_blank" class="btn btn-light btn-sm">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-content">
+                <h4 class="project-title">Fiche de paie</h4>
+                <p class="project-description" data-i18n="projects.items.5.desc">
+                    Une application Qt qui permet de générer une fiche de paie à partir des informations du mois.
+                </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(5)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/fiche-de-paie" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
+                <div class="project-technologies">
+                    <span class="badge bg-danger me-1 mb-1">Qt Designer</span>
+                    <span class="badge bg-danger me-1 mb-1">C++</span>
+                    <span class="badge bg-danger me-1 mb-1">Maths</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projet 7 : Gestion Contacts et Appels -->
+    <div class="col-lg-4 col-md-6 mb-4 project-item" data-aos="fade-up" data-aos-delay="700">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/img/projets/gestion-contact.png" alt="Gestion Contacts et Appels" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-actions">
+                        <button class="btn btn-light btn-sm me-2" onclick="openProjectModal(6)">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        
+                        <a href="https://github.com/rodibrian/gestion-contact" target="_blank" class="btn btn-light btn-sm">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-content">
+                <h4 class="project-title">Gestion Contacts et Appels</h4>
+                <p class="project-description" data-i18n="projects.items.6.desc">
+                    Application Qt pour enregistrer et gérer des contacts, appels et historique. 
+                    Recherche et mise à jour rapides des informations.
+                </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(6)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/gestion-contact" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
+                <div class="project-technologies">
+                    <span class="badge bg-primary me-1 mb-1">C++</span>
+                    <span class="badge bg-primary me-1 mb-1">Qt</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projet 8 : Gestion de Logements -->
+    <div class="col-lg-4 col-md-6 mb-4 project-item featured" data-aos="fade-up" data-aos-delay="800">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/img/projets/gestion-logements.png" alt="Gestion de Logements" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-actions">
+                        <button class="btn btn-light btn-sm me-2" onclick="openProjectModal(7)">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        
+                        <a href="https://github.com/rodibrian/gestion-logements" target="_blank" class="btn btn-light btn-sm">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <span class="project-badge" data-i18n="projects.badgeFeatured">Phare</span>
+            </div>
+            <div class="project-content">
+                <h4 class="project-title">Gestion de Logements</h4>
+                <p class="project-description" data-i18n="projects.items.7.desc">
+                    Logiciel Qt pour gérer les logements étudiants : ajout de chambres, répartition 
+                    et suivi des étudiants hébergés.
+                </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(7)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/gestion-logements" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
+                <div class="project-technologies">
+                    <span class="badge bg-info me-1 mb-1">C++</span>
+                    <span class="badge bg-info me-1 mb-1">Qt</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projet 9 : Tableau de Synthèse Bilan -->
+    <div class="col-lg-4 col-md-6 mb-4 project-item" data-aos="fade-up" data-aos-delay="900">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/img/projets/tableau-synthese.png" alt="Tableau de Synthèse Bilan" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-actions">
+                        <button class="btn btn-light btn-sm me-2" onclick="openProjectModal(8)">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        
+                        <a href="https://github.com/rodibrian/bilan-fonctionnel" target="_blank" class="btn btn-light btn-sm">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-content">
+                <h4 class="project-title">Tableau de Synthèse Bilan</h4>
+                <p class="project-description" data-i18n="projects.items.8.desc">
+                    Application Qt générant un tableau de synthèse bilan (actif/passif) avec calculs 
+                    et interprétation automatique des résultats.
+                </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(8)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/bilan-fonctionnel" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
+                <div class="project-technologies">
+                    <span class="badge bg-success me-1 mb-1">C++</span>
+                    <span class="badge bg-success me-1 mb-1">Qt</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projet 10 : Outils Octave -->
+    <div class="col-lg-4 col-md-6 mb-4 project-item featured" data-aos="fade-up" data-aos-delay="1000">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/img/projets/outils-octave.png" alt="Outils Octave" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-actions">
+                        <button class="btn btn-light btn-sm me-2" onclick="openProjectModal(9)">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        
+                        <a href="https://github.com/rodibrian/outils-traitement" target="_blank" class="btn btn-light btn-sm">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <span class="project-badge" data-i18n="projects.badgeFeatured">Phare</span>
+            </div>
+            <div class="project-content">
+                <h4 class="project-title">Outils de Traitement Octave</h4>
+                <p class="project-description" data-i18n="projects.items.9.desc">
+                    Scripts Octave pour manipuler des matrices, résoudre des équations, 
+                    traiter des signaux et effectuer des transformations de Fourier.
+                </p>
+                <div class="project-ctas">
+                    <button class="btn btn-sm btn-primary" onclick="openProjectModal(9)">
+                        <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                    </button>
+                    <a href="https://github.com/rodibrian/outils-traitement" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                    </a>
+                </div>
+                <div class="project-technologies">
+                    <span class="badge bg-secondary me-1 mb-1">Octave</span>
+                    <span class="badge bg-secondary me-1 mb-1">Maths</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projet 11 : Voiture Taxi 3D -->
+<div class="col-lg-4 col-md-6 mb-4 project-item" data-aos="fade-up" data-aos-delay="1100">
+    <div class="project-card">
+        <div class="project-image">
+            <img src="assets/img/projets/voiture-taxi.png" alt="Voiture Taxi 3D" class="img-fluid">
+            <div class="project-overlay">
+                <div class="project-actions">
+                    <button class="btn btn-light btn-sm me-2" onclick="openProjectModal(10)">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    
+                    <a href="https://github.com/rodibrian/openScad-design" target="_blank" class="btn btn-light btn-sm">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="project-content">
+            <h4 class="project-title">Voiture Taxi 3D</h4>
+            <p class="project-description" data-i18n="projects.items.10.desc">
+                Modélisation 3D d’une voiture taxi avec OpenSCAD. Projet mettant en valeur la conception paramétrique et le rendu.
+            </p>
+            <div class="project-ctas">
+                <button class="btn btn-sm btn-primary" onclick="openProjectModal(10)">
+                    <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                </button>
+                <a href="https://github.com/rodibrian/openScad-design" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                    <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                </a>
+            </div>
+            <div class="project-technologies">
+                <span class="badge bg-secondary me-1 mb-1">OpenSCAD</span>
+                <span class="badge bg-secondary me-1 mb-1">3D</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Projet 12 : Logo / Maquette AEMIA -->
+<div class="col-lg-4 col-md-6 mb-4 project-item" data-aos="fade-up" data-aos-delay="1200">
+    <div class="project-card">
+        <div class="project-image">
+            <img src="assets/img/projets/logo-aemia.png" alt="Logo / Maquette AEMIA" class="img-fluid">
+            <div class="project-overlay">
+                <div class="project-actions">
+                    <button class="btn btn-light btn-sm me-2" onclick="openProjectModal(11)">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    
+                    <a href="https://github.com/rodibrian/openScad-design" target="_blank" class="btn btn-light btn-sm">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="project-content">
+            <h4 class="project-title">Logo / Maquette AEMIA</h4>
+            <p class="project-description" data-i18n="projects.items.11.desc">
+                Projet OpenSCAD pour concevoir une maquette 3D et un logo représentant l’association AEMIA.
+            </p>
+            <div class="project-ctas">
+                <button class="btn btn-sm btn-primary" onclick="openProjectModal(11)">
+                    <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                </button>
+                <a href="https://github.com/rodibrian/openScad-design" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                    <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                </a>
+            </div>
+            <div class="project-technologies">
+                <span class="badge bg-secondary me-1 mb-1">OpenSCAD</span>
+                <span class="badge bg-secondary me-1 mb-1">3D</span>
+                <span class="badge bg-secondary me-1 mb-1">Design</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Projet 13 : Projecteur Java -->
+<div class="col-lg-4 col-md-6 mb-4 project-item featured" data-aos="fade-up" data-aos-delay="1300">
+    <div class="project-card">
+        <div class="project-image">
+            <img src="assets/img/projets/projecteur.png" alt="Projecteur Java" class="img-fluid">
+            <div class="project-overlay">
+                <div class="project-actions">
+                    <button class="btn btn-light btn-sm me-2" onclick="openProjectModal(12)">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    
+                    <a href="https://github.com/rodibrian/projecteur-serveur_client" target="_blank" class="btn btn-light btn-sm">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <span class="project-badge" data-i18n="projects.badgeFeatured">Phare</span>
+        </div>
+        <div class="project-content">
+            <h4 class="project-title">Projecteur Serveur/Client</h4>
+            <p class="project-description" data-i18n="projects.items.12.desc">
+               Une application qui permet de projeter les informations du serveur vers une vue client,en Java Server.
+            </p>
+            <div class="project-ctas">
+                <button class="btn btn-sm btn-primary" onclick="openProjectModal(12)">
+                    <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                </button>
+                <a href="https://github.com/rodibrian/projecteur-serveur_client" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                    <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                </a>
+            </div>
+            <div class="project-technologies">
+                <span class="badge bg-secondary me-1 mb-1">Java SE</span>
+                <span class="badge bg-secondary me-1 mb-1">Design</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Projet 14 : Dictionnaire Qt -->
+<div class="col-lg-4 col-md-6 mb-4 project-item" data-aos="fade-up" data-aos-delay="1400">
+    <div class="project-card">
+        <div class="project-image">
+            <img src="assets/img/projets/dictionnaire.png" alt="Dictionnaire Qt" class="img-fluid">
+            <div class="project-overlay">
+                <div class="project-actions">
+                    <button class="btn btn-light btn-sm me-2" onclick="openProjectModal(13)">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    
+                    <a href="https://github.com/rodibrian/dictionnaire" target="_blank" class="btn btn-light btn-sm">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="project-content">
+            <h4 class="project-title">Dictionnaire Qt</h4>
+            <p class="project-description" data-i18n="projects.items.13.desc">
+                Mini-logiciel Qt permettant la gestion d’un dictionnaire : recherche de mots, traduction et consultation.
+            </p>
+            <div class="project-ctas">
+                <button class="btn btn-sm btn-primary" onclick="openProjectModal(13)">
+                    <i class="fas fa-eye me-2"></i><span data-i18n="projects.details">Détails</span>
+                </button>
+                <a href="https://github.com/rodibrian/dictionnaire" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary">
+                    <i class="fab fa-github me-2"></i><span data-i18n="projects.source">Source</span>
+                </a>
+            </div>
+            <div class="project-technologies">
+                <span class="badge bg-secondary me-1 mb-1">C++</span>
+                <span class="badge bg-secondary me-1 mb-1">Qt</span>
+                <span class="badge bg-secondary me-1 mb-1">SQLite</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+        </div>
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light contact-section section-transition">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title wow animate__animated animate__fadeInUp" data-aos="fade-up" data-i18n="contact.title">Contactez-moi</h2>
+                    <div class="section-divider wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200"></div>
+                    <p class="lead wow animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400" data-i18n="contact.subtitle">
+                        Prêt à donner vie à votre projet ? Discutons de vos besoins et créons quelque chose d'exceptionnel ensemble
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Contact Info -->
+                <div class="col-lg-6 mb-5 wow animate__animated animate__fadeInLeft" data-aos="fade-right">
+                    <h3 class="mb-4" data-i18n="contact.leftTitle">Parlons de votre projet</h3>
+                    <p class="mb-4" data-i18n="contact.leftText">
+                        Je suis toujours ouvert aux opportunités de collaboration et aux projets innovants. 
+                        N'hésitez pas à me contacter pour discuter de vos idées !
+                    </p>
+                    
+                    <div class="contact-info">
+                        <a href="mailto:embony.rodibrian@gmail.com" class="contact-item">
+                            <div class="contact-icon bg-primary">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5 data-i18n="contact.emailLabel">Email</h5>
+                                <p>embony.rodibrian@gmail.com</p>
+                            </div>
+                        </a>
+                        
+                        <a href="tel:+261342633132" class="contact-item">
+                            <div class="contact-icon bg-success">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5 data-i18n="contact.phoneLabel">Téléphone</h5>
+                                <p>+261 34 26 331 32</p>
+                            </div>
+                        </a>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon bg-purple">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5 data-i18n="contact.locationLabel">Localisation</h5>
+                                <p>Toamasina, Madagascar (Freelance)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links-contact mt-4">
+                        <h5 class="mb-3" data-i18n="contact.socialTitle">Retrouvez-moi sur</h5>
+                        <a href="https://github.com/rodibrian" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/rodibrian-embony" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="col-lg-6 wow animate__animated animate__fadeInRight" data-aos="fade-left">
+                    <div class="contact-form-wrapper">
+                        <h3 class="mb-4" data-i18n="contact.formTitle">Envoyez-moi un message</h3>
+                        
+                        <div id="contactSuccess" class="alert alert-success d-none">
+                            <div class="text-center">
+                                <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+                                <h4 data-i18n="contact.successTitle">Message envoyé !</h4>
+                                <p data-i18n="contact.successText">Merci pour votre message. Je vous répondrai dans les plus brefs délais.</p>
+                            </div>
+                        </div>
+
+                        <div id="contactError" class="alert alert-danger d-none">
+                            <div class="text-center">
+                                <i class="fas fa-triangle-exclamation fa-3x text-danger mb-3"></i>
+                                <h4 data-i18n="contact.errorTitle">Envoi échoué</h4>
+                                <p class="mb-0" data-i18n="contact.errorText">Une erreur est survenue. Réessayez dans quelques instants.</p>
+                            </div>
+                        </div>
+                        
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label" data-i18n="contact.nameLabel">Nom complet *</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label" data-i18n="contact.email2Label">Email *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label" data-i18n="contact.subjectLabel">Sujet *</label>
+                                <input type="text" class="form-control" id="subject" name="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label" data-i18n="contact.messageLabel">Message *</label>
+                                <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-paper-plane me-2"></i><span data-i18n="contact.submit">Envoyer le message</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-5 section-transition">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="final-cta" data-aos="fade-up">
+                        <div class="row align-items-center g-4">
+                            <div class="col-md-8">
+                                <h3 class="text-white fw-bold mb-2" data-i18n="finalCta.title">Vous avez un projet en tête ?</h3>
+                                <p class="text-white-50 mb-0" data-i18n="finalCta.text">
+                                    Construisons quelque chose de propre, rapide et fiable — avec une expérience utilisateur au niveau.
+                                </p>
+                            </div>
+                            <div class="col-md-4 text-md-end">
+                                <a href="#contact" class="btn btn-light btn-lg w-100 d-md-inline-block" style="max-width: 260px;">
+                                    <i class="fas fa-paper-plane me-2"></i><span data-i18n="finalCta.button">Me contacter</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Rodi Brian</h5>
+                    <p class="text-secondary" data-i18n="footer.tagline">Développeur passionné créant des expériences web modernes et performantes.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 data-i18n="footer.navigation">Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="footer-link" data-i18n="nav.home">Accueil</a></li>
+                        <li><a href="#about" class="footer-link" data-i18n="nav.value">Proposition</a></li>
+                        <li><a href="#skills" class="footer-link" data-i18n="nav.skills">Compétences</a></li>
+                        <li><a href="#projects" class="footer-link" data-i18n="nav.projects">Projets</a></li>
+                        <li><a href="#contact" class="footer-link" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 data-i18n="footer.contact">Contact</h5>
+                    <p class="text-secondary">
+                        <i class="fas fa-envelope me-2"></i>embony.rodibrian@gmail.com
+                    </p>
+                    <p class="text-secondary">
+                        <i class="fas fa-phone me-2"></i>+261 34 26 331 32
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/rodibrian" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/rodibrian-embony" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://facebook.com/embony.rodibrian" target="_blank" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-white mb-0" data-i18n="footer.rights">&copy; 2025 Rodi Brian. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-white mb-0">
+                        <span data-i18n="footer.madeWith">Créé avec</span> <i class="fas fa-heart text-danger"></i> <span data-i18n="footer.andBootstrap">et Bootstrap</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle" data-i18n="modal.titlePlaceholder">Titre du projet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="" class="img-fluid mb-3 rounded">
+                    <p id="modalDescription" data-i18n="modal.descriptionPlaceholder">Description du projet</p>
+                    <div class="mb-3">
+                        <h6 data-i18n="modal.techUsed">Technologies utilisées</h6>
+                        <div id="modalTechnologies"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a id="modalDemo" href="#" target="_blank" rel="noopener" class="btn btn-primary d-none">
+                        <i class="fas fa-arrow-up-right-from-square me-2"></i><span data-i18n="modal.liveDemo">Live Demo</span>
+                    </a>
+                    <a id="modalGithub" href="#" target="_blank" class="btn btn-outline-secondary">
+                        <i class="fab fa-github me-2"></i><span data-i18n="modal.sourceCode">Code source</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- WOW.js (trigger animations on scroll) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Typed.js for typewriter effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- CountUp.js for counters -->
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
+    <!-- EmailJS (contact form email sending) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
