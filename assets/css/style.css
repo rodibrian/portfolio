@@ -160,13 +160,118 @@ img { max-width: 100%; display: block; }
 }
 .skill-list li i { font-size: 1rem; }
 
+.experience-layout { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 1.2rem; align-items: start; }
 .timeline { position: relative; padding-left: 1.2rem; border-left: 2px solid var(--border); margin-left: 0.75rem; }
 .timeline-item { position: relative; margin-bottom: 1.2rem; }
 .timeline-marker { position: absolute; left: -1.41rem; top: 1.1rem; width: 0.9rem; height: 0.9rem; border-radius: 50%; background: var(--accent); border: 3px solid var(--bg); }
-.timeline-card { padding: 1.2rem; }
+.timeline-card {
+  padding: 1.2rem;
+  position: relative;
+  overflow: hidden;
+}
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  inset: auto -40px -40px auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(20, 184, 166, 0.08));
+  pointer-events: none;
+}
+.timeline-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 0.8rem;
+  margin-bottom: 0.7rem;
+}
 .timeline-date { color: var(--accent); font-weight: 700; margin: 0 0 0.4rem; }
 .timeline-card h3 { margin: 0 0 0.5rem; }
 .timeline-card p { margin: 0; color: var(--muted); }
+.timeline-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.timeline-badge.alt {
+  background: rgba(20, 184, 166, 0.12);
+  color: var(--accent-2);
+}
+.timeline-points {
+  margin: 0.9rem 0 0;
+  padding-left: 1rem;
+  color: var(--muted);
+  display: grid;
+  gap: 0.45rem;
+}
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+.timeline-tags span {
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  background: var(--surface-alt);
+  color: var(--text);
+  font-size: 0.84rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+}
+.timeline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.9rem;
+}
+.timeline-actions a, .panel-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: 999px;
+  background: var(--surface-alt);
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-weight: 700;
+}
+.timeline-actions a:first-child, .panel-links a:first-child { color: var(--accent); }
+.experience-sidebar { display: grid; gap: 1rem; }
+.experience-panel {
+  padding: 1.15rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.experience-panel h3 { margin-top: 0; margin-bottom: 0.55rem; }
+.experience-panel p { color: var(--muted); margin: 0 0 0.9rem; }
+.gallery-grid { display: grid; gap: 0.8rem; }
+.gallery-card {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+}
+.gallery-card img { width: 100%; height: 140px; object-fit: cover; }
+.gallery-card span {
+  display: block;
+  padding: 0.7rem 0.8rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.panel-links { display: grid; gap: 0.55rem; }
+.panel-links a { justify-content: flex-start; }
 
 .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .project-card { overflow: hidden; }
@@ -193,11 +298,14 @@ img { max-width: 100%; display: block; }
 @media (max-width: 920px) {
   .hero-grid, .about-grid, .contact-grid, .skills-grid, .project-grid, .cards-row, .two-col-list { grid-template-columns: 1fr 1fr; }
   .hero-grid { grid-template-columns: 1fr; }
+  .experience-layout { grid-template-columns: 1fr; }
   .skills-grid, .project-grid, .cards-row { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 720px) {
   .menu-toggle { display: inline-flex; }
+  .timeline-card-top { flex-direction: column; }
+  .timeline-actions { flex-direction: column; align-items: flex-start; }
   .nav-links {
     position: absolute;
     top: calc(100% + 0.5rem);
