@@ -484,8 +484,37 @@ img { max-width: 100%; display: block; }
 }
 .list-stack { display: grid; gap: 0.8rem; }
 .list-item, .mini-card, .card { padding: 1rem 1.1rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
-.certification-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.certification-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.certification-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+.carousel-btn {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+.certification-track {
+  display: flex;
+  gap: 1.25rem;
+  transition: transform 0.6s ease;
+  will-change: transform;
+}
 .cert-card {
+  flex: 0 0 calc(50% - 0.625rem);
+  max-width: calc(50% - 0.625rem);
+  min-width: 0;
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -511,7 +540,7 @@ img { max-width: 100%; display: block; }
 .footer-row { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); align-items: center; }
 
 @media (max-width: 920px) {
-  .hero-grid, .about-grid, .contact-grid, .skills-grid, .project-grid, .cards-row, .two-col-list, .certification-grid { grid-template-columns: 1fr 1fr; }
+  .hero-grid, .about-grid, .contact-grid, .skills-grid, .project-grid, .cards-row, .two-col-list { grid-template-columns: 1fr 1fr; }
   .hero-grid { grid-template-columns: 1fr; }
   .experience-layout { grid-template-columns: 1fr; }
   .gallery-collage { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -522,7 +551,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 720px) {
   .menu-toggle { display: inline-flex; }
   .education-item { flex-direction: column; }
-  .certification-grid { grid-template-columns: 1fr; }
+  .cert-card { flex-basis: 100%; flex: 0 0 100%; }
   .education-top { flex-direction: column; }
   .gallery-collage { grid-template-columns: 1fr; }
   .gallery-item, .gallery-item.wide, .gallery-item.tall { grid-column: span 1; grid-row: span 1; min-height: 220px; }

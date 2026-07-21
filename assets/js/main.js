@@ -7,6 +7,10 @@ const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
 const galleryFilterButtons = Array.from(document.querySelectorAll(".filter-btn"));
 const galleryItems = Array.from(document.querySelectorAll(".gallery-item"));
+const certificationTrack = document.getElementById("certificationTrack");
+const certificationCards = Array.from(document.querySelectorAll(".certification-track .cert-card"));
+const certPrevButton = document.getElementById("certPrev");
+const certNextButton = document.getElementById("certNext");
 
 function applyTheme(theme) {
   body.classList.toggle("dark", theme === "dark");
@@ -104,6 +108,71 @@ function initGalleryFilters() {
   });
 }
 
+function initCertificationCarousel() {
+  if (!certificationTrack || !certificationCards.length) return;
+
+  let currentIndex = 0;
+  let autoSlideTimer = null;
+
+  const getVisibleCount = () => (window.innerWidth <= 720 ? 1 : 2);
+  const getMaxIndex = () => Math.max(0, certificationCards.length - getVisibleCount());
+
+  const getSlideOffset = () => {
+    const carousel = certificationTrack.closest(".certification-carousel");
+    if (!carousel) return 0;
+
+    const trackStyle = window.getComputedStyle(certificationTrack);
+    const gap = parseFloat(trackStyle.gap || trackStyle.columnGap || "20") || 20;
+    const cardWidth = carousel.clientWidth * 0.5 - gap / 2;
+    return cardWidth + gap;
+  };
+
+  const updateCarousel = () => {
+    certificationTrack.style.transform = `translateX(-${currentIndex * getSlideOffset()}px)`;
+  };
+
+  const nextSlide = () => {
+    if (currentIndex >= getMaxIndex()) {
+      currentIndex = 0;
+    } else {
+      currentIndex += 1;
+    }
+    updateCarousel();
+  };
+
+  const prevSlide = () => {
+    if (currentIndex <= 0) {
+      currentIndex = getMaxIndex();
+    } else {
+      currentIndex -= 1;
+    }
+    updateCarousel();
+  };
+
+  const startAutoSlide = () => {
+    if (autoSlideTimer) window.clearInterval(autoSlideTimer);
+    autoSlideTimer = window.setInterval(nextSlide, 3000);
+  };
+
+  certPrevButton?.addEventListener("click", () => {
+    prevSlide();
+    startAutoSlide();
+  });
+
+  certNextButton?.addEventListener("click", () => {
+    nextSlide();
+    startAutoSlide();
+  });
+
+  window.addEventListener("resize", () => {
+    currentIndex = Math.min(currentIndex, getMaxIndex());
+    updateCarousel();
+  });
+
+  startAutoSlide();
+  updateCarousel();
+}
+
 initTheme();
 initMenu();
 initThemeToggle();
@@ -111,3 +180,4 @@ initReveal();
 initActiveNav();
 initContactForm();
 initGalleryFilters();
+initCertificationCarousel();
