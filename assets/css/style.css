@@ -459,6 +459,22 @@ img { max-width: 100%; display: block; }
 }
 .list-stack { display: grid; gap: 0.8rem; }
 .list-item, .mini-card, .card { padding: 1rem 1.1rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+.certification-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.cert-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.cert-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.cert-content { padding: 1rem 1.1rem 1.2rem; }
+.cert-content h3 { margin: 0 0 0.45rem; font-size: 1.05rem; }
+.cert-content p { margin: 0; color: var(--muted); line-height: 1.6; }
 .cards-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
 .two-col-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .contact-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 1rem; }
@@ -470,7 +486,7 @@ img { max-width: 100%; display: block; }
 .footer-row { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); align-items: center; }
 
 @media (max-width: 920px) {
-  .hero-grid, .about-grid, .contact-grid, .skills-grid, .project-grid, .cards-row, .two-col-list { grid-template-columns: 1fr 1fr; }
+  .hero-grid, .about-grid, .contact-grid, .skills-grid, .project-grid, .cards-row, .two-col-list, .certification-grid { grid-template-columns: 1fr 1fr; }
   .hero-grid { grid-template-columns: 1fr; }
   .experience-layout { grid-template-columns: 1fr; }
   .gallery-collage { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -481,6 +497,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 720px) {
   .menu-toggle { display: inline-flex; }
   .education-item { flex-direction: column; }
+  .certification-grid { grid-template-columns: 1fr; }
   .education-top { flex-direction: column; }
   .gallery-collage { grid-template-columns: 1fr; }
   .gallery-item, .gallery-item.wide, .gallery-item.tall { grid-column: span 1; grid-row: span 1; min-height: 220px; }
