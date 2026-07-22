@@ -71,6 +71,24 @@ function initThemeToggle() {
   });
 }
 
+function initSkillPercentages() {
+  document.querySelectorAll(".skill-list li[data-score]").forEach((item) => {
+    const scoreEl = item.querySelector(".skill-score");
+    const progressBar = item.querySelector(".skill-progress-bar");
+    if (!scoreEl) return;
+
+    const score = Number(item.dataset.score);
+    if (!Number.isFinite(score)) return;
+
+    const normalizedScore = Math.max(0, Math.min(100, score));
+    scoreEl.textContent = `${normalizedScore}%`;
+
+    if (progressBar) {
+      progressBar.style.width = `${normalizedScore}%`;
+    }
+  });
+}
+
 function initReveal() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -330,6 +348,7 @@ function initCertificationCarousel() {
 initTheme();
 initMenu();
 initThemeToggle();
+initSkillPercentages();
 initReveal();
 initActiveNav();
 initContactForm();
