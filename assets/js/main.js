@@ -827,8 +827,8 @@ function initCertificationCarousel() {
   let autoSlideTimer = null;
 
   const getVisibleCount = () => {
-    if (window.innerWidth <= 720) return 1;
-    if (window.innerWidth <= 1024) return 2;
+    if (window.innerWidth <= 780) return 1;
+    if (window.innerWidth <= 1100) return 2;
     return 3;
   };
   const getMaxIndex = () => Math.max(0, certificationCards.length - getVisibleCount());
