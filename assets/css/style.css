@@ -301,10 +301,11 @@ img { max-width: 100%; display: block; }
 .about-image-note { position: absolute; z-index: 2; right: -1.35rem; bottom: 1.8rem; display: flex; align-items: center; gap: 0.7rem; padding: 0.75rem 0.85rem; border: 1px solid var(--border); border-radius: 14px; color: var(--text); background: color-mix(in srgb, var(--surface) 88%, transparent); box-shadow: var(--shadow); font-size: 0.78rem; font-weight: 700; line-height: 1.35; backdrop-filter: blur(12px); }
 .about-image-note i { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 10px; color: white; background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
 .about-content { position: relative; z-index: 1; padding-left: 1.5rem; border-left: 2px solid color-mix(in srgb, var(--accent) 30%, var(--border)); }
-.about-kicker { display: inline-flex; align-items: center; gap: 0.55rem; margin: 0 0 0.8rem; color: var(--accent); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
-.about-kicker span { width: 1.6rem; height: 2px; background: var(--accent-2); }
+.about-kicker { display: inline-flex; align-items: center; gap: 0.55rem; margin: 0 0 1.15rem; color: var(--accent); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
+.about-kicker > span:first-child { width: 1.6rem; height: 2px; background: var(--accent-2); }
+.about-kicker > span[data-i18n] { width: auto; height: auto; background: none; }
 .about-content p { color: var(--muted); }
-.about-content h2 { max-width: 720px; margin-top: 0; line-height: 1.18; }
+.about-content h2 { max-width: 720px; margin: 0.1rem 0 1.1rem; line-height: 1.18; }
 .about-proof-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.7rem; margin-top: 1.6rem; }
 .about-proof-row div { display: grid; gap: 0.25rem; padding: 0.85rem 0.8rem; border-top: 2px solid var(--accent); background: color-mix(in srgb, var(--surface-alt) 72%, transparent); }
 .about-proof-row div:nth-child(2) { border-color: var(--accent-2); }
