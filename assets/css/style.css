@@ -1476,8 +1476,86 @@ img { max-width: 100%; display: block; }
   background: color-mix(in srgb, var(--volunteer-accent) 18%, var(--surface));
 }
 .contact-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 1rem; align-items: start; }
-.contact-card, .contact-form { padding: 1.25rem; align-self: start; }
-.contact-card { display: grid; gap: 0.9rem; }
+.contact-card, .contact-form {
+  padding: 1.3rem;
+  align-self: start;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid color-mix(in srgb, var(--border) 86%, transparent);
+  box-shadow: 0 20px 48px color-mix(in srgb, var(--accent) 8%, transparent);
+}
+.contact-card {
+  display: grid;
+  gap: 0.95rem;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, var(--surface)) 0%, var(--surface) 60%, color-mix(in srgb, var(--accent) 4%, var(--surface-alt)) 100%);
+}
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: auto -40px -40px auto;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  pointer-events: none;
+}
+.contact-card-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: white;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 12px 24px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+.contact-intro { margin: 0; color: var(--muted); line-height: 1.7; }
+.contact-highlights { display: grid; gap: 0.7rem; }
+.contact-highlight-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 0.9rem;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--surface) 86%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 78%, transparent);
+}
+.contact-highlight-card i {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--accent) 11%, var(--surface));
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.contact-highlight-card a, .contact-highlight-card span {
+  display: block;
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+.contact-highlight-card a:hover { color: var(--accent); }
+.contact-highlight-label {
+  display: block;
+  margin-bottom: 0.1rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
 .contact-list { display: grid; gap: 0.6rem; }
 .contact-list li { display: flex; align-items: center; gap: 0.55rem; color: var(--muted); }
 .map-card {
@@ -1491,11 +1569,29 @@ img { max-width: 100%; display: block; }
   height: 220px;
   border: 0;
 }
-.contact-form { display: grid; gap: 0.9rem; height: fit-content; }
+.contact-form {
+  display: grid;
+  gap: 0.9rem;
+  height: fit-content;
+  background: var(--surface);
+}
 .form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; }
 .contact-form label { display: grid; gap: 0.4rem; font-weight: 600; color: var(--muted); }
-.contact-form input, .contact-form textarea { width: 100%; border: 1px solid var(--border); border-radius: 14px; padding: 0.8rem 0.9rem; font: inherit; background: var(--surface-alt); color: var(--text); }
-.contact-form input:focus, .contact-form textarea:focus { outline: 2px solid rgba(37, 99, 235, 0.2); border-color: var(--accent); }
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 0.9rem 1rem;
+  font: inherit;
+  background: color-mix(in srgb, var(--surface-alt) 88%, white 12%);
+  color: var(--text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 15%, transparent);
+}
 .form-status {
   min-height: 2.2rem;
   margin-top: 1rem;
