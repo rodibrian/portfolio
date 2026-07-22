@@ -286,7 +286,11 @@ function initCertificationCarousel() {
   let currentIndex = 0;
   let autoSlideTimer = null;
 
-  const getVisibleCount = () => (window.innerWidth <= 720 ? 1 : 2);
+  const getVisibleCount = () => {
+    if (window.innerWidth <= 720) return 1;
+    if (window.innerWidth <= 1024) return 2;
+    return 3;
+  };
   const getMaxIndex = () => Math.max(0, certificationCards.length - getVisibleCount());
 
   const getSlideOffset = () => {
@@ -294,8 +298,9 @@ function initCertificationCarousel() {
     if (!carousel) return 0;
 
     const trackStyle = window.getComputedStyle(certificationTrack);
-    const gap = parseFloat(trackStyle.gap || trackStyle.columnGap || "20") || 20;
-    const cardWidth = carousel.clientWidth * 0.5 - gap / 2;
+    const gap = parseFloat(trackStyle.gap || trackStyle.columnGap || "16") || 16;
+    const visibleCount = getVisibleCount();
+    const cardWidth = (carousel.clientWidth - gap * (visibleCount - 1)) / visibleCount;
     return cardWidth + gap;
   };
 

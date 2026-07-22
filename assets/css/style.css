@@ -1251,59 +1251,150 @@ img { max-width: 100%; display: block; }
 .list-item, .mini-card, .card { padding: 1rem 1.1rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
 .certification-carousel {
   position: relative;
-  overflow: hidden;
   width: 100%;
+  padding: 1.2rem 1.2rem 1.1rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
+  border-radius: calc(var(--radius) + 10px);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 7%, var(--surface)) 0%, var(--surface) 55%, color-mix(in srgb, var(--accent) 4%, var(--surface-alt)) 100%);
+  box-shadow: 0 22px 55px color-mix(in srgb, var(--accent) 8%, transparent);
 }
 .certification-controls {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
   display: flex;
-  justify-content: flex-end;
   gap: 0.6rem;
-  margin-bottom: 0.8rem;
+  z-index: 2;
 }
 .carousel-btn {
   width: 42px;
   height: 42px;
-  border: 1px solid var(--border);
+  border: 1px solid color-mix(in srgb, var(--border) 82%, transparent);
   border-radius: 50%;
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--text);
   cursor: pointer;
-  box-shadow: var(--shadow);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--accent) 10%, transparent);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
+.carousel-btn:hover { transform: translateY(-2px); border-color: var(--accent); }
 .certification-track {
   display: flex;
-  gap: 1.25rem;
+  gap: 1rem;
+  padding: 0.35rem 0.05rem 0.2rem;
   transition: transform 0.6s ease;
   will-change: transform;
 }
 .cert-card {
-  flex: 0 0 calc(33.333% - 0.625rem);
-  max-width: calc(33.333% - 0.625rem);
+  --cert-accent: var(--accent);
+  position: relative;
+  flex: 0 0 calc(33.333% - 0.67rem);
+  max-width: calc(33.333% - 0.67rem);
   min-width: 0;
   overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+  border-radius: 24px;
   background: var(--surface);
-  box-shadow: var(--shadow);
+  box-shadow: 0 18px 42px color-mix(in srgb, var(--accent) 7%, transparent);
   transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+.cert-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(140deg, color-mix(in srgb, var(--cert-accent) 14%, transparent) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 .cert-card:hover,
 .cert-card:focus-within {
-  transform: translateY(-4px);
-  border-color: color-mix(in srgb, var(--accent) 38%, var(--border));
-  box-shadow: 0 22px 48px color-mix(in srgb, var(--accent) 13%, transparent);
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--cert-accent) 40%, var(--border));
+  box-shadow: 0 26px 56px color-mix(in srgb, var(--cert-accent) 14%, transparent);
 }
+.cert-card:hover::before,
+.cert-card:focus-within::before { opacity: 1; }
+.cert-visual { position: relative; }
 .cert-card img {
   width: 100%;
-  aspect-ratio: 10 / 7;
+  aspect-ratio: 2000 / 1400;
   object-fit: cover;
+  display: block;
   transition: transform 0.4s ease, filter 0.3s ease;
 }
 .cert-card:hover img,
-.cert-card:focus-within img { transform: scale(1.025); filter: saturate(1.04); }
-.cert-content { padding: 1rem 1.1rem 1.2rem; }
-.cert-content h3 { margin: 0 0 0.45rem; font-size: 1.05rem; }
-.cert-content p { margin: 0; color: var(--muted); line-height: 1.6; }
+.cert-card:focus-within img { transform: scale(1.03); filter: saturate(1.05); }
+.cert-badge {
+  position: absolute;
+  left: 0.9rem;
+  top: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: white;
+  background: color-mix(in srgb, var(--cert-accent) 78%, black 22%);
+  border: 1px solid color-mix(in srgb, var(--cert-accent) 70%, white 30%);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--cert-accent) 22%, transparent);
+}
+.cert-card--mission { --cert-accent: #2563eb; }
+.cert-card--green { --cert-accent: #0f9f86; }
+.cert-card--blue { --cert-accent: #2563eb; }
+.cert-card--violet { --cert-accent: #7c3aed; }
+.cert-card--amber { --cert-accent: #d97706; }
+.cert-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.7rem;
+  padding: 1rem 1.05rem 1.1rem;
+}
+.cert-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+.cert-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 700;
+  color: var(--cert-accent);
+  background: color-mix(in srgb, var(--cert-accent) 10%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--cert-accent) 16%, var(--border));
+}
+.cert-date { color: var(--muted); }
+.cert-content h3 { margin: 0; font-size: 1.05rem; line-height: 1.35; }
+.cert-content p { margin: 0; color: var(--muted); line-height: 1.65; }
+.cert-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.1rem;
+}
+.cert-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  border: 1px solid color-mix(in srgb, var(--cert-accent) 16%, var(--border));
+  background: color-mix(in srgb, var(--cert-accent) 8%, var(--surface));
+  color: color-mix(in srgb, var(--cert-accent) 78%, var(--text));
+}
 .cards-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
 .two-col-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .volunteer-grid { align-items: stretch; }
@@ -1574,12 +1665,15 @@ img { max-width: 100%; display: block; }
   .gallery-collage { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .gallery-item, .gallery-item.wide, .gallery-item.tall { grid-column: span 1; grid-row: span 1; min-height: 220px; }
   .skills-grid, .project-grid, .cards-row { grid-template-columns: 1fr 1fr; }
+  .cert-card { flex-basis: calc(50% - 0.5rem); flex: 0 0 calc(50% - 0.5rem); max-width: calc(50% - 0.5rem); }
 }
 
 @media (max-width: 720px) {
   .menu-toggle { display: inline-flex; }
   .education-item { flex-direction: column; }
-  .cert-card { flex-basis: 100%; flex: 0 0 100%; }
+  .certification-carousel { padding: 1rem 0.9rem 0.95rem; }
+  .certification-controls { position: static; justify-content: flex-end; margin-bottom: 0.8rem; }
+  .cert-card { flex-basis: 100%; flex: 0 0 100%; max-width: 100%; }
   .education-top { flex-direction: column; }
   /* On small screens, restore normal flow for the summary button */
   .education-details summary { position: static; right: auto; top: auto; }
