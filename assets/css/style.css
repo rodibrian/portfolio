@@ -1937,3 +1937,21 @@ img { max-width: 100%; display: block; }
   .career-goal-aside { border-top: 1px solid var(--border); border-left: 0; }
   .form-row { grid-template-columns: 1fr; }
 }
+
+@media (min-width: 721px) and (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .skills-grid > .skill-card,
+  .skill-card--management {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .skill-card--management .skill-list {
+    grid-template-columns: 1fr;
+  }
+}
