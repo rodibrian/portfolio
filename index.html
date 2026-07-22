@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,36 +23,40 @@
         <span></span><span></span><span></span>
       </button>
       <div class="nav-links" id="navMenu">
-        <a href="#about"><i class="fa-solid fa-user"></i><span>À propos</span></a>
-        <a href="#skills"><i class="fa-solid fa-layer-group"></i><span>Compétences</span></a>
+        <a href="#about"><i class="fa-solid fa-user"></i><span data-i18n="nav.about">À propos</span></a>
+        <a href="#skills"><i class="fa-solid fa-layer-group"></i><span data-i18n="nav.skills">Compétences</span></a>
         <div class="nav-select">
           <button class="nav-select-toggle" type="button" aria-expanded="false">
             <i class="fa-solid fa-route"></i>
-            <span>Parcours</span>
+            <span data-i18n="nav.journey">Parcours</span>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="nav-select-menu">
-            <a href="#experience">Expérience</a>
-            <a href="#education">Formation</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#volunteer">Bénévolat</a>
+            <a href="#experience" data-i18n="nav.experience">Expérience</a>
+            <a href="#education" data-i18n="nav.education">Formation</a>
+            <a href="#certifications" data-i18n="nav.certifications">Certifications</a>
+            <a href="#volunteer" data-i18n="nav.volunteer">Bénévolat</a>
           </div>
         </div>
         <div class="nav-select">
           <button class="nav-select-toggle" type="button" aria-expanded="false">
             <i class="fa-solid fa-images"></i>
-            <span>Projets</span>
+            <span data-i18n="nav.projects">Projets</span>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="nav-select-menu">
-            <a href="#projects">Projets phares</a>
-            <a href="#gallery">Galerie</a>
+            <a href="#projects" data-i18n="nav.featuredProjects">Projets phares</a>
+            <a href="#gallery" data-i18n="nav.gallery">Galerie</a>
           </div>
         </div>
-        <a href="#contact"><i class="fa-solid fa-paper-plane"></i><span>Contact</span></a>
+        <a href="#contact"><i class="fa-solid fa-paper-plane"></i><span data-i18n="nav.contact">Contact</span></a>
       </div>
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Basculer le thème">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Basculer le thème" data-i18n-attr='{"aria-label":"theme.toggle"}'>
         <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="theme-toggle" id="languageToggle" type="button" aria-label="Switch language">
+        <i class="fa-solid fa-globe"></i>
+        <span>FR</span>
       </button>
     </nav>
   </header>
@@ -61,33 +65,38 @@
     <section class="hero-section">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="hero-kicker"><span class="hero-kicker-dot"></span> Développeur Web &amp; Desktop <span class="hero-kicker-separator">•</span> Fondateur de Baia Creative Solutions</p>
-          <h1>Rodi Brian Embony</h1>
-          <p class="lead">Génie informatique, applications web et desktop sur mesure, design numérique et accompagnement de projets concrets.</p>
+          <p class="hero-kicker">
+            <span class="hero-kicker-dot"></span>
+            <span data-i18n="hero.kickerText">Développeur Web &amp; Desktop</span>
+            <span class="hero-kicker-separator">•</span>
+            <span data-i18n="hero.kickerBrand">Fondateur de Baia Creative Solutions</span>
+          </p>
+          <h1 data-i18n="hero.title">Rodi Brian Embony</h1>
+          <p class="lead" data-i18n="hero.lead">Génie informatique, applications web et desktop sur mesure, design numérique et accompagnement de projets concrets.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">Voir mes projets</a>
-            <a class="btn btn-secondary" href="mailto:embony.rodibrian@gmail.com">Me contacter</a>
-            <a class="btn btn-outline" href="assets/docs/RODI_BRIAN_CV.pdf" target="_blank" rel="noopener">Télécharger mon CV</a>
+            <a class="btn btn-primary" href="#projects" data-i18n="hero.viewProjects">Voir mes projets</a>
+            <a class="btn btn-secondary" href="mailto:embony.rodibrian@gmail.com" data-i18n="hero.contact">Me contacter</a>
+            <a class="btn btn-outline" href="assets/docs/RESUME EMBONY_RODI_BRIAN.pdf" target="_blank" rel="noopener" data-i18n="hero.downloadCv">Télécharger mon CV</a>
           </div>
           <ul class="hero-meta">
-            <li><i class="fa-solid fa-location-dot"></i><span>Toamasina, Madagascar</span></li>
+            <li><i class="fa-solid fa-location-dot"></i><span data-i18n="hero.location">Toamasina, Madagascar</span></li>
             <li><i class="fa-solid fa-envelope"></i><span>embony.rodibrian@gmail.com</span></li>
           </ul>
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/rodibrian-embony/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://github.com/rodibrian/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.facebook.com/embony.rodibrian" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://x.com/e_rodibrian" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/rodibrian-embony/" target="_blank" rel="noopener" data-i18n-attr='{"aria-label":"hero.socialLinkedIn"}'><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/rodibrian/" target="_blank" rel="noopener" data-i18n-attr='{"aria-label":"hero.socialGitHub"}'><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.facebook.com/embony.rodibrian" target="_blank" rel="noopener" data-i18n-attr='{"aria-label":"hero.socialFacebook"}'><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://x.com/e_rodibrian" target="_blank" rel="noopener" data-i18n-attr='{"aria-label":"hero.socialX"}'><i class="fa-brands fa-twitter"></i></a>
           </div>
         </div>
         <div class="hero-card reveal">
           <span class="hero-card-index">01 / PROFILE</span>
           <img src="assets/images/profile.png" alt="Portrait placeholder de Rodi Brian Embony" />
           <div class="hero-card-caption">
-            <span>Créer avec intention</span>
-            <strong>Des idées qui deviennent utiles.</strong>
+            <span data-i18n="hero.cardCaption">Créer avec intention</span>
+            <strong data-i18n="hero.cardStrong">Des idées qui deviennent utiles.</strong>
           </div>
-          <span class="hero-card-status"><i class="fa-solid fa-circle"></i> Ouvert aux collaborations</span>
+          <span class="hero-card-status"><i class="fa-solid fa-circle"></i><span data-i18n="hero.availability">Ouvert aux collaborations</span></span>
         </div>
       </div>
     </section>
@@ -103,21 +112,21 @@
           </div>
         </div>
         <div class="about-content reveal">
-          <p class="about-kicker"><span></span> À propos de mon parcours</p>
-          <h2>Ingénieur en informatique, je conçois et développe des applications web et desktop depuis 2019</h2>
-          <p>Tout a commencé sur les bancs de l'université, où j'ai maîtrisé HTML, CSS, JavaScript, Bootstrap, PHP, C/Gtk, Java et C++/Qt. Cette base technique s'est ensuite solidifiée en entreprise chez DDS, où j'ai développé des applications métier avec Java SE et Spring Boot — apprenant à livrer des solutions robustes dans des contextes professionnels exigeants.</p>
-          <p>Aujourd'hui, je porte cette expertise à travers Baia Creative Solutions, la structure que j'ai fondée pour accompagner mes clients dans la création de sites vitrines, d'applications desktop sur mesure et d'assistance digitale — de l'analyse du besoin jusqu'à la livraison.</p>
-          <p>Mon parcours ne se limite pas au code : une mission internationale de service bénévole au Bénin et au Togo m'a appris à diriger, m'adapter et communiquer efficacement dans des contextes interculturels complexes — des compétences que je mobilise aujourd'hui dans chaque projet et chaque relation client.</p>
+          <p class="about-kicker"><span></span><span data-i18n="about.kicker">À propos de mon parcours</span></p>
+          <h2 data-i18n="about.title">Ingénieur en informatique, je conçois et développe des applications web et desktop depuis 2019</h2>
+          <p data-i18n="about.p1">Tout a commencé sur les bancs de l'université, où j'ai maîtrisé HTML, CSS, JavaScript, Bootstrap, PHP, C/Gtk, Java et C++/Qt. Cette base technique s'est ensuite solidifiée en entreprise chez DDS, où j'ai développé des applications métier avec Java SE et Spring Boot — apprenant à livrer des solutions robustes dans des contextes professionnels exigeants.</p>
+          <p data-i18n="about.p2">Aujourd'hui, je porte cette expertise à travers Baia Creative Solutions, la structure que j'ai fondée pour accompagner mes clients dans la création de sites vitrines, d'applications desktop sur mesure et d'assistance digitale — de l'analyse du besoin jusqu'à la livraison.</p>
+          <p data-i18n="about.p3">Mon parcours ne se limite pas au code : une mission internationale de service bénévole au Bénin et au Togo m'a appris à diriger, m'adapter et communiquer efficacement dans des contextes interculturels complexes — des compétences que je mobilise aujourd'hui dans chaque projet et chaque relation client.</p>
           <div class="pill-list about-pill-list">
-            <span>Autonomie</span>
-            <span>Leadership</span>
-            <span>Adaptabilité</span>
-            <span>Esprit critique</span>
+            <span data-i18n="about.badge1">Autonomie</span>
+            <span data-i18n="about.badge2">Leadership</span>
+            <span data-i18n="about.badge3">Adaptabilité</span>
+            <span data-i18n="about.badge4">Esprit critique</span>
           </div>
           <div class="about-proof-row">
-            <div><strong>2019</strong><span>Début du parcours<br />professionnel</span></div>
-            <div><strong>Web + Desktop</strong><span>Des solutions pensées<br />pour le terrain</span></div>
-            <div><strong>1 approche</strong><span>Clarté, autonomie<br />et impact utile</span></div>
+            <div><strong data-i18n="about.proof1">2019</strong><span data-i18n="about.proof1Sub">Début du parcours<br />professionnel</span></div>
+            <div><strong data-i18n="about.proof2">Web + Desktop</strong><span data-i18n="about.proof2Sub">Des solutions pensées<br />pour le terrain</span></div>
+            <div><strong data-i18n="about.proof3">1 approche</strong><span data-i18n="about.proof3Sub">Clarté, autonomie<br />et impact utile</span></div>
           </div>
         </div>
       </div>
@@ -130,17 +139,17 @@
             <i class="fa-solid fa-compass"></i>
           </div>
           <div class="career-goal-content">
-            <p class="eyebrow">Prochaine étape</p>
-            <h2>Ce que je recherche</h2>
-            <p>De nouveaux défis professionnels me permettant de progresser dans mon domaine, en priorité en télétravail, ouvert à l’hybride.</p>
-            <a class="career-goal-link" href="#contact">Échangeons sur une opportunité <i class="fa-solid fa-arrow-right"></i></a>
+            <p class="eyebrow" data-i18n="career.eyebrow">Prochaine étape</p>
+            <h2 data-i18n="career.title">Ce que je recherche</h2>
+            <p data-i18n="career.text">De nouveaux défis professionnels me permettant de progresser dans mon domaine, en priorité en télétravail, ouvert à l’hybride.</p>
+            <a class="career-goal-link" href="#contact"><span data-i18n="career.link">Échangeons sur une opportunité</span> <i class="fa-solid fa-arrow-right"></i></a>
           </div>
           <div class="career-goal-aside">
-            <span class="career-goal-aside-label">Cadre idéal</span>
+            <span class="career-goal-aside-label" data-i18n="career.asideLabel">Cadre idéal</span>
             <ul>
-              <li><i class="fa-solid fa-house-laptop"></i><span>Télétravail prioritaire</span></li>
-              <li><i class="fa-solid fa-arrows-left-right-to-line"></i><span>Ouvert à l’hybride</span></li>
-              <li><i class="fa-solid fa-rocket"></i><span>Projets à impact concret</span></li>
+              <li><i class="fa-solid fa-house-laptop"></i><span data-i18n="career.item1">Télétravail prioritaire</span></li>
+              <li><i class="fa-solid fa-arrows-left-right-to-line"></i><span data-i18n="career.item2">Ouvert à l’hybride</span></li>
+              <li><i class="fa-solid fa-rocket"></i><span data-i18n="career.item3">Projets à impact concret</span></li>
             </ul>
           </div>
         </div>
@@ -150,42 +159,42 @@
     <section id="skills" class="section section-alt">
       <div class="container">
         <div class="section-heading skills-heading reveal">
-          <p class="eyebrow">03 / Compétences</p>
-          <h2>Un socle technique solide, complété par une approche design et orientée résultats.</h2>
+          <p class="eyebrow" data-i18n="skills.eyebrow">03 / Compétences</p>
+          <h2 data-i18n="skills.title">Un socle technique solide, complété par une approche design et orientée résultats.</h2>
         </div>
         <div class="skills-grid">
           <div class="skill-card skill-card--languages reveal">
             <div class="skill-card-head">
               <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
-              <div><span class="skill-card-number">01</span><h3>Langages</h3><small>Construire la base</small></div>
+              <div><span class="skill-card-number">01</span><h3 data-i18n="skills.languages">Langages</h3><small data-i18n="skills.languagesSubtitle">Construire la base</small></div>
             </div>
             <ul class="skill-list">
-              <li data-score="92"><span class="skill-badge"><i class="devicon-c-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label">C</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
-              <li data-score="90"><span class="skill-badge"><i class="devicon-cplusplus-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label">C++</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
-              <li data-score="88"><span class="skill-badge"><i class="devicon-java-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label">Java SE</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
-              <li data-score="94"><span class="skill-badge"><i class="devicon-javascript-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label">JavaScript</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
-              <li data-score="78"><span class="skill-badge"><i class="devicon-python-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label">Python</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
-              <li data-score="74"><span class="skill-badge"><i class="devicon-php-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label">PHP</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
+              <li data-score="92"><span class="skill-badge"><i class="devicon-c-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label" data-i18n="skills.item.c">C</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
+              <li data-score="90"><span class="skill-badge"><i class="devicon-cplusplus-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label" data-i18n="skills.item.cpp">C++</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
+              <li data-score="88"><span class="skill-badge"><i class="devicon-java-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label" data-i18n="skills.item.java">Java SE</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
+              <li data-score="94"><span class="skill-badge"><i class="devicon-javascript-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label" data-i18n="skills.item.js">JavaScript</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
+              <li data-score="78"><span class="skill-badge"><i class="devicon-python-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label" data-i18n="skills.item.python">Python</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
+              <li data-score="74"><span class="skill-badge"><i class="devicon-php-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label" data-i18n="skills.item.php">PHP</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
             </ul>
           </div>
           <div class="skill-card skill-card--frameworks reveal">
             <div class="skill-card-head">
               <div class="skill-icon"><i class="fa-solid fa-layer-group"></i></div>
-              <div><span class="skill-card-number">02</span><h3>Frameworks &amp; bases de données</h3><small>Structurer le produit</small></div>
+              <div><span class="skill-card-number">02</span><h3 data-i18n="skills.frameworks">Frameworks &amp; bases de données</h3><small data-i18n="skills.frameworksSubtitle">Structurer le produit</small></div>
             </div>
             <ul class="skill-list">
-              <li data-score="84"><span class="skill-badge"><i class="fa-solid fa-cubes"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label">Qt</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
-              <li data-score="82"><span class="skill-badge"><i class="devicon-bootstrap-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label">Bootstrap</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
-              <li data-score="81"><span class="skill-badge"><i class="devicon-spring-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label">Spring Boot</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
-              <li data-score="80"><span class="skill-badge"><i class="devicon-mysql-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label">MySQL</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
-              <li data-score="76"><span class="skill-badge"><i class="devicon-sqlite-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label">SQLite</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
-              <li data-score="79"><span class="skill-badge"><i class="devicon-postgresql-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label">PostgreSQL</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
+              <li data-score="84"><span class="skill-badge"><i class="fa-solid fa-cubes"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label" data-i18n="skills.item.qt">Qt</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
+              <li data-score="82"><span class="skill-badge"><i class="devicon-bootstrap-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label" data-i18n="skills.item.bootstrap">Bootstrap</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
+              <li data-score="81"><span class="skill-badge"><i class="devicon-spring-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label" data-i18n="skills.item.spring">Spring Boot</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
+              <li data-score="80"><span class="skill-badge"><i class="devicon-mysql-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label" data-i18n="skills.item.mysql">MySQL</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
+              <li data-score="76"><span class="skill-badge"><i class="devicon-sqlite-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label" data-i18n="skills.item.sqlite">SQLite</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
+              <li data-score="79"><span class="skill-badge"><i class="devicon-postgresql-plain colored"></i></span><span class="skill-content"><span class="skill-text"><span class="skill-label" data-i18n="skills.item.postgres">PostgreSQL</span><span class="skill-score">--</span></span><span class="skill-progress" aria-hidden="true"><span class="skill-progress-bar"></span></span></span></li>
             </ul>
           </div>
           <div class="skill-card skill-card--tools reveal">
             <div class="skill-card-head">
               <div class="skill-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-              <div><span class="skill-card-number">03</span><h3>Outils</h3><small>Accélérer chaque étape</small></div>
+              <div><span class="skill-card-number">03</span><h3 data-i18n="skills.tools">Outils</h3><small data-i18n="skills.toolsSubtitle">Accélérer chaque étape</small></div>
             </div>
             <ul class="skill-list">
               <li><span class="skill-badge"><i class="fa-solid fa-code"></i></span><span>VS Code</span></li>
@@ -199,29 +208,29 @@
           <div class="skill-card skill-card--soft reveal">
             <div class="skill-card-head">
               <div class="skill-icon"><i class="fa-solid fa-users"></i></div>
-              <div><span class="skill-card-number">04</span><h3>Soft skills</h3><small>Faire avancer le collectif</small></div>
+              <div><span class="skill-card-number">04</span><h3 data-i18n="skills.soft">Soft skills</h3><small data-i18n="skills.softSubtitle">Faire avancer le collectif</small></div>
             </div>
             <div class="pill-list">
-              <span>Organisation</span>
-              <span>Leadership</span>
-              <span>Autonomie</span>
-              <span>Créativité</span>
-              <span>Patience</span>
-              <span>Communication</span>
-              <span>Gestion du stress</span>
-              <span>Empathie</span>
+              <span data-i18n="skills.soft.org">Organisation</span>
+              <span data-i18n="skills.soft.lead">Leadership</span>
+              <span data-i18n="skills.soft.autonomy">Autonomie</span>
+              <span data-i18n="skills.soft.creativity">Créativité</span>
+              <span data-i18n="skills.soft.patience">Patience</span>
+              <span data-i18n="skills.soft.communication">Communication</span>
+              <span data-i18n="skills.soft.stress">Gestion du stress</span>
+              <span data-i18n="skills.soft.empathy">Empathie</span>
             </div>
           </div>
           <div class="skill-card skill-card--management reveal">
             <div class="skill-card-head">
               <div class="skill-icon"><i class="fa-solid fa-compass-drafting"></i></div>
-              <div><span class="skill-card-number">05</span><h3>Gestion &amp; Entrepreneuriat</h3><small>Piloter la vision</small></div>
+              <div><span class="skill-card-number">05</span><h3 data-i18n="skills.management">Gestion &amp; Entrepreneuriat</h3><small data-i18n="skills.managementSubtitle">Piloter la vision</small></div>
             </div>
             <ul class="skill-list">
-              <li><span class="skill-badge"><i class="fa-solid fa-diagram-project"></i></span><span>Gestion de projet</span></li>
-              <li><span class="skill-badge"><i class="fa-solid fa-handshake"></i></span><span>Relation client</span></li>
-              <li><span class="skill-badge"><i class="fa-solid fa-magnifying-glass-chart"></i></span><span>Analyse des besoins</span></li>
-              <li><span class="skill-badge"><i class="fa-solid fa-building-user"></i></span><span>Direction d’entreprise</span></li>
+              <li><span class="skill-badge"><i class="fa-solid fa-diagram-project"></i></span><span data-i18n="skills.item.project">Gestion de projet</span></li>
+              <li><span class="skill-badge"><i class="fa-solid fa-handshake"></i></span><span data-i18n="skills.item.client">Relation client</span></li>
+              <li><span class="skill-badge"><i class="fa-solid fa-magnifying-glass-chart"></i></span><span data-i18n="skills.item.analysis">Analyse des besoins</span></li>
+              <li><span class="skill-badge"><i class="fa-solid fa-building-user"></i></span><span data-i18n="skills.item.direction">Direction d’entreprise</span></li>
             </ul>
           </div>
         </div>
@@ -231,8 +240,8 @@
     <section id="experience" class="section">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">Expériences</p>
-          <h2>Un parcours construit autour du produit, du terrain et de l’apprentissage continu.</h2>
+          <p class="eyebrow" data-i18n="experience.eyebrow">Expériences</p>
+          <h2 data-i18n="experience.title">Un parcours construit autour du produit, du terrain et de l’apprentissage continu.</h2>
         </div>
 
         <div class="experience-layout">
@@ -246,17 +255,17 @@
                       <img src="assets/images/experiences/logo-bcs.png" alt="Logo de Baia Creative Solutions" />
                     </div>
                     <div>
-                      <p class="timeline-date">2026 – Aujourd’hui</p>
-                      <h3>Fondateur • CEO • Développeur — Baia Creative Solutions</h3>
+                      <p class="timeline-date" data-i18n="experience.bcsDate">2026 – Aujourd’hui</p>
+                      <h3 data-i18n="experience.bcsTitle">Fondateur • CEO • Développeur — Baia Creative Solutions</h3>
                     </div>
                   </div>
-                  <span class="timeline-badge">Startup</span>
+                  <span class="timeline-badge" data-i18n="experience.bcsTag">Startup</span>
                 </div>
-                <p>Création d’une structure de services numériques axée sur le développement web, desktop, design et accompagnement de clients.</p>
+                <p data-i18n="experience.bcsText">Création d’une structure de services numériques axée sur le développement web, desktop, design et accompagnement de clients.</p>
                 <ul class="timeline-points">
-                  <li>Conception de sites vitrines, portfolios et interfaces modernes pensées pour les besoins réels des clients.</li>
-                  <li>Développement d’applications desktop et support numérique sur mesure, avec une approche orientée résultat.</li>
-                  <li>Gestion de projet, relation client, identité visuelle, communication et accompagnement stratégique.</li>
+                  <li data-i18n="experience.bcsPoint1">Conception de sites vitrines, portfolios et interfaces modernes pensées pour les besoins réels des clients.</li>
+                  <li data-i18n="experience.bcsPoint2">Développement d’applications desktop et support numérique sur mesure, avec une approche orientée résultat.</li>
+                  <li data-i18n="experience.bcsPoint3">Gestion de projet, relation client, identité visuelle, communication et accompagnement stratégique.</li>
                 </ul>
                 <div class="timeline-tags">
                   <span>Web</span>
@@ -265,8 +274,8 @@
                   <span>Entrepreneuriat</span>
                 </div>
                 <div class="timeline-actions">
-                  <a href="#projects">Voir les projets</a>
-                  <a href="mailto:embony.rodibrian@gmail.com">Prendre contact</a>
+                  <a href="#projects" data-i18n="experience.bcsLink1">Voir les projets</a>
+                  <a href="mailto:embony.rodibrian@gmail.com" data-i18n="experience.bcsLink2">Prendre contact</a>
                 </div>
               </div>
             </article>
@@ -280,17 +289,17 @@
                       <img src="assets/images/experiences/logo-international-mission.png" alt="Logo de la mission internationale" />
                     </div>
                     <div>
-                      <p class="timeline-date">2023 – 2025</p>
-                      <h3>Mission internationale de service bénévole — Bénin, Togo</h3>
+                      <p class="timeline-date" data-i18n="experience.missionDate">2023 – 2025</p>
+                      <h3 data-i18n="experience.missionTitle">Mission internationale de service bénévole — Bénin, Togo</h3>
                     </div>
                   </div>
-                  <span class="timeline-badge alt">Engagement</span>
+                  <span class="timeline-badge alt" data-i18n="experience.missionTag">Engagement</span>
                 </div>
-                <p>Un terrain d’apprentissage humain et professionnel, marqué par l’organisation, l’écoute et la coordination d’actions de service au cœur d’environnements multiculturels.</p>
+                <p data-i18n="experience.missionText">Un terrain d’apprentissage humain et professionnel, marqué par l’organisation, l’écoute et la coordination d’actions de service au cœur d’environnements multiculturels.</p>
                 <ul class="timeline-points">
-                  <li>Accompagnement de personnes et familles dans des contextes sensibles, avec une forte dimension humaine.</li>
-                  <li>Organisation d’activités, coordination logistique et gestion autonome du planning.</li>
-                  <li>Renforcement de la communication interculturelle, de la résilience et du leadership de service.</li>
+                  <li data-i18n="experience.missionPoint1">Accompagnement de personnes et familles dans des contextes sensibles, avec une forte dimension humaine.</li>
+                  <li data-i18n="experience.missionPoint2">Organisation d’activités, coordination logistique et gestion autonome du planning.</li>
+                  <li data-i18n="experience.missionPoint3">Renforcement de la communication interculturelle, de la résilience et du leadership de service.</li>
                 </ul>
                 <div class="timeline-tags">
                   <span>Leadership</span>
@@ -333,30 +342,30 @@
 
           <aside class="experience-sidebar">
             <div class="experience-panel reveal">
-              <h3>Galerie photo &amp; collage</h3>
-              <p>Un aperçu visuel de l’évolution de mon parcours, des projets et des expériences qui ont façonné mon approche.</p>
+              <h3 data-i18n="experience.galleryTitle">Galerie photo &amp; collage</h3>
+              <p data-i18n="experience.galleryText">Un aperçu visuel de l’évolution de mon parcours, des projets et des expériences qui ont façonné mon approche.</p>
               <div class="gallery-grid collage-grid">
                 <div class="gallery-card tall-card">
-                  <img src="assets/images/experiences/bcs-post.png" alt="Illustration du projet Sub-M" />
+                  <img src="assets/images/experiences/bcs-post.png" data-i18n-attr='{"alt":"experience.galleryCard1Alt"}' alt="Illustration du projet Baia Creative Solutions" />
                   <div class="gallery-caption">
-                    <strong>Présentation de Baia Creative Solutions</strong>
-                    <span>Lancement Officiel de Baia Creative Solutions sur les réseaux</span>
+                    <strong data-i18n="experience.galleryCard1Title">Présentation de Baia Creative Solutions</strong>
+                    <span data-i18n="experience.galleryCard1Text">Lancement officiel de Baia Creative Solutions sur les réseaux</span>
                   </div>
                 </div>
                 
                 <div class="gallery-card">
-                  <img src="assets/images/experiences/professional-journey.png" alt="Illustration du parcours professionnel" />
+                  <img src="assets/images/experiences/professional-journey.png" data-i18n-attr='{"alt":"experience.galleryCard2Alt"}' alt="Illustration du parcours professionnel" />
                   <div class="gallery-caption">
-                    <strong>Mission &amp; leadership</strong>
-                    <span>Un parcours enrichi par l’engagement, l’adaptation et l’écoute.</span>
+                    <strong data-i18n="experience.galleryCard2Title">Mission &amp; leadership</strong>
+                    <span data-i18n="experience.galleryCard2Text">Un parcours enrichi par l’engagement, l’adaptation et l’écoute.</span>
                   </div>
                 </div>
 
                 <div class="gallery-card">
-                  <img src="assets/images/experiences/ijeeryapp-dashboard.png" alt="Illustration du projet IjeeryApp" />
+                  <img src="assets/images/experiences/ijeeryapp-dashboard.png" data-i18n-attr='{"alt":"experience.galleryCard3Alt"}' alt="Illustration du projet IjeeryApp" />
                   <div class="gallery-caption">
-                    <strong>ERP &amp; solutions métiers</strong>
-                    <span>Applications pensées pour la productivité, la traçabilité et la clarté des opérations.</span>
+                    <strong data-i18n="experience.galleryCard3Title">ERP &amp; solutions métiers</strong>
+                    <span data-i18n="experience.galleryCard3Text">Applications pensées pour la productivité, la traçabilité et la clarté des opérations.</span>
                   </div>
                 </div>
                 
@@ -376,8 +385,8 @@
     <section id="education" class="section">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">Formation</p>
-          <h2>Une formation académique solide, enrichie par des expériences terrain et des initiatives citoyennes.</h2>
+          <p class="eyebrow" data-i18n="education.eyebrow">Formation</p>
+          <h2 data-i18n="education.title">Une formation académique solide, enrichie par des expériences terrain et des initiatives citoyennes.</h2>
         </div>
 
         <div class="education-stack">
@@ -386,19 +395,17 @@
             <div class="education-content">
               <div class="education-top">
                 <div class="education-title-block">
-                  <h3>Master en Génie Informatique</h3>
-                  <span class="education-institution">Université de Toamasina</span>
+                  <h3 data-i18n="education.infoTitle">Master en Génie Informatique</h3>
+                  <span class="education-institution" data-i18n="education.infoInstitution">Université de Toamasina</span>
                 </div>
-                <p class="education-year">2025</p>
+                <p class="education-year" data-i18n="education.infoYear">2025</p>
               </div>
-              <p>Formation approfondie en génie informatique, avec un travail de recherche orienté vers le développement d’un système intelligent de gestion de bankroll basé sur l’analyse de données.</p>
+              <p data-i18n="education.infoText">Formation approfondie en génie informatique, avec un travail de recherche orienté vers le développement d’un système intelligent de gestion de bankroll basé sur l’analyse de données.</p>
               <details class="education-details">
                 <summary>Voir détails</summary>
                 <div class="education-details-body">
                   <ul>
-                    <li>Analyse statistique et modélisation</li>
-                    <li>Développement en C++ / Qt et SQLite</li>
-                    <li>UML, architecture logicielle et méthodologie de recherche</li>
+                    <li data-i18n="education.infoDetails">Analyse statistique et modélisation</li>
                   </ul>
                 </div>
               </details>
@@ -434,19 +441,17 @@
             <div class="education-content">
               <div class="education-top">
                 <div class="education-title-block">
-                  <h3>Bachelor Business Management</h3>
-                  <span class="education-institution">BYU Online / BYU-Pathway</span>
+                  <h3 data-i18n="education.businessTitle">Bachelor Business Management</h3>
+                  <span class="education-institution" data-i18n="education.businessInstitution">BYU Online / BYU-Pathway</span>
                 </div>
-                <p class="education-year">En cours</p>
+                <p class="education-year" data-i18n="education.businessYear">En cours</p>
               </div>
-              <p>Formation complémentaire en gestion d’entreprise, communication professionnelle, leadership, finance et marketing, pour renforcer l’aspect entrepreneurial de mon parcours.</p>
+              <p data-i18n="education.businessText">Formation complémentaire en gestion d’entreprise, communication professionnelle, leadership, finance et marketing, pour renforcer l’aspect entrepreneurial de mon parcours.</p>
               <details class="education-details">
                 <summary>Voir détails</summary>
                 <div class="education-details-body">
                   <ul>
-                    <li>Gestion d’entreprise et stratégie</li>
-                    <li>Communication professionnelle et leadership</li>
-                    <li>Finance, marketing et développement entrepreneurial</li>
+                    <li data-i18n="education.businessDetails">Gestion d’entreprise et stratégie</li>
                   </ul>
                 </div>
               </details>
@@ -463,8 +468,8 @@
     <section id="certifications" class="section section-alt">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">Certifications</p>
-          <h2>Des preuves de parcours, de rigueur et d’engagement, présentées avec une identité visuelle plus forte.</h2>
+          <p class="eyebrow" data-i18n="certifications.eyebrow">Certifications</p>
+          <h2 data-i18n="certifications.title">Des preuves de parcours, de rigueur et d’engagement, présentées avec une identité visuelle plus forte.</h2>
         </div>
 
         <div class="certification-carousel reveal">
@@ -476,15 +481,15 @@
             <article class="cert-card cert-card--mission">
               <div class="cert-visual">
                 <img src="assets/images/certifications/cerificat-mission.png" alt="Illustration du certificat de mission bénévole" />
-                <span class="cert-badge">Preuve de mission</span>
+                <span class="cert-badge" data-i18n="certifications.card1Badge">Preuve de mission</span>
               </div>
               <div class="cert-content">
                 <div class="cert-meta">
-                  <span class="cert-label">Attestation</span>
-                  <span class="cert-date">2023–2025</span>
+                  <span class="cert-label" data-i18n="certifications.card1Label">Attestation</span>
+                  <span class="cert-date" data-i18n="certifications.card1Date">2023–2025</span>
                 </div>
-                <h3>Certificat de fin de mission bénévole</h3>
-                <p>Attestation de mission à temps plein réalisée au Bénin et au Togo, valorisant l’engagement, la responsabilité et la coopération internationale.</p>
+                <h3 data-i18n="certifications.card1Title">Certificat de fin de mission bénévole</h3>
+                <p data-i18n="certifications.card1Text">Attestation de mission à temps plein réalisée au Bénin et au Togo, valorisant l’engagement, la responsabilité et la coopération internationale.</p>
                 <div class="cert-footer">
                   <span class="cert-pill">Engagement</span>
                   <span class="cert-pill">Responsabilité</span>
@@ -496,15 +501,15 @@
             <article class="cert-card cert-card--green">
               <div class="cert-visual">
                 <img src="assets/images/certifications/certificatinvoloinaparc.png" alt="Illustration de l’attestation Ambassadeur Vert" />
-                <span class="cert-badge">Formation citoyenne</span>
+                <span class="cert-badge" data-i18n="certifications.card2Badge">Formation citoyenne</span>
               </div>
               <div class="cert-content">
                 <div class="cert-meta">
-                  <span class="cert-label">Reconnaissance</span>
-                  <span class="cert-date">Éducation</span>
+                  <span class="cert-label" data-i18n="certifications.card2Label">Reconnaissance</span>
+                  <span class="cert-date" data-i18n="certifications.card2Date">Éducation</span>
                 </div>
-                <h3>Attestation Ambassadeur Vert</h3>
-                <p>Reconnaissance de la participation à une formation environnementale et de sensibilisation, avec une implication dans les actions liées à la protection de l’environnement.</p>
+                <h3 data-i18n="certifications.card2Title">Attestation Ambassadeur Vert</h3>
+                <p data-i18n="certifications.card2Text">Reconnaissance de la participation à une formation environnementale et de sensibilisation, avec une implication dans les actions liées à la protection de l’environnement.</p>
                 <div class="cert-footer">
                   <span class="cert-pill">Environnement</span>
                   <span class="cert-pill">Sensibilisation</span>
@@ -516,15 +521,15 @@
             <article class="cert-card cert-card--blue">
               <div class="cert-visual">
                 <img src="assets/images/certifications/certificat-laminformatique.png" alt="Illustration de l’attestation de stage" />
-                <span class="cert-badge">Stage pratique</span>
+                <span class="cert-badge" data-i18n="certifications.card3Badge">Stage pratique</span>
               </div>
               <div class="cert-content">
                 <div class="cert-meta">
-                  <span class="cert-label">Expérience</span>
-                  <span class="cert-date">Technique</span>
+                  <span class="cert-label" data-i18n="certifications.card3Label">Expérience</span>
+                  <span class="cert-date" data-i18n="certifications.card3Date">Technique</span>
                 </div>
-                <h3>Attestation de stage Maintenance Informatique &amp; Réseaux</h3>
-                <p>Preuve d’un stage pratique en maintenance informatique, dépannage et support réseau, enrichissant l’expérience technique et professionnelle.</p>
+                <h3 data-i18n="certifications.card3Title">Attestation de stage Maintenance Informatique &amp; Réseaux</h3>
+                <p data-i18n="certifications.card3Text">Preuve d’un stage pratique en maintenance informatique, dépannage et support réseau, enrichissant l’expérience technique et professionnelle.</p>
                 <div class="cert-footer">
                   <span class="cert-pill">Réseau</span>
                   <span class="cert-pill">Support</span>
@@ -536,15 +541,15 @@
             <article class="cert-card cert-card--violet">
               <div class="cert-visual">
                 <img src="assets/images/certifications/certificat-masterclass.png" alt="Illustration du certificat Master Class RARY ARO MADA" />
-                <span class="cert-badge">Leadership</span>
+                <span class="cert-badge" data-i18n="certifications.card4Badge">Leadership</span>
               </div>
               <div class="cert-content">
                 <div class="cert-meta">
-                  <span class="cert-label">Formation</span>
-                  <span class="cert-date">Civic</span>
+                  <span class="cert-label" data-i18n="certifications.card4Label">Formation</span>
+                  <span class="cert-date" data-i18n="certifications.card4Date">Civic</span>
                 </div>
-                <h3>Certificat Master Class RARY ARO MADA</h3>
-                <p>Certification liée à une formation de sensibilisation et de leadership civic, marquée par un engagement dans des initiatives de paix, de dialogue et d’éducation.</p>
+                <h3 data-i18n="certifications.card4Title">Certificat Master Class RARY ARO MADA</h3>
+                <p data-i18n="certifications.card4Text">Certification liée à une formation de sensibilisation et de leadership civic, marquée par un engagement dans des initiatives de paix, de dialogue et d’éducation.</p>
                 <div class="cert-footer">
                   <span class="cert-pill">Dialogue</span>
                   <span class="cert-pill">Éducation</span>
@@ -556,15 +561,15 @@
             <article class="cert-card cert-card--amber">
               <div class="cert-visual">
                 <img src="assets/images/certifications/certificat-not-found.png" alt="Illustration de l’atelier Mikrotik chez Bridge" />
-                <span class="cert-badge">Atelier réseau</span>
+                <span class="cert-badge" data-i18n="certifications.card5Badge">Atelier réseau</span>
               </div>
               <div class="cert-content">
                 <div class="cert-meta">
-                  <span class="cert-label">Compétence</span>
-                  <span class="cert-date">Déc. 2025</span>
+                  <span class="cert-label" data-i18n="certifications.card5Label">Compétence</span>
+                  <span class="cert-date" data-i18n="certifications.card5Date">Déc. 2025</span>
                 </div>
-                <h3>Atelier Mikrotik chez Bridge</h3>
-                <p>Formation pratique sur les bases de configuration réseau, notamment les notions de serveur, point d’accès, bridge et administration de réseau.</p>
+                <h3 data-i18n="certifications.card5Title">Atelier Mikrotik chez Bridge</h3>
+                <p data-i18n="certifications.card5Text">Formation pratique sur les bases de configuration réseau, notamment les notions de serveur, point d’accès, bridge et administration de réseau.</p>
                 <div class="cert-footer">
                   <span class="cert-pill">Mikrotik</span>
                   <span class="cert-pill">Infrastructure</span>
@@ -580,23 +585,23 @@
     <section id="volunteer" class="section">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">Bénévolat</p>
-          <h2>Un engagement qui a renforcé ma capacité d’adaptation, d’écoute, de coordination et de leadership.</h2>
+          <p class="eyebrow" data-i18n="volunteer.eyebrow">Bénévolat</p>
+          <h2 data-i18n="volunteer.title">Un engagement qui a renforcé ma capacité d’adaptation, d’écoute, de coordination et de leadership.</h2>
         </div>
         <div class="two-col-list volunteer-grid">
           <article class="card volunteer-card volunteer-card--international reveal">
             <div class="volunteer-card-heading">
               <div class="volunteer-icon" aria-hidden="true"><i class="fa-solid fa-earth-africa"></i></div>
               <div>
-                <span class="volunteer-kicker">Engagement international</span>
-                <h3>Mission internationale — Bénin et Togo</h3>
+                <span class="volunteer-kicker" data-i18n="volunteer.internationalKicker">Engagement international</span>
+                <h3 data-i18n="volunteer.internationalTitle">Mission internationale — Bénin et Togo</h3>
               </div>
             </div>
-            <p><strong>Mai 2023 – Mai 2025</strong> • Participation à des actions de service au cœur de contextes multiculturels, avec une forte dimension humaine, sociale et organisationnelle.</p>
+            <p data-i18n="volunteer.internationalText"><strong>Mai 2023 – Mai 2025</strong> • Participation à des actions de service au cœur de contextes multiculturels, avec une forte dimension humaine, sociale et organisationnelle.</p>
             <ul class="timeline-points">
-              <li>Accompagnement de personnes et de familles dans des situations sensibles, avec écoute, empathie et réactivité.</li>
-              <li>Coordination d’activités terrain, gestion de l’organisation locale et contribution à la fluidité des actions menées.</li>
-              <li>Renforcement de la communication interculturelle, de la résilience et du sens du service au profit du collectif.</li>
+              <li data-i18n="volunteer.internationalPoint1">Accompagnement de personnes et de familles dans des situations sensibles, avec écoute, empathie et réactivité.</li>
+              <li data-i18n="volunteer.internationalPoint2">Coordination d’activités terrain, gestion de l’organisation locale et contribution à la fluidité des actions menées.</li>
+              <li data-i18n="volunteer.internationalPoint3">Renforcement de la communication interculturelle, de la résilience et du sens du service au profit du collectif.</li>
             </ul>
             <div class="timeline-tags">
               <span>Service</span><span>Écoute</span><span>Coordination</span><span>Leadership</span>
@@ -606,15 +611,15 @@
             <div class="volunteer-card-heading">
               <div class="volunteer-icon" aria-hidden="true"><i class="fa-solid fa-people-group"></i></div>
               <div>
-                <span class="volunteer-kicker">Engagement de proximité</span>
-                <h3>Service communautaire local</h3>
+                <span class="volunteer-kicker" data-i18n="volunteer.communityKicker">Engagement de proximité</span>
+                <h3 data-i18n="volunteer.communityTitle">Service communautaire local</h3>
               </div>
             </div>
-            <p><strong>Depuis décembre 2025</strong> • Appui à la coordination de bénévoles au sein d’un conseil communautaire, dans un cadre de proximité et d’engagement collectif.</p>
+            <p data-i18n="volunteer.communityText"><strong>Depuis décembre 2025</strong> • Appui à la coordination de bénévoles au sein d’un conseil communautaire, dans un cadre de proximité et d’engagement collectif.</p>
             <ul class="timeline-points">
-              <li>Accompagnement et mobilisation d’acteurs bénévoles autour d’actions concrètes et utiles pour la communauté.</li>
-              <li>Contribution à la mise en ordre des priorités, à la communication interne et à l’animation des initiatives.</li>
-              <li>Développement d’un esprit de solidarité, d’organisation et de responsabilisation au sein du groupe.</li>
+              <li data-i18n="volunteer.communityPoint1">Accompagnement et mobilisation d’acteurs bénévoles autour d’actions concrètes et utiles pour la communauté.</li>
+              <li data-i18n="volunteer.communityPoint2">Contribution à la mise en ordre des priorités, à la communication interne et à l’animation des initiatives.</li>
+              <li data-i18n="volunteer.communityPoint3">Développement d’un esprit de solidarité, d’organisation et de responsabilisation au sein du groupe.</li>
             </ul>
             <div class="timeline-tags">
               <span>Communauté</span><span>Organisation</span><span>Solidarité</span><span>Échange</span>
@@ -627,8 +632,8 @@
         <section id="projects" class="section section-alt">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">Projets phares</p>
-          <h2>Des solutions pensées pour des besoins réels, avec une forte attention à la clarté et à l’usage.</h2>
+          <p class="eyebrow" data-i18n="projects.eyebrow">Projets phares</p>
+          <h2 data-i18n="projects.title">Des solutions pensées pour des besoins réels, avec une forte attention à la clarté et à l’usage.</h2>
         </div>
         <div class="project-grid">
           <article class="project-card project-card--erp reveal">
@@ -640,8 +645,8 @@
               <p class="project-tag">Python • PostgreSQL • ERP</p>
               <h3>IjeeryApp</h3>
               <div class="project-footer">
-                <p>ERP desktop pour automatiser et centraliser les opérations d’un grossiste, avec modules stock, ventes, caisse et reporting.</p>
-                <a class="btn btn-sm" href="#contact">Voir le détail</a>
+                <p data-i18n="projects.ijeeryText">ERP desktop pour automatiser et centraliser les opérations d’un grossiste, avec modules stock, ventes, caisse et reporting.</p>
+                <a class="btn btn-sm" href="#contact" data-i18n="projects.details">Voir le détail</a>
               </div>
             </div>
           </article>
@@ -652,10 +657,10 @@
             </div>
             <div class="project-content">
               <p class="project-tag">Java SE • Desktop</p>
-              <h3>Sub-M</h3>
+              <h3 data-i18n="projects.submTitle">Sub-M</h3>
               <div class="project-footer">
-                <p>Application de gestion de service de distribution d’eau potable avec suivi des abonnés et des opérations.</p>
-                <a class="btn btn-sm" href="#contact">Voir le détail</a>
+                <p data-i18n="projects.submText">Application de gestion de service de distribution d’eau potable avec suivi des abonnés et des opérations.</p>
+                <a class="btn btn-sm" href="#contact" data-i18n="projects.details">Voir le détail</a>
               </div>
             </div>
           </article>
@@ -663,8 +668,8 @@
             <div class="project-content">
               <div class="project-upcoming-icon" aria-hidden="true"><i class="fa-solid fa-utensils"></i></div>
               <p class="project-tag">Bientôt</p>
-              <h3>Projet à venir</h3>
-              <p>Application de gestion de restaurant à venir, avec une logique métier pensée pour les équipes opérationnelles.</p>
+              <h3 data-i18n="projects.upcomingTitle">Projet à venir</h3>
+              <p data-i18n="projects.upcomingText">Application de gestion de restaurant à venir, avec une logique métier pensée pour les équipes opérationnelles.</p>
             </div>
           </article>
         </div>
@@ -674,25 +679,25 @@
     <section id="gallery" class="section section-alt">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">Galerie</p>
-          <h2>Un aperçu de mes projets, réalisations et participations, présenté comme une vraie vitrine de portfolio.</h2>
+          <p class="eyebrow" data-i18n="gallery.eyebrow">Galerie</p>
+          <h2 data-i18n="gallery.title">Un aperçu de mes projets, réalisations et participations, présenté comme une vraie vitrine de portfolio.</h2>
         </div>
 
         <div class="gallery-filters reveal" role="toolbar" aria-label="Filtres de galerie">
           <button class="filter-btn active" type="button" data-filter="all">
-            <span class="filter-btn-text">Tous</span>
+            <span class="filter-btn-text" data-i18n="gallery.filterAll">Tous</span>
             <span class="filter-btn-dot"></span>
           </button>
           <button class="filter-btn" type="button" data-filter="projects">
-            <span class="filter-btn-text">Projets</span>
+            <span class="filter-btn-text" data-i18n="gallery.filterProjects">Projets</span>
             <span class="filter-btn-dot"></span>
           </button>
           <button class="filter-btn" type="button" data-filter="achievements">
-            <span class="filter-btn-text">Réalisations</span>
+            <span class="filter-btn-text" data-i18n="gallery.filterAchievements">Réalisations</span>
             <span class="filter-btn-dot"></span>
           </button>
           <button class="filter-btn" type="button" data-filter="participation">
-            <span class="filter-btn-text">Participation</span>
+            <span class="filter-btn-text" data-i18n="gallery.filterParticipation">Participation</span>
             <span class="filter-btn-dot"></span>
           </button>
         </div>
@@ -703,8 +708,8 @@
             <img src="assets/images/gallerie/realisation-1.png" alt="Réalisation 1" />
             <div class="gallery-overlay">
               <span class="gallery-tag">Réalisation</span>
-              <h3>Projet Stratégique</h3>
-              <p>Une réalisation majeure dans le parcours professionnel.</p>
+              <h3 data-i18n="gallery.item1Title">Projet Stratégique</h3>
+              <p data-i18n="gallery.item1Text">Une réalisation majeure dans le parcours professionnel.</p>
             </div>
           </article>
 
@@ -712,8 +717,8 @@
             <img src="assets/images/gallerie/realisation-2.png" alt="Réalisation 2" />
             <div class="gallery-overlay">
               <span class="gallery-tag">Réalisation</span>
-              <h3>Innovation Digitale</h3>
-              <p>Conception et mise en œuvre d'une solution innovante.</p>
+              <h3 data-i18n="gallery.item2Title">Innovation Digitale</h3>
+              <p data-i18n="gallery.item2Text">Conception et mise en œuvre d'une solution innovante.</p>
             </div>
           </article>
 
@@ -722,8 +727,8 @@
             <img src="assets/images/gallerie/project-1.png" alt="Projet 1" />
             <div class="gallery-overlay">
               <span class="gallery-tag">Projet</span>
-              <h3>IjeeryApp</h3>
-              <p>ERP desktop pour automatiser les opérations.</p>
+              <h3 data-i18n="gallery.item3Title">IjeeryApp</h3>
+              <p data-i18n="gallery.item3Text">ERP desktop pour automatiser les opérations.</p>
             </div>
           </article>
 
@@ -740,8 +745,8 @@
             <img src="assets/images/gallerie/project-3.png" alt="Projet 3" />
             <div class="gallery-overlay">
               <span class="gallery-tag">Projet</span>
-              <h3>Bibliothèque numérique</h3>
-              <p>Mini-application de gestion de bibliothèque</p>
+              <h3 data-i18n="gallery.item5Title">Bibliothèque numérique</h3>
+              <p data-i18n="gallery.item5Text">Mini-application de gestion de bibliothèque</p>
             </div>
           </article>
 
@@ -749,8 +754,8 @@
             <img src="assets/images/gallerie/project-4.png" alt="Projet 4" />
             <div class="gallery-overlay">
               <span class="gallery-tag">Projet</span>
-              <h3>Gestion logement</h3>
-              <p>Mini-application universitaire de gestion des logements.</p>
+              <h3 data-i18n="gallery.item6Title">Gestion logement</h3>
+              <p data-i18n="gallery.item6Text">Mini-application universitaire de gestion des logements.</p>
             </div>
           </article>
 
@@ -759,8 +764,8 @@
             <img src="assets/images/gallerie/participation-1.png" alt="Participation 1" />
             <div class="gallery-overlay">
               <span class="gallery-tag">Participation</span>
-              <h3>Mission Internationale</h3>
-              <p>Engagement terrain et accompagnement humain.</p>
+              <h3 data-i18n="gallery.item7Title">Mission Internationale</h3>
+              <p data-i18n="gallery.item7Text">Engagement terrain et accompagnement humain.</p>
             </div>
           </article>
 
@@ -768,8 +773,8 @@
             <img src="assets/images/gallerie/participation-2.png" alt="Participation 2" />
             <div class="gallery-overlay">
               <span class="gallery-tag">Participation</span>
-              <h3>Service Communautaire</h3>
-              <p>Coordination et mobilisation bénévole.</p>
+              <h3 data-i18n="gallery.item8Title">Service Communautaire</h3>
+              <p data-i18n="gallery.item8Text">Coordination et mobilisation bénévole.</p>
             </div>
           </article>
         </div>
@@ -781,38 +786,38 @@
         <div class="contact-card reveal">
           <div class="contact-card-top">
             <div>
-              <p class="eyebrow">Contact</p>
-              <h2>Discutons de votre projet.</h2>
+              <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+              <h2 data-i18n="contact.title">Discutons de votre projet.</h2>
             </div>
-            <span class="contact-pill">Disponible</span>
+            <span class="contact-pill" data-i18n="contact.pill">Disponible</span>
           </div>
-          <p class="contact-intro">Disponible pour des missions freelance, des collaborations à distance et des projets à moyen terme. Je travaille aussi à travers Baia Creative Solutions pour accompagner les clients dans leurs besoins numériques.</p>
+          <p class="contact-intro" data-i18n="contact.intro">Disponible pour des missions freelance, des collaborations à distance et des projets à moyen terme. Je travaille aussi à travers Baia Creative Solutions pour accompagner les clients dans leurs besoins numériques.</p>
           <div class="contact-highlights">
             <div class="contact-highlight-card">
               <i class="fa-solid fa-envelope"></i>
               <div>
-                <span class="contact-highlight-label">Email</span>
+                <span class="contact-highlight-label" data-i18n="contact.emailLabel">Email</span>
                 <a href="mailto:embony.rodibrian@gmail.com">embony.rodibrian@gmail.com</a>
               </div>
             </div>
             <div class="contact-highlight-card">
               <i class="fa-solid fa-phone"></i>
               <div>
-                <span class="contact-highlight-label">Téléphone</span>
+                <span class="contact-highlight-label" data-i18n="contact.phoneLabel">Téléphone</span>
                 <a href="tel:+261342633132">+261 34 26 331 32</a>
               </div>
             </div>
             <div class="contact-highlight-card">
               <i class="fa-solid fa-location-dot"></i>
               <div>
-                <span class="contact-highlight-label">Localisation</span>
+                <span class="contact-highlight-label" data-i18n="contact.locationLabel">Localisation</span>
                 <span>Toamasina, Madagascar</span>
               </div>
             </div>
             <div class="contact-highlight-card">
               <i class="fa-solid fa-building"></i>
               <div>
-                <span class="contact-highlight-label">Structure</span>
+                <span class="contact-highlight-label" data-i18n="contact.structureLabel">Structure</span>
                 <span>Baia Creative Solutions</span>
               </div>
             </div>
@@ -835,23 +840,23 @@
         <form class="contact-form reveal" id="contactForm">
           <div class="form-row">
             <label>
-              Nom
+              <span data-i18n="contact.formName">Nom</span>
               <input type="text" name="name" required />
             </label>
             <label>
-              Email
+              <span data-i18n="contact.formEmail">Email</span>
               <input type="email" name="email" required />
             </label>
           </div>
           <label>
-            Objet
-            <input type="text" name="subject" placeholder="Ex. Projet web, application desktop, collaboration" />
+            <span data-i18n="contact.formSubject">Objet</span>
+            <input type="text" name="subject" data-i18n-attr='{"placeholder":"contact.formPlaceholder"}' placeholder="Ex. Projet web, application desktop, collaboration" />
           </label>
           <label>
-            Message
+            <span data-i18n="contact.formMessage">Message</span>
             <textarea name="message" rows="6" required></textarea>
           </label>
-          <button class="btn btn-primary" type="submit">Envoyer</button>
+          <button class="btn btn-primary" type="submit" data-i18n="contact.submit">Envoyer</button>
           <p class="form-status" id="formStatus" aria-live="polite"></p>
         </form>
       </div>
@@ -869,27 +874,27 @@
             </a>
             <span class="footer-badge">Disponible</span>
           </div>
-          <p>Développeur Web &amp; Desktop, je conçois des solutions numériques utiles, claires et adaptées aux réalités de chaque projet.</p>
-          <div class="footer-availability"><i class="fa-solid fa-circle"></i> Disponible pour de nouveaux projets</div>
+          <p data-i18n="footer.brandText">Développeur Web &amp; Desktop, je conçois des solutions numériques utiles, claires et adaptées aux réalités de chaque projet.</p>
+          <div class="footer-availability"><i class="fa-solid fa-circle"></i><span data-i18n="footer.availability">Disponible pour de nouveaux projets</span></div>
           <div class="footer-callout">
-            <span>Prêt à créer quelque chose d’utile, d’élégant et de durable ?</span>
+            <span data-i18n="footer.cta">Prêt à créer quelque chose d’utile, d’élégant et de durable ?</span>
           </div>
         </div>
 
         <div class="footer-column">
-          <h3>Navigation</h3>
+          <h3 data-i18n="footer.linksNav">Navigation</h3>
           <nav class="footer-links" aria-label="Navigation du pied de page">
-            <a href="#about">À propos</a>
-            <a href="#skills">Compétences</a>
-            <a href="#experience">Expérience</a>
-            <a href="#education">Formation</a>
-            <a href="#projects">Projets</a>
-            <a href="#contact">Contact</a>
+            <a href="#about" data-i18n="footer.linksAbout">À propos</a>
+            <a href="#skills" data-i18n="footer.linksSkills">Compétences</a>
+            <a href="#experience" data-i18n="footer.linksExperience">Expérience</a>
+            <a href="#education" data-i18n="footer.linksEducation">Formation</a>
+            <a href="#projects" data-i18n="footer.linksProjects">Projets</a>
+            <a href="#contact" data-i18n="footer.linksContact">Contact</a>
           </nav>
         </div>
 
         <div class="footer-column">
-          <h3>Liens utiles</h3>
+          <h3 data-i18n="footer.socials">Liens utiles</h3>
           <nav class="footer-links" aria-label="Liens utiles">
             <a href="#career-goal">Ce que je recherche</a>
             <a href="#certifications">Certifications</a>
@@ -901,7 +906,7 @@
         </div>
 
         <div class="footer-column footer-contact-column">
-          <h3>Réseaux &amp; partenaire</h3>
+          <h3 data-i18n="footer.partners">Réseaux &amp; partenaire</h3>
           <div class="footer-social-links" aria-label="Réseaux sociaux">
             <a href="https://www.linkedin.com/in/rodibrian-embony/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://github.com/rodibrian/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -910,13 +915,13 @@
           </div>
           <a class="footer-partner" href="https://www.facebook.com/profile.php?id=61586054857471" target="_blank" rel="noopener" aria-label="Baia Creative Solutions">
             <span class="footer-partner-icon"><i class="fa-solid fa-building"></i></span>
-            <span><strong>Baia Creative Solutions</strong><small>Partenaire de vos projets numériques</small></span>
+            <span><strong>Baia Creative Solutions</strong><small data-i18n="footer.partnerText">Partenaire de vos projets numériques</small></span>
           </a>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Rodi Brian Embony — Portfolio moderne et professionnel.</p>
+        <p data-i18n="footer.copy">© 2026 Rodi Brian Embony — Portfolio moderne et professionnel.</p>
         <a class="footer-top-link" href="#home"><i class="fa-solid fa-arrow-up"></i> Retour en haut</a>
       </div>
     </div>
