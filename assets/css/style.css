@@ -349,7 +349,7 @@ img { max-width: 100%; display: block; }
 .career-goal-card {
   position: relative;
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 150px minmax(0, 1fr) 250px;
   align-items: center;
   gap: 2rem;
   overflow: hidden;
@@ -407,6 +407,27 @@ img { max-width: 100%; display: block; }
 }
 .career-goal-link i { transition: transform 0.2s ease; }
 .career-goal-link:hover i { transform: translateX(4px); }
+.career-goal-aside {
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+  border-left: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface-alt) 62%, transparent);
+}
+.career-goal-aside-label {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.career-goal-aside ul { display: grid; gap: 0.65rem; list-style: none; margin: 0; padding: 0; }
+.career-goal-aside li { display: flex; align-items: center; gap: 0.6rem; color: var(--text); font-size: 0.82rem; font-weight: 700; line-height: 1.35; }
+.career-goal-aside li i { display: grid; place-items: center; width: 28px; height: 28px; flex-shrink: 0; border-radius: 9px; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--surface)); }
+.career-goal-aside li:nth-child(2) i { color: var(--accent-2); background: color-mix(in srgb, var(--accent-2) 12%, var(--surface)); }
+.career-goal-aside li:nth-child(3) i { color: #d97706; background: color-mix(in srgb, #d97706 12%, var(--surface)); }
 @keyframes career-card-enter {
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }
@@ -1530,5 +1551,6 @@ img { max-width: 100%; display: block; }
   .career-goal-card { grid-template-columns: 1fr; gap: 1.2rem; padding: 1.5rem; }
   .career-goal-icon { width: 88px; height: 88px; border-radius: 24px; }
   .career-goal-icon i { font-size: 2.8rem; }
+  .career-goal-aside { border-top: 1px solid var(--border); border-left: 0; }
   .form-row { grid-template-columns: 1fr; }
 }
