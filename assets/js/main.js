@@ -12,6 +12,10 @@ const certificationCards = Array.from(document.querySelectorAll(".certification-
 const certPrevButton = document.getElementById("certPrev");
 const certNextButton = document.getElementById("certNext");
 
+const EMAILJS_SERVICE_ID = "rodibrian_gmailjs";
+const EMAILJS_TEMPLATE_ID = "template_6vsrdho";
+const EMAILJS_PUBLIC_KEY = "YX4PR5z1IhqV01ii1";
+
 function applyTheme(theme) {
   body.classList.toggle("dark", theme === "dark");
   const icon = themeToggle?.querySelector("i");
@@ -101,11 +105,60 @@ function initActiveNav() {
   });
 }
 
+function updateFormStatus(message, type = "success") {
+  if (!formStatus) return;
+  formStatus.classList.remove("success", "error");
+  formStatus.classList.add(type);
+  formStatus.innerHTML = `
+    <i class="fa-solid ${type === "success" ? "fa-circle-check" : "fa-triangle-exclamation"}"></i>
+    <span>${message}</span>
+  `;
+}
+
+function initEmailJS() {
+  if (!window.emailjs) return false;
+  if (EMAILJS_PUBLIC_KEY.startsWith("YOUR_")) return false;
+  emailjs.init(EMAILJS_PUBLIC_KEY);
+  return true;
+}
+
 function initContactForm() {
   contactForm?.addEventListener("submit", (event) => {
     event.preventDefault();
-    formStatus.textContent = "Merci pour votre message. Je vous répondrai rapidement.";
-    contactForm.reset();
+
+    if (!window.emailjs) {
+      updateFormStatus("Le service d'envoi n'est pas chargé. Vérifiez EmailJS.", "error");
+      return;
+    }
+
+    if (EMAILJS_SERVICE_ID.startsWith("YOUR_") || EMAILJS_TEMPLATE_ID.startsWith("YOUR_") || EMAILJS_PUBLIC_KEY.startsWith("YOUR_")) {
+      updateFormStatus("Configuration EmailJS incomplète. Merci de renseigner vos identifiants.", "error");
+      return;
+    }
+
+    if (!initEmailJS()) {
+      updateFormStatus("Impossible d'initialiser EmailJS.", "error");
+      return;
+    }
+
+    const email_guest = contactForm.querySelector('input[name="email"]')?.value.trim() || "";
+    let emailGuestInput = contactForm.querySelector('input[name="email_guest"]');
+    if (!emailGuestInput) {
+      emailGuestInput = document.createElement("input");
+      emailGuestInput.type = "hidden";
+      emailGuestInput.name = "email_guest";
+      contactForm.appendChild(emailGuestInput);
+    }
+    emailGuestInput.value = email_guest;
+
+    emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm)
+      .then(() => {
+        updateFormStatus("Merci pour votre message. Je vous répondrai rapidement.", "success");
+        contactForm.reset();
+      })
+      .catch(() => {
+        updateFormStatus("L'envoi a échoué. Veuillez réessayer plus tard.", "error");
+      });
   });
 }
 
